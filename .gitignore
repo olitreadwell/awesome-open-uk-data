@@ -12,7 +12,7 @@ test-results
 .env
 .env.local
 .env.*.local
-data
+/data
 *.tsbuildinfo
 logs/**
 .mypy_cache

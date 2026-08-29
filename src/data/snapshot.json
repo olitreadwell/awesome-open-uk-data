@@ -1,0 +1,86 @@
+{
+  "version": "seed",
+  "exportedAt": "2026-08-29T08:09:26.287Z",
+  "license": "Public data only. Opt-out respected — see /opt-out.",
+  "items": [
+    {
+      "id": "example-place-one",
+      "name": "Example Place One",
+      "slug": "example-place-one",
+      "city": "Wellington",
+      "region": "Wellington region",
+      "location": "CBD",
+      "lat": -41.2904,
+      "lng": 174.7787,
+      "website": "https://example.com",
+      "categories": [
+        "example"
+      ],
+      "description": "Placeholder listing proving the template pipeline: replace this file with real data.",
+      "source": {
+        "label": "Template seed data",
+        "url": "https://example.com"
+      },
+      "lastVerified": "2026-08-01",
+      "verified": false,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "example-place-two",
+      "name": "Example Place Two",
+      "slug": "example-place-two",
+      "city": "Wellington",
+      "region": "Wellington region",
+      "location": "Te Aro",
+      "lat": -41.2939,
+      "lng": 174.7826,
+      "website": "https://example.com",
+      "categories": [
+        "example",
+        "family"
+      ],
+      "description": "Second placeholder listing with calendar dates for the iCal feed.",
+      "source": {
+        "label": "Template seed data",
+        "url": "https://example.com"
+      },
+      "lastVerified": "2026-08-01",
+      "verified": false,
+      "active": true,
+      "optOut": false,
+      "calendarDates": [
+        {
+          "start": "2026-09-05",
+          "label": "Market day"
+        }
+      ]
+    },
+    {
+      "id": "example-place-three",
+      "name": "Example Place Three",
+      "slug": "example-place-three",
+      "city": "Lower Hutt",
+      "region": "Wellington region",
+      "location": "Petone",
+      "lat": -41.2256,
+      "lng": 174.8735,
+      "website": "https://example.com",
+      "categories": [
+        "example",
+        "thrift"
+      ],
+      "description": "Third placeholder listing outside the start city.",
+      "source": {
+        "label": "Template seed data",
+        "url": "https://example.com"
+      },
+      "lastVerified": "2025-01-15",
+      "verified": false,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    }
+  ]
+}
