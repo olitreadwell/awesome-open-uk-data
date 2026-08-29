@@ -41,9 +41,7 @@ describe('seed dataset integrity', () => {
 
 describe('item schema validation', () => {
   it('rejects a mismatched id and slug', () => {
-    const result = itemListSchema.safeParse([
-      { ...seedItems[0], slug: 'different-slug' },
-    ]);
+    const result = itemListSchema.safeParse([{ ...seedItems[0], slug: 'different-slug' }]);
     expect(result.success).toBe(false);
   });
 

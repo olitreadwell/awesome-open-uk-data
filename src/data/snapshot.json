@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-08-29T08:09:26.287Z",
+  "exportedAt": "2026-08-29T08:18:28.574Z",
   "license": "Public data only. Opt-out respected — see /opt-out.",
   "items": [
     {
@@ -13,9 +13,7 @@
       "lat": -41.2904,
       "lng": 174.7787,
       "website": "https://example.com",
-      "categories": [
-        "example"
-      ],
+      "categories": ["example"],
       "description": "Placeholder listing proving the template pipeline: replace this file with real data.",
       "source": {
         "label": "Template seed data",
@@ -37,10 +35,7 @@
       "lat": -41.2939,
       "lng": 174.7826,
       "website": "https://example.com",
-      "categories": [
-        "example",
-        "family"
-      ],
+      "categories": ["example", "family"],
       "description": "Second placeholder listing with calendar dates for the iCal feed.",
       "source": {
         "label": "Template seed data",
@@ -67,10 +62,7 @@
       "lat": -41.2256,
       "lng": 174.8735,
       "website": "https://example.com",
-      "categories": [
-        "example",
-        "thrift"
-      ],
+      "categories": ["example", "thrift"],
       "description": "Third placeholder listing outside the start city.",
       "source": {
         "label": "Template seed data",

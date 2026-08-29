@@ -3,6 +3,7 @@
 // The snapshot is the committed artifact every read path serves in snapshot mode.
 import { execFileSync } from 'node:child_process';
 import { writeFileSync } from 'node:fs';
+import { format } from 'prettier';
 
 // Load the TS seed through tsx so this script needs no separate build step.
 const out = execFileSync(
@@ -32,6 +33,7 @@ const out = execFileSync(
   { encoding: 'utf8' }
 );
 
+const formatted = await format(out.trim(), { parser: 'json' });
 const snapshotPath = new URL('../src/data/snapshot.json', import.meta.url);
-writeFileSync(snapshotPath, `${out.trim()}\n`);
-console.log(`Snapshot written: ${new URL('../src/data/snapshot.json', import.meta.url).pathname}`);
+writeFileSync(snapshotPath, formatted);
+console.log(`Snapshot written (prettier-formatted): ${snapshotPath.pathname}`);

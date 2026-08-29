@@ -4,6 +4,7 @@
 // Usage: DATABASE_URL=... node scripts/export-snapshot.mjs
 import { writeFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
+import { format } from 'prettier';
 
 const out = execFileSync(
   process.execPath,
@@ -18,5 +19,6 @@ const out = execFileSync(
   ],
   { encoding: 'utf8' }
 );
-writeFileSync(new URL('../src/data/snapshot.json', import.meta.url), `${out.trim()}\n`);
+const formatted = await format(out.trim(), { parser: 'json' });
+writeFileSync(new URL('../src/data/snapshot.json', import.meta.url), formatted);
 console.log('Snapshot exported from database.');
