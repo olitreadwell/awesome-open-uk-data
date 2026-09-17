@@ -1,4 +1,5 @@
 import { afterEach, describe, expect, it } from 'vitest';
+import { seedItems } from '@/data/items';
 import { countItems, readSnapshotItems, resetSnapshotCache } from '@/lib/db';
 
 describe('snapshot data source', () => {
@@ -22,9 +23,9 @@ describe('snapshot data source', () => {
   it('counts with filters in snapshot mode', async () => {
     const total = await countItems({});
     expect(total).toBeGreaterThan(0);
-    const cityTotal = await countItems({ city: 'Wellington' });
+    const cityTotal = await countItems({ city: seedItems[0].city });
     expect(cityTotal).toBeGreaterThan(0);
-    const categoryTotal = await countItems({ category: 'example' });
+    const categoryTotal = await countItems({ category: seedItems[0].categories[0] });
     expect(categoryTotal).toBeGreaterThan(0);
     expect(cityTotal).toBeLessThanOrEqual(total);
   });

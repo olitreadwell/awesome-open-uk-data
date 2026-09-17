@@ -10,6 +10,18 @@ Vercel Cron, and record every run in `scrapes` (DB mode) or
 | --- | --- | --- |
 | `example-listings` (this repo's `scripts/examples/listing-entries.json`) | seed pipeline demo | ✅ offline demo |
 
+| `data.gov.uk` | initial seed source | ✅ planned |
+| `ONS` | initial seed source | ✅ planned |
+| `Companies House` | initial seed source | ✅ planned |
+| `HM Land Registry` | initial seed source | ✅ planned |
+| `TfL` | initial seed source | ✅ planned |
+| `UK Police Data` | initial seed source | ✅ planned |
+| `Explore Education Statistics` | initial seed source | ✅ planned |
+| `OS Data Hub` | initial seed source | ✅ planned |
+| `Bank of England` | initial seed source | ✅ planned |
+| `London Datastore` | initial seed source | ✅ planned |
+| `Met Office DataPoint` | initial seed source | ✅ planned |
+| `UK Data Service` | initial seed source | ✅ planned |
 <!-- SEED-SOURCES -->
 
 Projects run `pnpm run setup` to list their own initial sources here; the

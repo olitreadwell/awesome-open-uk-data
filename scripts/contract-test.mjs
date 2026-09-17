@@ -16,6 +16,13 @@ function check(condition, label) {
 }
 
 async function main() {
+  // Use a live item id from the dataset instead of a template placeholder,
+  // so the contract test stays valid for real seed data.
+  const sampleItemsRes = await fetch(`${base}/api/v1/items?limit=1`);
+  if (!sampleItemsRes.ok) throw new Error(`items HTTP ${sampleItemsRes.status}`);
+  const itemsPayload = await sampleItemsRes.json();
+  const sampleId = itemsPayload.data?.[0]?.id;
+  if (!sampleId) throw new Error('dataset has no items to resolve');
   const specRes = await fetch(`${base}/api/openapi.json`);
   if (!specRes.ok) throw new Error(`openapi.json HTTP ${specRes.status}`);
   const spec = await specRes.json();
@@ -30,10 +37,10 @@ async function main() {
     for (const method of methods) {
       if (method !== 'get') continue;
       const operation = spec.paths[path][method];
-      let resolvedPath = path.replace(/\[id\]/g, 'example-place-one');
+      let resolvedPath = path.replace(/\[id\]/g, sampleId);
       for (const param of operation.parameters ?? []) {
         if (param.in === 'path') {
-          resolvedPath = resolvedPath.replace(`{${param.name}}`, 'example-place-one');
+          resolvedPath = resolvedPath.replace(`{${param.name}}`, sampleId);
         }
       }
       const url = new URL(`${base}${resolvedPath}`);
@@ -54,7 +61,7 @@ async function main() {
     'every item has id + name'
   );
 
-  const detailRes = await fetch(`${base}/api/v1/items/example-place-one`);
+  const detailRes = await fetch(`${base}/api/v1/items/${sampleId}`);
   check(detailRes.status === 200, 'GET /api/v1/items/{id} resolves a seed item');
   const missingRes = await fetch(`${base}/api/v1/items/definitely-not-a-listing`);
   check(missingRes.status === 404, 'GET /api/v1/items/{id} 404 for unknown');

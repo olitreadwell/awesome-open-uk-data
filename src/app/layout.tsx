@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: config.name,
     template: `%s — ${config.name}`,
   },
-  description: `Open directory of ${config.thingPlural} in ${config.city} (${config.region}). Public data only; opt-out respected.`,
+  description: `Curated directory of public ${config.thingPlural} in ${config.region}. Public data only; opt-out respected.`,
 };
 
 /**

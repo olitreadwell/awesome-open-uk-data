@@ -1,0 +1,6 @@
+# awesome-open-uk-data grow loop heal
+
+The daily grow loop has skipped three consecutive iterations. Diagnose and
+fix the blocker (dirty tree, failing gate, dead source, broken wrapper,
+stale lock). Restore the known-good state, verify one iteration runs clean,
+then exit 0. Do not widen scope beyond the blocker.

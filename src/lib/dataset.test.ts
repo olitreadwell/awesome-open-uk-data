@@ -37,14 +37,18 @@ describe('dataset export helpers', () => {
 
   it('counts by city and category descending', () => {
     const cities = countByCity(seedItems);
+    expect(cities.length).toBeGreaterThan(0);
     expect(cities[0].count).toBeGreaterThanOrEqual(cities[cities.length - 1].count);
-    expect(cities.find((c) => c.city === 'Wellington')?.count).toBeGreaterThan(0);
     const categories = countByCategory(seedItems);
-    expect(categories.some((c) => c.category === 'example')).toBe(true);
+    expect(categories.length).toBeGreaterThan(0);
+    expect(categories.every((c) => c.count > 0)).toBe(true);
   });
 
   it('lists distinct source labels sorted', () => {
-    expect(listSourceLabels(seedItems)).toEqual(['Template seed data']);
+    const labels = listSourceLabels(seedItems);
+    expect(labels.length).toBeGreaterThan(0);
+    expect(labels).toEqual([...labels].sort());
+    expect(new Set(labels).size).toBe(labels.length);
   });
 
   it('builds dataset meta from an export', () => {

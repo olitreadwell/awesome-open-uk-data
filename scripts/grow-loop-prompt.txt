@@ -1,0 +1,32 @@
+# awesome-open-uk-data grow loop (daily)
+
+You are running one iteration of the UK Open Data grow loop on `main`, from
+a clean tree up to date with `origin/main`.
+
+## Iteration contract
+
+1. Verify: run `node scripts/check-external-links.mjs`. For every failing
+   item, fix the URL or set `verified: false` with a `notes` reason. Roll
+   `lastVerified` forward to today for sources that still respond.
+2. Discover: find 1-3 NEW public UK open data sources not already listed
+   (federal or state official catalogues: data.gov.uk, agency
+   developer pages, ONS, data.gov.uk, devolved administration portals). Confirm the URL responds before
+   adding; prefer sources with a documented API or bulk download.
+3. Ship: add items to `src/data/items.ts` in the validated shape with real
+   descriptions and no invented stats, run `pnpm run build:snapshot`, then
+   prettier on changed files.
+4. Gates: `pnpm run lint`, `pnpm run typecheck`, `pnpm run test`, `pnpm run
+   build`, `pnpm run check:external-links`. Fix before committing; never
+   delete or weaken a failing test.
+5. Commit one Conventional Commit per item (`feat(data): add ...`) and a
+   `chore(data)` for link fixes; append one dated line to CHANGELOG.md and
+   update the seeded-source table in DATA_SOURCES.md when you add a source.
+6. Push `main`. Log blockers in LOOP-NOTES.md.
+
+## Hard rules
+
+- Only real, verified, public sources. No fabricated URLs, stats, or "this
+  worked" claims. Every new listing must link the official publisher.
+- Same blocker fails three times: log it and exit non-zero.
+- Stop when the batch ships. Cadence: daily via launchd; if the tree is
+  locked or dirty, exit 0 silently and let the wrapper decide.

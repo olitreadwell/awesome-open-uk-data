@@ -22,10 +22,12 @@ describe('item repository (snapshot mode)', () => {
   it('lists items with filters and pagination', async () => {
     const all = await listItems({ limit: 200 });
     expect(all.length).toBe(seedItems.length);
-    const city = await listItems({ city: 'Wellington' });
-    expect(city.every((item) => item.city === 'Wellington')).toBe(true);
-    const category = await listItems({ category: 'thrift' });
-    expect(category.every((item) => item.categories.includes('thrift'))).toBe(true);
+    const city = await listItems({ city: seedItems[0].city });
+    expect(city.every((item) => item.city === seedItems[0].city)).toBe(true);
+    const category = await listItems({ category: seedItems[0].categories[0] });
+    expect(category.every((item) => item.categories.includes(seedItems[0].categories[0]))).toBe(
+      true
+    );
     const page = await listItems({ limit: 1, offset: 0 });
     expect(page.length).toBe(1);
   });
@@ -37,11 +39,11 @@ describe('item repository (snapshot mode)', () => {
 
   it('aggregates cities, categories and sources', async () => {
     const cities = await listCities();
-    expect(cities.find((c) => c.city === 'Wellington')?.count).toBeGreaterThan(0);
+    expect(cities.find((c) => c.city === seedItems[0].city)?.count).toBeGreaterThan(0);
     const categories = await listCategories();
-    expect(categories.some((c) => c.category === 'example')).toBe(true);
+    expect(categories.some((c) => c.category === seedItems[0].categories[0])).toBe(true);
     const sources = await listSources();
-    expect(sources).toContain('Template seed data');
+    expect(sources).toContain(seedItems[0].source.label);
   });
 
   it('records analytics to stdout in snapshot mode', async () => {
