@@ -1,10 +1,14 @@
+import { readFileSync } from 'node:fs';
 import { AxeBuilder } from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
+
+const snapshot = JSON.parse(readFileSync('src/data/snapshot.json', 'utf8'));
+const sample = snapshot.items[0];
 
 const routes = [
   '/',
   '/items',
-  '/items/example-place-one',
+  `/items/${sample.id}`,
   '/search',
   '/map',
   '/opt-out',
