@@ -42,7 +42,7 @@
     "check:fast": "npm run build:snapshot && npm run format:check && npm run lint && npm run typecheck && npm run test:fast && npm run check:external-links && npm run check:links && npm run build"
   },
   "dependencies": {
-    "@clack/prompts": "1.7.0",
+    "@clack/prompts": "1.8.1",
     "@radix-ui/react-accordion": "1.2.20",
     "@radix-ui/react-label": "2.1.15",
     "@radix-ui/react-select": "2.3.7",
