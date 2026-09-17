@@ -15,9 +15,10 @@ a clean tree up to date with `origin/main`.
 3. Ship: add items to `src/data/items.ts` in the validated shape with real
    descriptions and no invented stats, run `pnpm run build:snapshot`, then
    prettier on changed files.
-4. Gates: `pnpm run lint`, `pnpm run typecheck`, `pnpm run test`, `pnpm run
-   build`, `pnpm run check:external-links`. Fix before committing; never
-   delete or weaken a failing test.
+4. Gates: run `pnpm run check:fast` (snapshot, format, lint, typecheck,
+   data-focused tests, links, build). Fix before committing; never delete
+   or weaken a failing test. Full suite (coverage, e2e, smoke) runs in CI
+   after push.
 5. Commit one Conventional Commit per item (`feat(data): add ...`) and a
    `chore(data)` for link fixes; append one dated line to CHANGELOG.md and
    update the seeded-source table in DATA_SOURCES.md when you add a source.

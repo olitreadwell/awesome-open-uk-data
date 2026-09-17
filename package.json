@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Reusable template: open directory of {THING} in {PLACE} — dataset, scrapers, OpenAPI API, website, self-improving loops.",
+  "description": "Reusable template: open directory of {THING} in {PLACE} \u2014 dataset, scrapers, OpenAPI API, website, self-improving loops.",
   "engines": {
     "node": ">=22.22.2"
   },
@@ -37,7 +37,9 @@
     "audit": "pnpm audit",
     "test:setup": "node --test scripts/setup.test.mjs",
     "check": "npm run build:snapshot && npm run format:check && npm run lint && npm run typecheck && npm run test:coverage && npm run test:setup && npm run build && npm run smoke && npm run test:e2e && npm run check:links && npm run check:external-links",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test:fast": "vitest run src/data src/lib/dataset.test.ts src/lib/db.test.ts src/lib/db-mode.test.ts src/lib/item-repository.test.ts src/lib/search.test.ts",
+    "check:fast": "npm run build:snapshot && npm run format:check && npm run lint && npm run typecheck && npm run test:fast && npm run check:external-links && npm run check:links && npm run build"
   },
   "dependencies": {
     "@clack/prompts": "1.7.0",

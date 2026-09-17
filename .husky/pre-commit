@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-# Pre-commit gate: lint, typecheck, and tests in parallel.
+# Pre-commit fast lane: lint, typecheck, and the data-focused test subset in
+# parallel. The full suite (coverage, e2e, smoke) runs in CI after push.
 set -e
 
-echo "=== Pre-commit checks ==="
+echo "=== Pre-commit fast lane ==="
 
 (
   npm run lint --if-present
@@ -15,7 +16,7 @@ G1=$!
 G2=$!
 
 (
-  npm test --if-present
+  npm run test:fast --if-present
 ) &
 G3=$!
 
