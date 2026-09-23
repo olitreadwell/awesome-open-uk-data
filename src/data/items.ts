@@ -461,6 +461,26 @@ const rawItems = [
     lastVerified: '2026-09-24',
     verified: true,
   },
+  {
+    id: 'statswales',
+    slug: 'statswales',
+    name: 'StatsWales',
+    city: 'Cardiff',
+    region: 'Wales',
+    location: 'Wales',
+    lat: 51.4816,
+    lng: -3.1791,
+    description:
+      'Welsh Government statistics about Wales, grouped by topic from health and housing to transport and the Welsh language. The public API lists the published datasets and downloads any of them as JSON, CSV or XLSX.',
+    categories: ['statistics', 'government', 'api'],
+    website: 'https://stats.gov.wales/en-GB',
+    source: {
+      label: 'Welsh Government',
+      url: 'https://api.stats.gov.wales/v1/docs',
+    },
+    lastVerified: '2026-09-24',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */

@@ -45,6 +45,8 @@ All notable changes documented here. Format follows
 - 2026-09-24: `planning-data`: the Ministry of Housing, Communities and Local
   Government's planning and housing platform for England, with one API over
   100+ datasets and bulk downloads.
+- 2026-09-24: `statswales`: Welsh Government statistics about Wales, with a
+  public API that lists datasets and downloads them as JSON, CSV or XLSX.
 
 ### Fixed
 
