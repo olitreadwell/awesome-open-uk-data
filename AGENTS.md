@@ -118,12 +118,27 @@ docs.
 - `development` -> `main` is the single integration PR, kept up to date.
 - After merge, feature branches are deleted.
 
-<!-- BEGIN:nextjs-agent-rules -->
+## Next.js writes into this tree on every run
 
-# This is NOT the Next.js you know
+`next dev` starts in the e2e suite and `next build` runs inside
+`pnpm run check`, so both touch generated files that must not be tracked:
 
-This version has breaking changes: APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+- `next-env.d.ts` is regenerated per run, pointing at the dist dir of that
+  run (`./.next/dev/types/...` in dev, `./.next/types/...` in build). It is
+  in `.gitignore` and untracked, so either variant leaves `git status`
+  clean. Never edit or commit it; the Next.js TypeScript config docs say the
+  same (`node_modules/next/dist/docs/01-app/03-api-reference/05-config/02-typescript.md`).
+- `next dev` also upserts a managed agent-rules block into this file and
+  `CLAUDE.md` whenever the block does not byte-match the installed Next
+  version. That rewrote a tracked file on every local run. `next.config.ts`
+  sets `agentRules: false`, and the pointer that block carried lives below.
+  To re-enable the option, commit whatever block it writes in the same
+  change, or the tree goes dirty again and the grow loop skips.
 
-This block is written and re-added by `next dev`: verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+### This is not the Next.js in your training data
 
-<!-- END:nextjs-agent-rules -->
+This version has breaking changes: APIs, conventions, and file structure may
+all differ from your training data. Read the relevant guide in
+`node_modules/next/dist/docs/` (resolved from this file's directory; in
+monorepos the `next` package may not be visible from the repo root) before
+writing any code. Heed deprecation notices.

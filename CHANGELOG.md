@@ -53,3 +53,11 @@ All notable changes documented here. Format follows
 - 2026-09-23: `.codespellrc` ignores the `ot.mozmail.com` placeholder domain
   and "ONS", clearing the spell-check gate that had been red on every CI run
   since the first push.
+- 2026-09-23: `next-env.d.ts` is gitignored and no longer tracked. Next.js
+  regenerates it per run (dev points it at `.next/dev/types/...`, build at
+  `.next/types/...`), so tracking it left the tree dirty after every e2e run
+  and the grow loop skipped the next iteration.
+- 2026-09-23: `next.config.ts` sets `agentRules: false`. `next dev` was
+  rewriting the managed agent-rules block in the tracked `AGENTS.md` on
+  every run, dirtying the tree the same way. `AGENTS.md` keeps the block's
+  pointer to the bundled Next.js docs by hand.

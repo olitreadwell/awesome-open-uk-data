@@ -14,6 +14,10 @@ test-results
 .env.*.local
 /data
 *.tsbuildinfo
+# Next.js regenerates next-env.d.ts per run with the dist dir of that run
+# (./.next/dev/types in dev, ./.next/types in build). Tracking it means any
+# check run that starts the dev server leaves the tree dirty.
+next-env.d.ts
 logs/**
 .mypy_cache
 .pytest_cache

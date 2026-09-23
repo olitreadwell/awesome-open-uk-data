@@ -55,3 +55,25 @@ down, and what is queued for the next run.
   The `7c14574` run's e2e shards show as cancelled because the next push
   replaced them through the workflow's concurrency group; that is not a
   failure, and the same tests passed locally on that tree.
+
+## 2026-09-23 (tree hygiene, closes the `next-env.d.ts` note)
+
+- Reproduced the note above: `E2E_PORT=3134 pnpm run test:e2e` exited 0 and
+  left `git status --short` showing ` M AGENTS.md` and ` M next-env.d.ts`.
+  `next dev` writes `next-env.d.ts` with the dev dist dir
+  (`./.next/dev/types/...`) where the committed copy had the build one
+  (`./.next/types/...`), so every e2e run dirtied a tracked file and the
+  wrapper read the tree as locked on the next iteration.
+- Fixed at the root instead of reverting the file by hand: `next-env.d.ts`
+  is in `.gitignore` and untracked (`git rm --cached`). Next.js regenerates
+  it per run, and its own TypeScript config docs say to add it to
+  `.gitignore` and remove it from Git. Checked that typecheck and lint still
+  pass with the file absent, both with a warm `.next` and with `.next`
+  moved away to mimic a fresh clone.
+- Second self-dirtying file found in the same run: `next dev` upserts its
+  managed agent-rules block into `AGENTS.md` whenever the block does not
+  byte-match the installed Next version, and the em dash removal in
+  `a2ff6a6` stopped it matching. `next.config.ts` now sets
+  `agentRules: false` (the documented opt-out), and `AGENTS.md` keeps that
+  block's pointer to the bundled Next.js docs by hand. No revert step, no
+  hand-keeping: a full check now ends with an empty `git status --short`.
