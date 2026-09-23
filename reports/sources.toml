@@ -1,0 +1,25 @@
+# Config for the candidate report. The engine reads the repo readme, so the
+# dedupe step knows what is already listed.
+
+name = "UK Open Data"
+repo_slug = "awesome-open-uk-data"
+readme = "../README.md"
+sections = ["Sources"]
+
+[sources]
+lists = ["https://raw.githubusercontent.com/public-apis/public-apis/master/README.md"]
+keywords = [
+    "united kingdom",
+    "uk government",
+    "london",
+    "police",
+    "postcode",
+    "companies house",
+    "bank of england",
+    "met office",
+    "land registry",
+    "nhs",
+    "gov.uk",
+    "data.gov.uk",
+]
+report = "public-apis-candidates.md"

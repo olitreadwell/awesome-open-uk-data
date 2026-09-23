@@ -24,6 +24,16 @@ Vercel Cron, and record every run in `scrapes` (DB mode) or
 | `UK Data Service` | initial seed source | ✅ planned |
 <!-- SEED-SOURCES -->
 
+## Candidate seeds from public-apis
+
+`reports/public-apis-candidates.md` holds UK entries from
+[public-apis/public-apis](https://github.com/public-apis/public-apis) that this
+readme does not already carry: Postcodes.io, the UK Companies House API, NHS
+Scotland open data, the UK Police data API, and the TfL API among them. Several
+already sit in the planned table above, so the report is a shortlist to work
+through rather than a queue of new work. Regenerate it with the command in
+`reports/README.md`.
+
 Projects run `pnpm run setup` to list their own initial sources here; the
 scraper framework in `src/lib/scrapers/` turns each into a `Scraper`.
 
