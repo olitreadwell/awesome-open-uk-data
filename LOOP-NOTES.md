@@ -36,5 +36,18 @@ down, and what is queued for the next run.
   reuses the committed `exportedAt` while the items are unchanged and skips
   the write, so a green check leaves the tree clean. The timestamp still moves
   when the data moves, checked both ways by editing and reverting an item.
+- CI on `7c14574`: the `Check (mirrors pnpm run check)` job passed, and the
+  full suite passed locally on the same tree (`pnpm run check`: coverage,
+  build, smoke, 19 e2e tests, internal and external link checks). The GitHub
+  e2e shards were still queued when this entry was written.
+- `Spell check (codespell)` has been red on every CI run since the repo's
+  first push (`35275400769`, `35275405521`, `35280991145`, `35823742707`).
+  Every hit is a false positive in a file this run never touched: the
+  `ot.mozmail.com` placeholder domain in the template's contact addresses,
+  and "ONS" read as "owns". Adding `ot` and `ons` to `ignore-words-list` in
+  `.codespellrc` clears it; `python3 -m codespell_lib` now exits 0.
+- Note for the next run: `pnpm dev`, which the e2e suite starts, rewrites
+  `next-env.d.ts` to point at `.next/dev/types/...`. Revert that file before
+  ending an iteration, or the wrapper reads the tree as dirty and skips.
 - Final state: 23 listings, 25 URLs checked, 0 dead. `pnpm run check:fast`
   green before the push.

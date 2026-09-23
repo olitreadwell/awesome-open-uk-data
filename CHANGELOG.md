@@ -50,3 +50,6 @@ All notable changes documented here. Format follows
 - 2026-09-23: `build:snapshot` no longer rewrites `src/data/snapshot.json`
   when the items are unchanged, so `pnpm run check` leaves the tree clean
   instead of dirtying it with a new timestamp on every run.
+- 2026-09-23: `.codespellrc` ignores the `ot.mozmail.com` placeholder domain
+  and "ONS", clearing the spell-check gate that had been red on every CI run
+  since the first push.

@@ -1,5 +1,8 @@
 [codespell]
 skip = .git,node_modules,.next,dist,coverage,playwright-report,test-results,package-lock.json,pnpm-lock.yaml,docs/contributing,.codespellrc
-ignore-words-list = organise,organised,organisation,organisations,modelling,behaviour,licence,programme,defence,optimisation,normalise,colour,afterAll
+# `ot` is the placeholder domain in the template's contact addresses
+# (<app>-contact@ot.mozmail.com); `ons` is the Office for National Statistics
+# (ons.gov.uk), which codespell reads as "owns".
+ignore-words-list = organise,organised,organisation,organisations,modelling,behaviour,licence,programme,defence,optimisation,normalise,colour,afterAll,ot,ons
 check-hidden = false
 quiet-level = 3
