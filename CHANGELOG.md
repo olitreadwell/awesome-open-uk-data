@@ -41,6 +41,9 @@ All notable changes documented here. Format follows
 
 ### Fixed
 
+- 2026-09-24: rolled every `lastVerified` forward after
+  `pnpm run check:item-urls` re-checked all 25 listing URLs (23 answered, 2
+  bot-blocked but live, 0 dead).
 - 2026-09-23: re-pointed two dead publisher links at their live pages (GOV.UK
   content API docs, National Highways open data services) and rolled every
   `lastVerified` forward after re-checking all 22 listing URLs.
