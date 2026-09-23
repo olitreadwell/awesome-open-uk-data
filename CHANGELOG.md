@@ -31,3 +31,11 @@ All notable changes documented here. Format follows
   Playwright, ESLint 9, Prettier, husky, Docker, CI.
 - Tracked follow-up: user feedback feature →
   https://github.com/olitreadwell/dataset-directory-template/issues/1
+
+### Fixed
+
+- 2026-09-23: re-pointed two dead publisher links at their live pages (GOV.UK
+  content API docs, National Highways open data services), rolled every
+  `lastVerified` forward after re-checking all 22 listing URLs, and added
+  `scripts/check-item-urls.mjs` (`pnpm run check:item-urls`) so the daily loop
+  can re-check listing URLs against the live web.

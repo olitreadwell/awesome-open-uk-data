@@ -63,3 +63,16 @@ scraper framework in `src/lib/scrapers/` turns each into a `Scraper`.
 - No paywalled, logged-in, or private data. Ever.
 - Update this table when a source changes status — it is the project's
   transparency record.
+
+## How listings are re-verified
+
+`scripts/check-item-urls.mjs` (`pnpm run check:item-urls`) fetches the
+`website` and `source.url` of every listing and exits non-zero on a dead link.
+The grow loop runs it before each batch: sources that answer get `lastVerified`
+rolled forward, and a source that fails is either re-pointed at the live page
+or marked `verified: false` with a `notes` reason explaining why. A 403 from a
+bot-protected site counts as live, because the server is up and refusing this
+client, not gone.
+
+It sits outside `pnpm run check` on purpose: the gate has to pass on an
+offline clone and in CI, so no check in that chain may need the network.

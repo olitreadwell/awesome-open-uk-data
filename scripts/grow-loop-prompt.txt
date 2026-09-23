@@ -5,8 +5,11 @@ a clean tree up to date with `origin/main`.
 
 ## Iteration contract
 
-1. Verify: run `node scripts/check-external-links.mjs`. For every failing
-   item, fix the URL or set `verified: false` with a `notes` reason. Roll
+1. Verify: run `node scripts/check-item-urls.mjs`. It fetches the website and
+   source URL of every listing and exits non-zero on a dead one. (`node
+   scripts/check-external-links.mjs` is a different, offline check: the JSX
+   target/rel rule, already inside `check:fast`.) For every failing item, fix
+   the URL or set `verified: false` with a `notes` reason. Roll
    `lastVerified` forward to today for sources that still respond.
 2. Discover: find 1-3 NEW public UK open data sources not already listed
    (federal or state official catalogues: data.gov.uk, agency

@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-17T05:55:58.663Z",
+  "exportedAt": "2026-09-23T09:42:10.247Z",
   "license": "Public data only. Opt-out respected — see /opt-out.",
   "items": [
     {
@@ -19,7 +19,7 @@
         "label": "data.gov.uk",
         "url": "https://www.data.gov.uk/"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -41,7 +41,7 @@
         "label": "ONS",
         "url": "https://api.ons.gov.uk/"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -63,7 +63,7 @@
         "label": "ONS",
         "url": "https://geoportal.statistics.gov.uk/"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -85,7 +85,7 @@
         "label": "Companies House",
         "url": "https://developer.company-information.service.gov.uk/"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -107,7 +107,7 @@
         "label": "HM Land Registry",
         "url": "https://landregistry.data.gov.uk/"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -129,7 +129,7 @@
         "label": "UK Parliament",
         "url": "https://api.parliament.uk/"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -151,7 +151,7 @@
         "label": "The National Archives",
         "url": "https://www.legislation.gov.uk/"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -171,9 +171,9 @@
       "description": "The UK government site: content API, search, and the GOV.UK Design System, publishing government information as open data.",
       "source": {
         "label": "GOV.UK",
-        "url": "https://www.gov.uk/api_docs"
+        "url": "https://content-api.publishing.service.gov.uk/"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -195,7 +195,7 @@
         "label": "TfL",
         "url": "https://api.tfl.gov.uk/"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -210,15 +210,15 @@
       "location": "England strategic road network",
       "lat": 51.5074,
       "lng": -0.1278,
-      "website": "https://www.nationalhighways.co.uk/about-us/traffic-information/our-open-data/",
+      "website": "https://opendata.nationalhighways.co.uk/",
       "categories": ["transport", "catalog"],
-      "description": "Traffic flow, average speed, and live road events for England’s strategic roads, published as open data files.",
+      "description": "National Highways open data services: geographical data about England’s strategic road network, available as downloads or through an API.",
       "source": {
         "label": "National Highways",
-        "url": "https://www.nationalhighways.co.uk/about-us/traffic-information/our-open-data/"
+        "url": "https://opendata.nationalhighways.co.uk/"
       },
-      "lastVerified": "2026-09-17",
-      "verified": false,
+      "lastVerified": "2026-09-23",
+      "verified": true,
       "active": true,
       "optOut": false,
       "calendarDates": []
@@ -239,11 +239,12 @@
         "label": "NHS England",
         "url": "https://digital.nhs.uk/data-and-information/data-tools-and-services"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
-      "calendarDates": []
+      "calendarDates": [],
+      "notes": "digital.nhs.uk answers 403 to non-browser clients; the page is live when opened in a browser."
     },
     {
       "id": "environment-agency-data",
@@ -261,7 +262,7 @@
         "label": "Environment Agency",
         "url": "https://environment.data.gov.uk/"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -283,7 +284,7 @@
         "label": "UK Police",
         "url": "https://data.police.uk/"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -305,7 +306,7 @@
         "label": "Department for Education",
         "url": "https://explore-education-statistics.service.gov.uk/"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -327,7 +328,7 @@
         "label": "Ordnance Survey",
         "url": "https://osdatahub.os.uk/"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -349,11 +350,12 @@
         "label": "NESO",
         "url": "https://neso.energy/data-portal"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
-      "calendarDates": []
+      "calendarDates": [],
+      "notes": "neso.energy answers 403 to non-browser clients; the portal is live when opened in a browser."
     },
     {
       "id": "bank-of-england-data",
@@ -371,7 +373,7 @@
         "label": "Bank of England",
         "url": "https://www.bankofengland.co.uk/statistics/research-datasets"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -393,7 +395,7 @@
         "label": "Greater London Authority",
         "url": "https://data.london.gov.uk/"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -415,7 +417,7 @@
         "label": "Met Office",
         "url": "https://www.metoffice.gov.uk/services/data/datapoint"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -437,7 +439,7 @@
         "label": "UK Data Service",
         "url": "https://ukdataservice.ac.uk/"
       },
-      "lastVerified": "2026-09-17",
+      "lastVerified": "2026-09-23",
       "verified": true,
       "active": true,
       "optOut": false,
