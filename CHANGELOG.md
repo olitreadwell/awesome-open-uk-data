@@ -36,6 +36,8 @@ All notable changes documented here. Format follows
   under the Open Government Licence with a CKAN API.
 - 2026-09-23: `datamap-wales`: the Welsh Government spatial data platform,
   with its dataset catalogue, map viewer, and catalogue API.
+- 2026-09-23: `sepa-environmental-data`: SEPA's environment dataset index,
+  with downloads and REST/WMS map services.
 
 ### Fixed
 

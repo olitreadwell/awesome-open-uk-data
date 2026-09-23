@@ -401,6 +401,26 @@ const rawItems = [
     lastVerified: '2026-09-23',
     verified: true,
   },
+  {
+    id: 'sepa-environmental-data',
+    slug: 'sepa-environmental-data',
+    name: 'SEPA Environmental Data',
+    city: 'Stirling',
+    region: 'Scotland',
+    location: 'Scotland',
+    lat: 56.1165,
+    lng: -3.9369,
+    description:
+      'Scottish Environment Protection Agency datasets: air, water, waste and flood data, published with CSV, GDB and GeoPackage downloads plus REST and WMS map services.',
+    categories: ['environment', 'geospatial', 'catalog'],
+    website: 'https://www.sepa.org.uk/environment/environmental-data/',
+    source: {
+      label: 'SEPA',
+      url: 'https://www.sepa.org.uk/environment/environmental-data/',
+    },
+    lastVerified: '2026-09-23',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */

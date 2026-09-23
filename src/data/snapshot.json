@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-23T09:44:28.976Z",
+  "exportedAt": "2026-09-23T09:45:53.623Z",
   "license": "Public data only. Opt-out respected — see /opt-out.",
   "items": [
     {
@@ -482,6 +482,28 @@
       "source": {
         "label": "Welsh Government",
         "url": "https://datamap.gov.wales/"
+      },
+      "lastVerified": "2026-09-23",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "sepa-environmental-data",
+      "name": "SEPA Environmental Data",
+      "slug": "sepa-environmental-data",
+      "city": "Stirling",
+      "region": "Scotland",
+      "location": "Scotland",
+      "lat": 56.1165,
+      "lng": -3.9369,
+      "website": "https://www.sepa.org.uk/environment/environmental-data/",
+      "categories": ["environment", "geospatial", "catalog"],
+      "description": "Scottish Environment Protection Agency datasets: air, water, waste and flood data, published with CSV, GDB and GeoPackage downloads plus REST and WMS map services.",
+      "source": {
+        "label": "SEPA",
+        "url": "https://www.sepa.org.uk/environment/environmental-data/"
       },
       "lastVerified": "2026-09-23",
       "verified": true,
