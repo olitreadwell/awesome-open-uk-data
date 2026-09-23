@@ -38,8 +38,7 @@ down, and what is queued for the next run.
   when the data moves, checked both ways by editing and reverting an item.
 - CI on `7c14574`: the `Check (mirrors pnpm run check)` job passed, and the
   full suite passed locally on the same tree (`pnpm run check`: coverage,
-  build, smoke, 19 e2e tests, internal and external link checks). The GitHub
-  e2e shards were still queued when this entry was written.
+  build, smoke, 19 e2e tests, internal and external link checks).
 - `Spell check (codespell)` has been red on every CI run since the repo's
   first push (`35275400769`, `35275405521`, `35280991145`, `35823742707`).
   Every hit is a false positive in a file this run never touched: the
@@ -51,3 +50,8 @@ down, and what is queued for the next run.
   ending an iteration, or the wrapper reads the tree as dirty and skips.
 - Final state: 23 listings, 25 URLs checked, 0 dead. `pnpm run check:fast`
   green before the push.
+- CI on `c34d620`, the last commit of this batch, is green end to end: check,
+  spell check, actionlint, yamllint, dependency audit, and both e2e shards.
+  The `7c14574` run's e2e shards show as cancelled because the next push
+  replaced them through the workflow's concurrency group; that is not a
+  failure, and the same tests passed locally on that tree.
