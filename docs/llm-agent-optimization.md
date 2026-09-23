@@ -28,11 +28,11 @@ and every pointer resolves.
 - `AGENTS.md` and `CLAUDE.md`: how to work here, read first.
 - `docs/contributing/`: the shared workflow standard.
 - `docs/style-guide.md`: the writing rules.
-- `pnpm run check`: the single proof a change is good — the same command CI
+- `pnpm run check`: the single proof a change is good: the same command CI
   runs, so an agent never has to ask "what else do I verify?".
 
 ## Why it matters
 
 Every tool (Claude Code, Codex, Cursor, Gemini CLI, Windsurf) reads text the
-same way. A repo that reads well for one reads well for all — and for the
+same way. A repo that reads well for one reads well for all: and for the
 humans reviewing the same files.

@@ -1,7 +1,7 @@
 # Passwordless auth
 
 The template ships **Better Auth** (`better-auth`) with email one-time-code
-(OTP) sign-in — no passwords, no external service. It is the modern
+(OTP) sign-in: no passwords, no external service. It is the modern
 industry-standard passwordless library for TypeScript/Next.js (the same
 maintainers behind the archived Lucia recommend it).
 
@@ -9,7 +9,7 @@ maintainers behind the archived Lucia recommend it).
 
 - `better-auth` server instance in `src/server/auth.ts`
 - Email OTP plugin (5-minute codes, per-IP rate limiting built in)
-- Persistence: SQLite via Drizzle (`src/server/db.ts`) — the file
+- Persistence: SQLite via Drizzle (`src/server/db.ts`): the file
   `data/auth.db` and its tables are created on first boot; no migration
   step. Swap the drizzle adapter for Postgres when you outgrow SQLite.
 - HTTP: `src/app/api/auth/[...all]/route.ts`; browser client in
@@ -36,7 +36,7 @@ scaffold still works end-to-end.
 - Send code: `POST /api/auth/email-otp/send-verification-otp`
   (`authClient.emailOtp.sendVerificationOtp({ email, type: 'sign-in' })`)
 - Verify: `POST /api/auth/email-otp/verify-email`
-  (`authClient.emailOtp.verifyEmail({ email, otp })`) — sets the session
+  (`authClient.emailOtp.verifyEmail({ email, otp })`): sets the session
   cookie and creates the user on first sign-in
 - All endpoints are rate-limited per IP (5 requests/min by default)
 
@@ -52,5 +52,5 @@ scaffold still works end-to-end.
 ## Adding providers later
 
 Better Auth supports social logins (Google, GitHub, …), passkeys
-(WebAuthn), and magic links as plugins — add them to
+(WebAuthn), and magic links as plugins: add them to
 `src/server/auth.ts` without changing the client API.

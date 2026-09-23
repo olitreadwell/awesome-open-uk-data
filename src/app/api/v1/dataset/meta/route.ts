@@ -5,7 +5,7 @@ import { toErrorResponse } from '@/lib/errors';
 
 export const dynamic = 'force-dynamic';
 
-/** GET /api/v1/dataset/meta — version, counts, sources and license. */
+/** GET /api/v1/dataset/meta: version, counts, sources and license. */
 export async function GET(): Promise<Response> {
   try {
     const dataset = await buildExportFromSource();

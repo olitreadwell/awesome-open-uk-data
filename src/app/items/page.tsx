@@ -28,7 +28,7 @@ export default async function ItemsPage({
       <h1 className="text-3xl font-bold">
         All {config.thingPlural}
         {params.city ? ` in ${params.city}` : ''}
-        {params.category ? ` — ${params.category}` : ''}
+        {params.category ? `: ${params.category}` : ''}
       </h1>
       <p className="text-neutral-600 dark:text-neutral-300">
         {items.length} {items.length === 1 ? 'listing' : 'listings'} shown.

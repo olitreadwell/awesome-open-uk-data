@@ -16,7 +16,7 @@ pnpm run setup
 
 ## What you do next
 
-1. `pnpm run check` — prove the baseline is green before touching anything.
+1. `pnpm run check`: prove the baseline is green before touching anything.
 2. First commit: `git add -A && git commit -m "feat: init <app>"`.
 3. Push and open the first PR into your `development` branch:
    `gh repo create <owner>/<app> --private --source . --push`.

@@ -1,4 +1,4 @@
-# 03 — Code quality
+# 03: Code quality
 
 ## Gates
 

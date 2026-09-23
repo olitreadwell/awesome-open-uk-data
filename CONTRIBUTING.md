@@ -6,9 +6,9 @@ agents, and it applies to every change in this repository.
 
 Start here:
 
-- `docs/contributing/00-index.md` — reading order and how to use the guide
-- `docs/contributing/01-principles.md` — the non-negotiable rules
-- `docs/contributing/02-workflow.md` — how a contribution should flow
+- `docs/contributing/00-index.md`: reading order and how to use the guide
+- `docs/contributing/01-principles.md`: the non-negotiable rules
+- `docs/contributing/02-workflow.md`: how a contribution should flow
 
 Issue and pull request templates live in `docs/contributing/templates/`.
 

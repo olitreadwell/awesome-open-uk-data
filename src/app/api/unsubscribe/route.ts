@@ -5,7 +5,7 @@ import { handleUnsubscribe } from '@/lib/subscription';
 export const dynamic = 'force-dynamic';
 
 /**
- * POST /api/unsubscribe — remove an email from the optional list.
+ * POST /api/unsubscribe: remove an email from the optional list.
  */
 export async function POST(request: Request): Promise<Response> {
   try {

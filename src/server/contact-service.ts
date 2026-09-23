@@ -65,7 +65,7 @@ export async function deliverContactMessage(
       to: config.to,
       replyTo: message.email || undefined,
       subject: `[${message.subject}] from ${message.name}`,
-      text: `${message.message}\n\n— ${message.name} <${message.email || 'no email'}>`,
+      text: `${message.message}\n\n:  ${message.name} <${message.email || 'no email'}>`,
     });
     return { delivered: 'smtp' };
   }

@@ -1,5 +1,5 @@
 /**
- * Kebab-case a display name into a stable slug: "St Vinnies — Kingston"
+ * Kebab-case a display name into a stable slug: "St Vinnies: Kingston"
  * becomes "st-vinnies-kingston". Non-ASCII letters are folded to ASCII.
  *
  * @param name - Display name to slugify

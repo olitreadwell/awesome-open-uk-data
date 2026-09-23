@@ -1,6 +1,6 @@
 /**
  * Client-safe proof-of-work solver using the Web Crypto API.
- * This module must not import node:crypto — it ships in browser bundles.
+ * This module must not import node:crypto: it ships in browser bundles.
  */
 
 /**

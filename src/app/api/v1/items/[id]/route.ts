@@ -6,7 +6,7 @@ import { itemPathSchema } from '@/server/dataset-schemas';
 export const dynamic = 'force-dynamic';
 
 /**
- * GET /api/v1/items/{id} — one public listing by slug, 404 when unknown.
+ * GET /api/v1/items/{id}: one public listing by slug, 404 when unknown.
  */
 export async function GET(
   request: Request,

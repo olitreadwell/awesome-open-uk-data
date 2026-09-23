@@ -5,7 +5,7 @@ import { runAllScrapers } from '@/lib/scrapers/run-all';
 export const maxDuration = 300;
 
 /**
- * GET/POST /api/cron/refresh — daily refresh, fired by Vercel Cron at 2am
+ * GET/POST /api/cron/refresh: daily refresh, fired by Vercel Cron at 2am
  * NZT. Requires `Authorization: Bearer $CRON_SECRET` when CRON_SECRET is
  * set. Snapshot mode reports skipped (the committed snapshot updates via
  * repo runs instead); DB mode runs scrapers, upserts and logs the run.

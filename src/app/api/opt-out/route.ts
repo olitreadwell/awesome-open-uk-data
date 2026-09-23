@@ -7,7 +7,7 @@ import { optOutRequestSchema } from '@/server/dataset-schemas';
 export const dynamic = 'force-dynamic';
 
 /**
- * POST /api/opt-out — remove a listing from the directory. DB mode
+ * POST /api/opt-out: remove a listing from the directory. DB mode
  * persists immediately; snapshot mode records the request for a PR.
  */
 export async function POST(request: Request): Promise<Response> {

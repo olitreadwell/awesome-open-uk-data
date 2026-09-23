@@ -5,7 +5,7 @@ import { getSiteConfig } from '@/lib/site-config';
 export const dynamic = 'force-dynamic';
 
 /**
- * GET /feed.xml — RSS feed of new and updated listings. Consumers include
+ * GET /feed.xml: RSS feed of new and updated listings. Consumers include
  * aggregators and the community review loop.
  */
 export async function GET(): Promise<Response> {
@@ -14,7 +14,7 @@ export async function GET(): Promise<Response> {
   const dataset = await buildExportFromSource();
   const feed = new Feed({
     title: config.name,
-    description: `Open directory of ${config.thingPlural} in ${config.city} — ${config.region}.`,
+    description: `Open directory of ${config.thingPlural} in ${config.city}: ${config.region}.`,
     id: `${baseUrl}/`,
     link: `${baseUrl}/`,
     feedLinks: { rss: `${baseUrl}/feed.xml` },

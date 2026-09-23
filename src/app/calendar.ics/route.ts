@@ -24,7 +24,7 @@ function toIcsDate(date: string): string {
 }
 
 /**
- * GET /calendar.ics — all-day VEVENTs for every listing with calendar
+ * GET /calendar.ics: all-day VEVENTs for every listing with calendar
  * dates, for calendar apps and add-to-calendar links.
  */
 export async function GET(): Promise<Response> {
@@ -37,7 +37,7 @@ export async function GET(): Promise<Response> {
         `UID:${item.id}@${config.name.toLowerCase().replace(/\s+/g, '-')}`,
         `DTSTART;VALUE=DATE:${toIcsDate(d.start)}`,
         ...(d.end ? [`DTEND;VALUE=DATE:${toIcsDate(d.end)}`] : []),
-        `SUMMARY:${escapeIcs(d.label ? `${item.name} — ${d.label}` : item.name)}`,
+        `SUMMARY:${escapeIcs(d.label ? `${item.name}: ${d.label}` : item.name)}`,
         ...(item.location ? [`LOCATION:${escapeIcs(`${item.location}, ${item.city}`)}`] : []),
         ...(item.website ? [`URL:${item.website}`] : []),
         'END:VEVENT',
@@ -48,7 +48,7 @@ export async function GET(): Promise<Response> {
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
     'PRODID:-//OpenItemsDirectory//calendar.ics//EN',
-    `X-WR-CALNAME:${config.name} — dates`,
+    `X-WR-CALNAME:${config.name}: dates`,
     'REFRESH-INTERVAL;VALUE=DURATION:P1D',
     ...events,
     'END:VCALENDAR',

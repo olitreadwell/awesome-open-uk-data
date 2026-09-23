@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Reusable template: open directory of {THING} in {PLACE} \u2014 dataset, scrapers, OpenAPI API, website, self-improving loops.",
+  "description": "Reusable template: open directory of {THING} in {PLACE} :  dataset, scrapers, OpenAPI API, website, self-improving loops.",
   "engines": {
     "node": ">=22.22.2"
   },

@@ -182,7 +182,7 @@ export default async function ItemDetailPage({
           Help keep this listing right
         </h2>
         <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
-          Something wrong? Know a better detail? Been here recently? File a prefilled issue — the
+          Something wrong? Know a better detail? Been here recently? File a prefilled issue: the
           dataset gate (zod + tests) reviews every change.
         </p>
         {communityLinks ? (
@@ -213,7 +213,7 @@ export default async function ItemDetailPage({
             href={`/opt-out?id=${encodeURIComponent(item.id)}`}
             className="text-neutral-500 underline dark:text-neutral-400"
           >
-            This is my listing — request removal
+            This is my listing: request removal
           </a>
         </p>
       </section>

@@ -10,7 +10,7 @@ const config = getSiteConfig();
 export const metadata: Metadata = {
   title: {
     default: config.name,
-    template: `%s — ${config.name}`,
+    template: `%s: ${config.name}`,
   },
   description: `Curated directory of public ${config.thingPlural} in ${config.region}. Public data only; opt-out respected.`,
 };

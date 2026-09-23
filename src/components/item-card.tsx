@@ -16,7 +16,7 @@ export function ItemCard({ item }: { item: Item }): React.ReactElement {
         {stale ? (
           <span
             className="shrink-0 rounded-full bg-amber-100 px-2 py-0.5 text-xs text-amber-800 dark:bg-amber-900/50 dark:text-amber-200"
-            title="Last verified a while ago — see the listing page to verify"
+            title="Last verified a while ago: see the listing page to verify"
           >
             needs check
           </span>

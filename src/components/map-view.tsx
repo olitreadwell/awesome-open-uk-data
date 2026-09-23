@@ -41,7 +41,7 @@ export function MapView({ items, region }: { items: Item[]; region: string }): R
         strokeOpacity="0.2"
       />
       <text x="16" y="30" className="fill-neutral-500 text-sm" aria-hidden="true">
-        {region} — approximate positions
+        {region}: approximate positions
       </text>
       {withCoords.map((item) => {
         const { x, y } = project(item.lat ?? 0, item.lng ?? 0);

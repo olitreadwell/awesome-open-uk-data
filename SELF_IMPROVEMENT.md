@@ -6,12 +6,12 @@ stronger in DB mode (persistent tables).
 
 ## Signals we collect
 
-- `search_events` — every search query + result count (`/api/search`,
+- `search_events`: every search query + result count (`/api/search`,
   `GET /api/v1/items?q=`)
-- `item_views` — every listing open (POST `/api/items/{id}/view`)
-- `scrapes` — every scraper run: source, status, items found/new, error
-- `opt-outs` — removal requests (instant in DB mode, PR in snapshot mode)
-- Community issues — add/fix/review prefilled from detail pages
+- `item_views`: every listing open (POST `/api/items/{id}/view`)
+- `scrapes`: every scraper run: source, status, items found/new, error
+- `opt-outs`: removal requests (instant in DB mode, PR in snapshot mode)
+- Community issues: add/fix/review prefilled from detail pages
 
 DB mode stores these in the `analytics`, `scrapes` and `candidates` tables
 (`scripts/migrate.mjs`); snapshot mode logs `analytics:*` lines and
@@ -28,7 +28,7 @@ DB mode stores these in the `analytics`, `scrapes` and `candidates` tables
    upserts items + logs the run).
 
 Daily (Vercel Cron `/api/cron/refresh`, 2am NZT, `CRON_SECRET`-guarded):
-DB mode scrapes + upserts; snapshot mode reports `skipped` — snapshot
+DB mode scrapes + upserts; snapshot mode reports `skipped`: snapshot
 deploys update by running `pnpm scrape:apply` and committing.
 
 ## Data hygiene (weekly)

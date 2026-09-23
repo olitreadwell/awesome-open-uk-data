@@ -1,4 +1,4 @@
-# 05 — Git workflow
+# 05: Git workflow
 
 ## Branches
 

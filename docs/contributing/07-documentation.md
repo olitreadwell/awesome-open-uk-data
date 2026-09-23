@@ -1,4 +1,4 @@
-# 07 — Documentation
+# 07: Documentation
 
 ## When docs change
 

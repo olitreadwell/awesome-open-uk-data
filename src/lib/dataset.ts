@@ -3,7 +3,7 @@ import type { CategoryCount, CityCount, DatasetExport, DatasetMeta, Item } from 
 import { getSiteConfig } from '@/lib/site-config';
 
 /** License line attached to every dataset export. */
-export const DATASET_LICENSE = 'Public data only. Opt-out respected — see /opt-out.';
+export const DATASET_LICENSE = 'Public data only. Opt-out respected: see /opt-out.';
 
 /**
  * Filter listings to the public subset: no opt-outs, only active entries,

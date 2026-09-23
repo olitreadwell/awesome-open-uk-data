@@ -40,7 +40,7 @@ export function getPool(): Pool | null {
 /**
  * Read and validate the committed snapshot file, cached for a short TTL so
  * request-time reads stay cheap. Throws when the file is missing or fails
- * zod validation — a bad dataset must fail loudly, not serve silently.
+ * zod validation: a bad dataset must fail loudly, not serve silently.
  *
  * @returns The validated listing set from the snapshot
  */
@@ -50,7 +50,7 @@ export function readSnapshotItems(): Item[] {
     return snapshotCache.items;
   }
   if (!existsSync(SNAPSHOT_PATH)) {
-    throw new Error(`snapshot file not found: ${SNAPSHOT_PATH} — run scripts/build-snapshot.mjs`);
+    throw new Error(`snapshot file not found: ${SNAPSHOT_PATH}: run scripts/build-snapshot.mjs`);
   }
   const raw = JSON.parse(readFileSync(SNAPSHOT_PATH, 'utf8')) as { items: unknown };
   const items = itemListSchema.parse(raw.items);

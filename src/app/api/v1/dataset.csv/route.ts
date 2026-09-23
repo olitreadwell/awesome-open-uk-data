@@ -15,7 +15,7 @@ function csvCell(value: unknown): string {
 }
 
 /**
- * GET /api/v1/dataset.csv — the dataset export as CSV, sharing the JSON
+ * GET /api/v1/dataset.csv: the dataset export as CSV, sharing the JSON
  * dataset's content-hash ETag so the two representations stay in sync.
  */
 export async function GET(request: Request): Promise<Response> {

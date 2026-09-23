@@ -24,7 +24,7 @@ export default function ContactPage() {
     if (!result.ok) {
       setStatus(
         result.error === 'rate_limited'
-          ? 'Too many messages — try again in an hour.'
+          ? 'Too many messages: try again in an hour.'
           : 'Submission failed. Please try again.'
       );
       return;
@@ -34,14 +34,14 @@ export default function ContactPage() {
       setStatus('Opening your email client…');
       return;
     }
-    setStatus('Thanks — your message is on its way.');
+    setStatus('Thanks: your message is on its way.');
   }
 
   return (
     <main className="mx-auto max-w-xl px-6 py-12">
       <h1 className="text-2xl font-semibold">Contact</h1>
       <p className="mt-2 text-neutral-600">
-        Questions, corrections, or anything else — send a message.
+        Questions, corrections, or anything else: send a message.
       </p>
       <form onSubmit={onSubmit} className="mt-6 flex flex-col gap-4">
         <Label>

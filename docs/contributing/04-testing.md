@@ -1,4 +1,4 @@
-# 04 — Testing
+# 04: Testing
 
 Every change ships with evidence that it works. The evidence is a test, a
 reproducible manual check, or a run you can point at. Never claim "it works"

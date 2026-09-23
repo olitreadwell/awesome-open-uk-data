@@ -1,4 +1,4 @@
-# 06 — Security (what must never ship)
+# 06: Security (what must never ship)
 
 ## Secrets
 

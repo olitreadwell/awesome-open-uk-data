@@ -9,7 +9,7 @@ Exact commands come from the repository's own config (`Dockerfile`,
   inventing a new one.
 - **Layers and size**: keep the image lean per the repo's convention; do not
   ship build tooling or secrets into a runtime image.
-- **Secrets**: build args and env vars are visible in history — no secrets in
+- **Secrets**: build args and env vars are visible in history: no secrets in
   the Dockerfile, `.env` files, or Compose.
 - **Health**: match the repo's healthcheck; the container should fail fast on
   bad config.

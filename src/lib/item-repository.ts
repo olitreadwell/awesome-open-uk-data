@@ -143,7 +143,7 @@ export async function recordSearch(query: string, resultCount: number): Promise<
  */
 export async function setItemOptOut(id: string): Promise<boolean> {
   if (!hasDatabase()) {
-    console.log(`opt-out requested for ${id} (snapshot mode — needs a PR)`);
+    console.log(`opt-out requested for ${id} (snapshot mode: needs a PR)`);
     return Boolean(
       readSnapshotItems().find((item) => item.id === id && !item.optOut && item.active)
     );

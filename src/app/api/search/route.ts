@@ -6,7 +6,7 @@ import { searchQuerySchema } from '@/server/dataset-schemas';
 export const dynamic = 'force-dynamic';
 
 /**
- * GET /api/search?q=... — fuzzy search across the public dataset. The
+ * GET /api/search?q=...: fuzzy search across the public dataset. The
  * website search page and the API share this endpoint.
  */
 export async function GET(request: Request): Promise<Response> {

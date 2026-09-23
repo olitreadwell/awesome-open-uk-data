@@ -34,7 +34,7 @@ export default function LoginPage() {
     }
     setEmail(address);
     setStep('code');
-    setStatus('Code sent — check your inbox (or server logs in dev).');
+    setStatus('Code sent: check your inbox (or server logs in dev).');
   }
 
   async function onVerifyCode(event: FormEvent<HTMLFormElement>) {
@@ -51,7 +51,7 @@ export default function LoginPage() {
   return (
     <main className="mx-auto max-w-md px-6 py-12">
       <h1 className="text-2xl font-semibold">Sign in</h1>
-      <p className="mt-2 text-neutral-600">No password needed — we email you a one-time code.</p>
+      <p className="mt-2 text-neutral-600">No password needed: we email you a one-time code.</p>
       {step === 'email' ? (
         <form onSubmit={onSendCode} className="mt-6 flex flex-col gap-4">
           <Label>

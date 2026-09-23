@@ -1,4 +1,4 @@
-# Template build — orchestration board
+# Template build: orchestration board
 
 Status: **complete** (2026-08-25).
 

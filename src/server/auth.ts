@@ -20,7 +20,7 @@ function resolveSecret(): string {
   if (process.env.NODE_ENV === 'production') {
     throw new Error('AUTH_SECRET must be set in production');
   }
-  console.warn('[auth] AUTH_SECRET unset — using an ephemeral dev secret.');
+  console.warn('[auth] AUTH_SECRET unset: using an ephemeral dev secret.');
   return randomBytes(32).toString('base64');
 }
 

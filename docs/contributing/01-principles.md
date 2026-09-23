@@ -1,4 +1,4 @@
-# 01 — Principles (non-negotiable)
+# 01: Principles (non-negotiable)
 
 These hold for every change, no exceptions.
 

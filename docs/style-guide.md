@@ -7,7 +7,7 @@ hover, a grep, or an agent search answers a question without opening a file.
 
 - Use Radix UI primitives for interaction components (label, accordion,
   select, dialog, switch). They are wrapped in `src/components/ui/` with
-  Tailwind styling — add to that folder instead of hand-rolling.
+  Tailwind styling: add to that folder instead of hand-rolling.
 - Native inputs and textareas live in `src/components/ui/input.tsx` and
   `textarea.tsx` so all forms share one style.
 - Keep pages thin: forms render state, submission logic stays in `src/lib`

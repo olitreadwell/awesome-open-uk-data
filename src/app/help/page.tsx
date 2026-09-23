@@ -12,7 +12,7 @@ const faq = [
   {
     question: 'How do I report a bug?',
     answer:
-      'Use the feedback form — it creates a labelled GitHub issue with your browser, page, and repro steps included. No GitHub account needed.',
+      'Use the feedback form: it creates a labelled GitHub issue with your browser, page, and repro steps included. No GitHub account needed.',
   },
   {
     question: 'How do I request a feature?',
@@ -31,7 +31,7 @@ const faq = [
   {
     question: 'What information gets collected?',
     answer:
-      'The form fields you enter, your page URL, browser user agent, and the time. Issues are public when filed on a public repo — do not include secrets.',
+      'The form fields you enter, your page URL, browser user agent, and the time. Issues are public when filed on a public repo. Do not include secrets.',
   },
   {
     question: 'What if issue creation is disabled?',

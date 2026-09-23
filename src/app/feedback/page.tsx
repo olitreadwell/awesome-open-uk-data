@@ -32,14 +32,14 @@ export default function FeedbackPage() {
     if (!result.ok) {
       setStatus(
         result.error === 'rate_limited'
-          ? 'Too many submissions — try again in an hour.'
+          ? 'Too many submissions: try again in an hour.'
           : 'Submission failed. Please try again.'
       );
       return;
     }
     if (result.data?.disabled) {
       setStatus(
-        'Issue creation is not enabled on this instance — please email instead (see /contact).'
+        'Issue creation is not enabled on this instance: please email instead (see /contact).'
       );
       return;
     }
@@ -50,7 +50,7 @@ export default function FeedbackPage() {
     <main className="mx-auto max-w-xl px-6 py-12">
       <h1 className="text-2xl font-semibold">Report feedback</h1>
       <p className="mt-2 text-neutral-600">
-        Bug? Idea? File it with as much detail as possible — it becomes a labelled GitHub issue.
+        Bug? Idea? File it with as much detail as possible: it becomes a labelled GitHub issue.
       </p>
       <form onSubmit={onSubmit} className="mt-6 flex flex-col gap-4">
         <Label>

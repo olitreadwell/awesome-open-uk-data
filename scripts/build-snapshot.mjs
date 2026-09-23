@@ -20,7 +20,7 @@ const out = execFileSync(
     `
     import { seedItems } from ${JSON.stringify(new URL('../src/data/items.ts', import.meta.url).href)};
     process.stdout.write(JSON.stringify({
-      license: "Public data only. Opt-out respected — see /opt-out.",
+      license: "Public data only. Opt-out respected: see /opt-out.",
       items: seedItems.map((i) => ({
         ...i,
         categories: i.categories ?? [],

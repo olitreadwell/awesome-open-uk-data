@@ -1,4 +1,4 @@
-# TEMPLATE_USAGE — new project in 10 minutes
+# TEMPLATE_USAGE: new project in 10 minutes
 
 This template turns "open directory of {THING} in {PLACE}" into a working,
 deployed product fast: dataset + scrapers + OpenAPI API + website + feeds +
@@ -27,7 +27,7 @@ Answers asked:
 - Things (plural), e.g. `op shops`
 - Start city, e.g. `Wellington`
 - Region, e.g. `Wellington region`
-- Seed sources (comma-separated names/URLs — written into `DATA_SOURCES.md`)
+- Seed sources (comma-separated names/URLs: written into `DATA_SOURCES.md`)
 - Contact email
 - Public site URL (empty in dev; set `NEXT_PUBLIC_SITE_URL` in Vercel later)
 - GitHub repo for community links (enables add/fix/review issue links)
@@ -46,7 +46,7 @@ node scripts/setup.mjs --app-name op-shop-directory \
   --gh-repo "oli/op-shop-directory" --contact-email "help@example.com"
 ```
 
-## 3. Verify (3-5 min — first run downloads + builds)
+## 3. Verify (3-5 min: first run downloads + builds)
 
 ```bash
 pnpm run check   # format, lint, typecheck, coverage, setup tests, build,
@@ -123,4 +123,4 @@ node scripts/sync-from-template.mjs --apply    # copy + commit template files
 ```
 
 Policies live in `template-manifest.json` (template repo). App code and
-dataset files are `copyIfAbsent` — your local versions always win.
+dataset files are `copyIfAbsent`: your local versions always win.

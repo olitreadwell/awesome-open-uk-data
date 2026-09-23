@@ -1,4 +1,4 @@
-# 08 — Verification (prove the change works)
+# 08: Verification (prove the change works)
 
 ## The proof
 

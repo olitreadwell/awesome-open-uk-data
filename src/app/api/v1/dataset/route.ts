@@ -5,7 +5,7 @@ import { toErrorResponse } from '@/lib/errors';
 export const dynamic = 'force-dynamic';
 
 /**
- * GET /api/v1/dataset — full dataset export as JSON with an ETag derived
+ * GET /api/v1/dataset: full dataset export as JSON with an ETag derived
  * from the content hash, so clients cache until the dataset actually
  * changes (304 round-trip tested by the contract test).
  */

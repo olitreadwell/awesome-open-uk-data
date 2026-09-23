@@ -10,7 +10,7 @@
 - GitHub Pages (alternative): static export from the committed snapshot.
   `NEXT_OUTPUT_MODE=export pnpm build` (workflow:
   `.github/workflows/github-pages.yml`). API/feed/cron routes are
-  serverless-only and do not exist in the export — refresh the site by
+  serverless-only and do not exist in the export: refresh the site by
   running `pnpm run scrape:apply` and committing.
 - Env: every runtime setting comes from env vars (`.env.example` documents
   them). Never commit real keys.

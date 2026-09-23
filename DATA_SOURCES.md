@@ -64,7 +64,7 @@ scraper framework in `src/lib/scrapers/` turns each into a `Scraper`.
 - 500ms+ delay between requests per source
 - 15s request timeout; failures are recorded, never fatal
 - No paywalled, logged-in, or private data. Ever.
-- Update this table when a source changes status — it is the project's
+- Update this table when a source changes status: it is the project's
   transparency record.
 
 ## How listings are re-verified

@@ -6,7 +6,7 @@ import { itemPathSchema } from '@/server/dataset-schemas';
 export const dynamic = 'force-dynamic';
 
 /**
- * POST /api/items/{id}/view — fire-and-forget view counter used by the
+ * POST /api/items/{id}/view: fire-and-forget view counter used by the
  * detail page. 404 when the item is unknown so bad trackers surface.
  */
 export async function POST(

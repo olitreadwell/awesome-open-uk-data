@@ -8,7 +8,7 @@ export function SiteFooter(): React.ReactElement {
     <footer className="border-t border-neutral-200 py-8 text-sm text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4">
         <p className="mr-auto">
-          {config.name} — open directory of {config.thingPlural} in {config.city}.
+          {config.name}: open directory of {config.thingPlural} in {config.city}.
         </p>
         <Link href="/feed.xml" className="hover:underline">
           RSS

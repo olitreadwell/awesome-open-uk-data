@@ -1,4 +1,4 @@
-# 00 — Index and how to use this guide
+# 00: Index and how to use this guide
 
 This directory is the contribution standard for this repository. Every
 contributor, human or agent, follows it. It is deliberately generic: it says
@@ -8,15 +8,15 @@ nothing about any specific programming language, framework, or AI tool.
 
 For a first change, read all of these before writing code:
 
-- `01-principles.md` — the non-negotiable rules (start here)
-- `02-workflow.md` — how a contribution should flow
-- `03-code-quality.md` — what the code must look like
-- `04-testing.md` — how changes get tested
-- `05-git-workflow.md` — branches, commits, pull requests
-- `06-security.md` — what must never be shipped
-- `07-documentation.md` — when docs change
-- `08-verification.md` — how to prove the change works
-- `09-tooling.md` — environment, dependencies, CI
+- `01-principles.md`: the non-negotiable rules (start here)
+- `02-workflow.md`: how a contribution should flow
+- `03-code-quality.md`: what the code must look like
+- `04-testing.md`: how changes get tested
+- `05-git-workflow.md`: branches, commits, pull requests
+- `06-security.md`: what must never be shipped
+- `07-documentation.md`: when docs change
+- `08-verification.md`: how to prove the change works
+- `09-tooling.md`: environment, dependencies, CI
 
 For an urgent fix or a one-line change, `01-principles.md` plus the relevant
 section is enough, but read the index first so nothing is a surprise.

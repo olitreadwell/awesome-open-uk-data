@@ -1,4 +1,4 @@
-# 02 — Workflow
+# 02: Workflow
 
 The same loop applies to humans and agents. Follow it in order; skipping steps
 is where mistakes happen.

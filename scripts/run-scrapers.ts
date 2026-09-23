@@ -58,7 +58,7 @@ async function main(): Promise<void> {
   for (const result of results) {
     const status = result.status === 'ok' ? 'ok  ' : 'FAIL';
     console.log(
-      `${status} ${result.source}: ${result.itemsNew} new / ${result.itemsFound} found${result.error ? ` — ${result.error}` : ''}`
+      `${status} ${result.source}: ${result.itemsNew} new / ${result.itemsFound} found${result.error ? `: ${result.error}` : ''}`
     );
   }
 }

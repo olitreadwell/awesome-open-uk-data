@@ -65,5 +65,5 @@ export async function sendAuthEmail(
     });
     return;
   }
-  console.warn(`[auth-email] no SMTP configured (dev) — ${email.subject}: ${email.body}`);
+  console.warn(`[auth-email] no SMTP configured (dev): ${email.subject}: ${email.body}`);
 }

@@ -12,33 +12,33 @@ Every listing is a public open data source with a verified link. `lastVerified` 
 
 ## What you get
 
-- **Dataset** — zod-validated `items` (id/slug, city/region, location,
+- **Dataset**: zod-validated `items` (id/slug, city/region, location,
   lat/lng, contact, website, socials, categories, description, source,
   `lastVerified`, verified, active, opt-out) with tests that fail on bad
   data. Commit `src/data/items.ts`, regenerate the snapshot with
   `pnpm run build:snapshot`, or scrape.
-- **API** — `/api/v1/items`, `/api/v1/items/{id}`, `/api/v1/cities`,
+- **API**: `/api/v1/items`, `/api/v1/items/{id}`, `/api/v1/cities`,
   `/api/v1/categories`, `/api/v1/dataset` (JSON + `.csv`, ETag +
   content-hash version), `/api/v1/dataset/meta`, `/api/search`,
   `/api/items/{id}/view`, `/api/opt-out`, `/api/cron/refresh`, plus the
   base `/health`, contact and feedback endpoints. OpenAPI 3.1 at
   `/api/openapi.json`, Swagger UI at `/docs`, contract-tested against a
   live server in `pnpm run smoke`.
-- **Website** — home + browse (`/items`, `/cities/...`, `/categories/...`),
+- **Website**: home + browse (`/items`, `/cities/...`, `/categories/...`),
   fuzzy search (Fuse.js), item detail with community add/fix/review issue
   links, interactive map, opt-out page, dark mode.
-- **Feeds** — `/feed.xml` RSS, `/calendar.ics` iCal, dynamic
+- **Feeds**: `/feed.xml` RSS, `/calendar.ics` iCal, dynamic
   `/sitemap.xml`, `/robots.txt`.
-- **Scrapers** — Node + cheerio-ready framework with robots.txt checks,
+- **Scrapers**: Node + cheerio-ready framework with robots.txt checks,
   rate limiting, exponential backoff + jitter, per-run `scrapes` logging
   and the candidate discovery → verification → promotion loop. Ships an
   offline example scraper; add your real sources in `src/lib/scrapers/`.
-- **Snapshot mode by default** — no `DATABASE_URL`? The site serves the
+- **Snapshot mode by default**: no `DATABASE_URL`? The site serves the
   committed `src/data/snapshot.json`. Set `DATABASE_URL` and `pnpm db:setup`
   to switch to Postgres (`items`, `scrapes`, `candidates`, `analytics`).
-- **Daily refresh** — Vercel Cron at 2am NZT (`vercel.json`),
+- **Daily refresh**: Vercel Cron at 2am NZT (`vercel.json`),
   `CRON_SECRET`-protected.
-- **Community loop** — opt-out, prefilled add/fix/review issues from every
+- **Community loop**: opt-out, prefilled add/fix/review issues from every
   detail page, zod + tests as the PR gate, optional env-gated email
   subscribe module. Ethics: public data only, polite scraping.
 
@@ -89,7 +89,7 @@ pnpm run dev            # http://localhost:3000
 
 ## Docs
 
-- [Template usage — new project in 10 min](TEMPLATE_USAGE.md)
+- [Template usage: new project in 10 min](TEMPLATE_USAGE.md)
 - [Data sources & status](DATA_SOURCES.md)
 - [Self-improvement loop](SELF_IMPROVEMENT.md)
 - [Onboarding](docs/onboarding.md) · [Deployment](docs/deploy.md) ·
