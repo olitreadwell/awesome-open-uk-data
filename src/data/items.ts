@@ -421,6 +421,26 @@ const rawItems = [
     lastVerified: '2026-09-24',
     verified: true,
   },
+  {
+    id: 'food-hygiene-rating-scheme-api',
+    slug: 'food-hygiene-rating-scheme-api',
+    name: 'Food Hygiene Rating Scheme API',
+    city: 'York',
+    region: 'England',
+    location: 'England, Scotland, Wales and Northern Ireland',
+    lat: 53.9604,
+    lng: -1.075,
+    description:
+      'Food Standards Agency food hygiene ratings as a free JSON API: search establishment records and look up local authority details for England, Scotland, Wales and Northern Ireland. No key or sign-up, but every call must send an x-api-version header.',
+    categories: ['food', 'health', 'api'],
+    website: 'https://ratings.food.gov.uk/',
+    source: {
+      label: 'Food Standards Agency',
+      url: 'https://api.ratings.food.gov.uk/help',
+    },
+    lastVerified: '2026-09-24',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */

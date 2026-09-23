@@ -25,6 +25,7 @@ Vercel Cron, and record every run in `scrapes` (DB mode) or
 | `Public Health Scotland` (Scottish Health and Social Care Open Data) | initial seed source | ✅ planned |
 | `Welsh Government` (DataMapWales) | initial seed source | ✅ planned |
 | `SEPA` (environmental data publication) | initial seed source | ✅ planned |
+| `Food Standards Agency` (Food Hygiene Rating Scheme API) | initial seed source | ✅ planned |
 <!-- SEED-SOURCES -->
 
 ## Candidate seeds from public-apis

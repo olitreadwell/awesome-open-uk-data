@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-23T17:46:17.713Z",
+  "exportedAt": "2026-09-23T17:47:07.661Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -504,6 +504,28 @@
       "source": {
         "label": "SEPA",
         "url": "https://www.sepa.org.uk/environment/environmental-data/"
+      },
+      "lastVerified": "2026-09-24",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "food-hygiene-rating-scheme-api",
+      "name": "Food Hygiene Rating Scheme API",
+      "slug": "food-hygiene-rating-scheme-api",
+      "city": "York",
+      "region": "England",
+      "location": "England, Scotland, Wales and Northern Ireland",
+      "lat": 53.9604,
+      "lng": -1.075,
+      "website": "https://ratings.food.gov.uk/",
+      "categories": ["food", "health", "api"],
+      "description": "Food Standards Agency food hygiene ratings as a free JSON API: search establishment records and look up local authority details for England, Scotland, Wales and Northern Ireland. No key or sign-up, but every call must send an x-api-version header.",
+      "source": {
+        "label": "Food Standards Agency",
+        "url": "https://api.ratings.food.gov.uk/help"
       },
       "lastVerified": "2026-09-24",
       "verified": true,

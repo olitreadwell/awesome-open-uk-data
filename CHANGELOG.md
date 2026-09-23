@@ -38,6 +38,10 @@ All notable changes documented here. Format follows
   with its dataset catalogue, map viewer, and catalogue API.
 - 2026-09-23: `sepa-environmental-data`: SEPA's environment dataset index,
   with downloads and REST/WMS map services.
+- 2026-09-24: `food-hygiene-rating-scheme-api`: the Food Standards Agency's
+  food hygiene ratings as a free JSON API for England, Scotland, Wales and
+  Northern Ireland, with no key or sign-up and an x-api-version header on
+  every call.
 
 ### Fixed
 
