@@ -77,3 +77,34 @@ down, and what is queued for the next run.
   `agentRules: false` (the documented opt-out), and `AGENTS.md` keeps that
   block's pointer to the bundled Next.js docs by hand. No revert step, no
   hand-keeping: a full check now ends with an empty `git status --short`.
+
+## 2026-09-24
+
+- Step 1: `node scripts/check-item-urls.mjs` covered the 23 seeded listings
+  (25 URLs). 23 answered 200, `digital.nhs.uk` and `neso.energy` answered 403
+  (bot protection, server up), 0 dead. Every `lastVerified` rolled forward to
+  2026-09-24 in `559a6cf`.
+- Added 3 sources: the Food Standards Agency food hygiene rating API
+  (`9d5a437`), MHCLG's Planning Data (`3b54674`), and the Welsh Government's
+  StatsWales (`de8ace5`). The dataset is now 26 listings; re-running the URL
+  check after those adds reads 31 URLs, 29 ok, 2 bot-blocked, 0 dead.
+- The FSA item points at `ratings.food.gov.uk` and
+  `api.ratings.food.gov.uk/help`, both of which answer 200 to a plain GET. The
+  API endpoints themselves 404 without an `x-api-version` header (checked:
+  `/Authorities` is 404 plain and 200 with `x-api-version: 2`), and the
+  checker sends no such header, so no item URL points at an endpoint path. The
+  item's city is York, from the FSA's correspondence address (Foss House) on
+  its GOV.UK contact page.
+- Turned down again: `www.opendatani.gov.uk` (root 200, but
+  `/api/3/action/package_search` 404s where last run's `/dataset` page 500'd,
+  so this is the second failure) and `statistics.gov.scot` (no reply on any
+  attempt, second look).
+- Turned down for a different reason: `www.nisra.gov.uk/statistics` answers
+  406 to a plain GET, which `check-item-urls.mjs` reads as dead. Worth listing
+  if the checker ever treats 406 like the 403 case.
+- Queued for next run: Charity Commission full register download (200, bulk
+  downloads), National Archives Discovery API (200), Defra UK-AIR (200), and
+  `get-information-schools.service.gov.uk` (403 to this client, so it needs
+  the same checker question answered first).
+- `pnpm run check:fast` green on `de8ace5`, and `git status --short` was empty
+  after it.
