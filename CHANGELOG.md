@@ -34,6 +34,8 @@ All notable changes documented here. Format follows
 - 2026-09-23: `scottish-health-social-care-open-data`: Public Health
   Scotland's open data platform, carrying health and social care statistics
   under the Open Government Licence with a CKAN API.
+- 2026-09-23: `datamap-wales`: the Welsh Government spatial data platform,
+  with its dataset catalogue, map viewer, and catalogue API.
 
 ### Fixed
 

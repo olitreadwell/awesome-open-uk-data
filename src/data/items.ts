@@ -384,6 +384,23 @@ const rawItems = [
     lastVerified: '2026-09-23',
     verified: true,
   },
+  {
+    id: 'datamap-wales',
+    slug: 'datamap-wales',
+    name: 'DataMapWales',
+    city: 'Cardiff',
+    region: 'Wales',
+    location: 'Wales',
+    lat: 51.4816,
+    lng: -3.1791,
+    description:
+      'Welsh public sector spatial data platform: a catalogue of datasets, maps and apps, with a map viewer, downloads, and direct data access through an API.',
+    categories: ['geospatial', 'catalog', 'api'],
+    website: 'https://datamap.gov.wales/',
+    source: { label: 'Welsh Government', url: 'https://datamap.gov.wales/' },
+    lastVerified: '2026-09-23',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
