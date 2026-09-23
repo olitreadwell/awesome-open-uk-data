@@ -28,5 +28,13 @@ down, and what is queued for the next run.
 - Queued candidates: Food Standards Agency food hygiene ratings API
   (`api.ratings.food.gov.uk` returns JSON when the request carries
   `x-api-version`), SEPA Open Data Hub, and SEPA's KiWIS water level service.
-- Final state: 24 listings, 25 URLs checked, 0 dead. `pnpm run check:fast`
+- Blocker found and fixed at the root: `pnpm run check` runs
+  `build:snapshot`, which rewrote `src/data/snapshot.json` with a fresh
+  timestamp on every run. That left the tree dirty after the first push, and
+  the loop wrapper reads a dirty tree as locked, so every later iteration
+  would have skipped and then triggered a heal run. `build-snapshot.mjs` now
+  reuses the committed `exportedAt` while the items are unchanged and skips
+  the write, so a green check leaves the tree clean. The timestamp still moves
+  when the data moves, checked both ways by editing and reverting an item.
+- Final state: 23 listings, 25 URLs checked, 0 dead. `pnpm run check:fast`
   green before the push.

@@ -47,3 +47,6 @@ All notable changes documented here. Format follows
 - 2026-09-23: added `scripts/check-item-urls.mjs` (`pnpm run check:item-urls`)
   so the daily loop re-checks listing URLs against the live web. It stays
   outside `pnpm run check`, because that gate has to pass offline.
+- 2026-09-23: `build:snapshot` no longer rewrites `src/data/snapshot.json`
+  when the items are unchanged, so `pnpm run check` leaves the tree clean
+  instead of dirtying it with a new timestamp on every run.
