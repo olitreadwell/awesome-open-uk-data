@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-23T17:47:07.661Z",
+  "exportedAt": "2026-09-23T17:47:47.092Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -526,6 +526,28 @@
       "source": {
         "label": "Food Standards Agency",
         "url": "https://api.ratings.food.gov.uk/help"
+      },
+      "lastVerified": "2026-09-24",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "planning-data",
+      "name": "Planning Data",
+      "slug": "planning-data",
+      "city": "London",
+      "region": "England",
+      "location": "England",
+      "lat": 51.4958,
+      "lng": -0.1299,
+      "website": "https://www.planning.data.gov.uk/",
+      "categories": ["planning", "housing", "geospatial", "api"],
+      "description": "Ministry of Housing, Communities and Local Government platform for planning and housing data in England. One API serves over 100 datasets, from conservation areas and listed buildings to brownfield land and flood risk, and every dataset can be downloaded in bulk.",
+      "source": {
+        "label": "Ministry of Housing, Communities and Local Government",
+        "url": "https://www.planning.data.gov.uk/docs"
       },
       "lastVerified": "2026-09-24",
       "verified": true,

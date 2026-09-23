@@ -42,6 +42,9 @@ All notable changes documented here. Format follows
   food hygiene ratings as a free JSON API for England, Scotland, Wales and
   Northern Ireland, with no key or sign-up and an x-api-version header on
   every call.
+- 2026-09-24: `planning-data`: the Ministry of Housing, Communities and Local
+  Government's planning and housing platform for England, with one API over
+  100+ datasets and bulk downloads.
 
 ### Fixed
 

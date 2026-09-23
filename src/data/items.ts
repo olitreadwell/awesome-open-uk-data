@@ -441,6 +441,26 @@ const rawItems = [
     lastVerified: '2026-09-24',
     verified: true,
   },
+  {
+    id: 'planning-data',
+    slug: 'planning-data',
+    name: 'Planning Data',
+    city: 'London',
+    region: 'England',
+    location: 'England',
+    lat: 51.4958,
+    lng: -0.1299,
+    description:
+      'Ministry of Housing, Communities and Local Government platform for planning and housing data in England. One API serves over 100 datasets, from conservation areas and listed buildings to brownfield land and flood risk, and every dataset can be downloaded in bulk.',
+    categories: ['planning', 'housing', 'geospatial', 'api'],
+    website: 'https://www.planning.data.gov.uk/',
+    source: {
+      label: 'Ministry of Housing, Communities and Local Government',
+      url: 'https://www.planning.data.gov.uk/docs',
+    },
+    lastVerified: '2026-09-24',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
