@@ -22,6 +22,7 @@ Vercel Cron, and record every run in `scrapes` (DB mode) or
 | `London Datastore` | initial seed source | ✅ planned |
 | `Met Office DataPoint` | initial seed source | ✅ planned |
 | `UK Data Service` | initial seed source | ✅ planned |
+| `Public Health Scotland` (Scottish Health and Social Care Open Data) | initial seed source | ✅ planned |
 <!-- SEED-SOURCES -->
 
 ## Candidate seeds from public-apis

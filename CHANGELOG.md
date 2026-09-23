@@ -31,11 +31,15 @@ All notable changes documented here. Format follows
   Playwright, ESLint 9, Prettier, husky, Docker, CI.
 - Tracked follow-up: user feedback feature →
   https://github.com/olitreadwell/dataset-directory-template/issues/1
+- 2026-09-23: `scottish-health-social-care-open-data`: Public Health
+  Scotland's open data platform, carrying health and social care statistics
+  under the Open Government Licence with a CKAN API.
 
 ### Fixed
 
 - 2026-09-23: re-pointed two dead publisher links at their live pages (GOV.UK
-  content API docs, National Highways open data services), rolled every
-  `lastVerified` forward after re-checking all 22 listing URLs, and added
-  `scripts/check-item-urls.mjs` (`pnpm run check:item-urls`) so the daily loop
-  can re-check listing URLs against the live web.
+  content API docs, National Highways open data services) and rolled every
+  `lastVerified` forward after re-checking all 22 listing URLs.
+- 2026-09-23: added `scripts/check-item-urls.mjs` (`pnpm run check:item-urls`)
+  so the daily loop re-checks listing URLs against the live web. It stays
+  outside `pnpm run check`, because that gate has to pass offline.

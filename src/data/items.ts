@@ -367,6 +367,23 @@ const rawItems = [
     lastVerified: '2026-09-23',
     verified: true,
   },
+  {
+    id: 'scottish-health-social-care-open-data',
+    slug: 'scottish-health-social-care-open-data',
+    name: 'Scottish Health and Social Care Open Data',
+    city: 'Edinburgh',
+    region: 'Scotland',
+    location: 'Scotland-wide',
+    lat: 55.9533,
+    lng: -3.1883,
+    description:
+      'Public Health Scotland’s open data platform: health and social care statistics and reference data under the Open Government Licence, with a CKAN API for bulk access.',
+    categories: ['health', 'statistics', 'api'],
+    website: 'https://www.opendata.nhs.scot/',
+    source: { label: 'Public Health Scotland', url: 'https://www.opendata.nhs.scot/' },
+    lastVerified: '2026-09-23',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
