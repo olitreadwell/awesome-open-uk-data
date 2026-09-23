@@ -108,3 +108,15 @@ down, and what is queued for the next run.
   the same checker question answered first).
 - `pnpm run check:fast` green on `de8ace5`, and `git status --short` was empty
   after it.
+- CI on `4504395`: `CI` (the mirror of `pnpm run check`), `Docker` and
+  `Security` passed. `Quality Gates` failed in its Lighthouse job only:
+  `total-blocking-time` on `/` measured 358ms against the 200ms budget in
+  `lighthouserc.cjs`. The same assertion failed on the previous main commit
+  `f438704` (326ms) and on `7c14574`, so it is a runner-dependent perf-budget
+  red that predates this batch. No test, budget or threshold was changed.
+- `github-pages` failed on `4504395` too, in `actions/upload-pages-artifact`:
+  `tar: out: Cannot open: No such file or directory`. It has failed on every
+  main push since `dbbcfe9` (2026-09-17) because the workflow expects a static
+  export in `out/` and this app does not produce one. Pre-existing, untouched
+  here, and worth a separate decision about whether that workflow belongs in
+  the repo at all.
