@@ -22,7 +22,7 @@ const rawItems = [
     categories: ['catalog', 'api'],
     website: 'https://www.data.gov.uk/',
     source: { label: 'data.gov.uk', url: 'https://www.data.gov.uk/' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -39,7 +39,7 @@ const rawItems = [
     categories: ['statistics', 'population', 'economy', 'api'],
     website: 'https://www.ons.gov.uk/',
     source: { label: 'ONS', url: 'https://api.ons.gov.uk/' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -56,7 +56,7 @@ const rawItems = [
     categories: ['geospatial', 'statistics'],
     website: 'https://geoportal.statistics.gov.uk/',
     source: { label: 'ONS', url: 'https://geoportal.statistics.gov.uk/' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -76,7 +76,7 @@ const rawItems = [
       label: 'Companies House',
       url: 'https://developer.company-information.service.gov.uk/',
     },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -93,7 +93,7 @@ const rawItems = [
     categories: ['housing', 'statistics', 'geospatial'],
     website: 'https://landregistry.data.gov.uk/',
     source: { label: 'HM Land Registry', url: 'https://landregistry.data.gov.uk/' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -110,7 +110,7 @@ const rawItems = [
     categories: ['government', 'api'],
     website: 'https://api.parliament.uk/',
     source: { label: 'UK Parliament', url: 'https://api.parliament.uk/' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -127,7 +127,7 @@ const rawItems = [
     categories: ['government', 'legal'],
     website: 'https://www.legislation.gov.uk/',
     source: { label: 'The National Archives', url: 'https://www.legislation.gov.uk/' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -144,7 +144,7 @@ const rawItems = [
     categories: ['government', 'catalog', 'api'],
     website: 'https://www.gov.uk/',
     source: { label: 'GOV.UK', url: 'https://content-api.publishing.service.gov.uk/' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -161,7 +161,7 @@ const rawItems = [
     categories: ['transport', 'api'],
     website: 'https://api.tfl.gov.uk/',
     source: { label: 'TfL', url: 'https://api.tfl.gov.uk/' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -181,7 +181,7 @@ const rawItems = [
       label: 'National Highways',
       url: 'https://opendata.nationalhighways.co.uk/',
     },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -201,7 +201,7 @@ const rawItems = [
       label: 'NHS England',
       url: 'https://digital.nhs.uk/data-and-information/data-tools-and-services',
     },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
     notes:
       'digital.nhs.uk answers 403 to non-browser clients; the page is live when opened in a browser.',
@@ -220,7 +220,7 @@ const rawItems = [
     categories: ['environment', 'weather', 'api'],
     website: 'https://environment.data.gov.uk/',
     source: { label: 'Environment Agency', url: 'https://environment.data.gov.uk/' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -237,7 +237,7 @@ const rawItems = [
     categories: ['crime', 'statistics', 'api'],
     website: 'https://data.police.uk/',
     source: { label: 'UK Police', url: 'https://data.police.uk/' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -257,7 +257,7 @@ const rawItems = [
       label: 'Department for Education',
       url: 'https://explore-education-statistics.service.gov.uk/',
     },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -274,7 +274,7 @@ const rawItems = [
     categories: ['geospatial', 'api'],
     website: 'https://osdatahub.os.uk/',
     source: { label: 'Ordnance Survey', url: 'https://osdatahub.os.uk/' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -291,7 +291,7 @@ const rawItems = [
     categories: ['energy', 'catalog'],
     website: 'https://neso.energy/data-portal',
     source: { label: 'NESO', url: 'https://neso.energy/data-portal' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
     notes:
       'neso.energy answers 403 to non-browser clients; the portal is live when opened in a browser.',
@@ -313,7 +313,7 @@ const rawItems = [
       label: 'Bank of England',
       url: 'https://www.bankofengland.co.uk/statistics/research-datasets',
     },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -330,7 +330,7 @@ const rawItems = [
     categories: ['catalog', 'environment', 'transport'],
     website: 'https://data.london.gov.uk/',
     source: { label: 'Greater London Authority', url: 'https://data.london.gov.uk/' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -347,7 +347,7 @@ const rawItems = [
     categories: ['weather', 'api'],
     website: 'https://www.metoffice.gov.uk/services/data/datapoint',
     source: { label: 'Met Office', url: 'https://www.metoffice.gov.uk/services/data/datapoint' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -364,7 +364,7 @@ const rawItems = [
     categories: ['statistics', 'catalog'],
     website: 'https://ukdataservice.ac.uk/',
     source: { label: 'UK Data Service', url: 'https://ukdataservice.ac.uk/' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -381,7 +381,7 @@ const rawItems = [
     categories: ['health', 'statistics', 'api'],
     website: 'https://www.opendata.nhs.scot/',
     source: { label: 'Public Health Scotland', url: 'https://www.opendata.nhs.scot/' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -398,7 +398,7 @@ const rawItems = [
     categories: ['geospatial', 'catalog', 'api'],
     website: 'https://datamap.gov.wales/',
     source: { label: 'Welsh Government', url: 'https://datamap.gov.wales/' },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -418,7 +418,7 @@ const rawItems = [
       label: 'SEPA',
       url: 'https://www.sepa.org.uk/environment/environmental-data/',
     },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -438,7 +438,7 @@ const rawItems = [
       label: 'Food Standards Agency',
       url: 'https://api.ratings.food.gov.uk/help',
     },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -458,7 +458,7 @@ const rawItems = [
       label: 'Ministry of Housing, Communities and Local Government',
       url: 'https://www.planning.data.gov.uk/docs',
     },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
   {
@@ -478,7 +478,7 @@ const rawItems = [
       label: 'Welsh Government',
       url: 'https://api.stats.gov.wales/v1/docs',
     },
-    lastVerified: '2026-09-24',
+    lastVerified: '2026-09-25',
     verified: true,
   },
 ] as const;

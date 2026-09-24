@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-23T17:48:13.500Z",
+  "exportedAt": "2026-09-24T17:42:02.572Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -19,7 +19,7 @@
         "label": "data.gov.uk",
         "url": "https://www.data.gov.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -41,7 +41,7 @@
         "label": "ONS",
         "url": "https://api.ons.gov.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -63,7 +63,7 @@
         "label": "ONS",
         "url": "https://geoportal.statistics.gov.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -85,7 +85,7 @@
         "label": "Companies House",
         "url": "https://developer.company-information.service.gov.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -107,7 +107,7 @@
         "label": "HM Land Registry",
         "url": "https://landregistry.data.gov.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -129,7 +129,7 @@
         "label": "UK Parliament",
         "url": "https://api.parliament.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -151,7 +151,7 @@
         "label": "The National Archives",
         "url": "https://www.legislation.gov.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -173,7 +173,7 @@
         "label": "GOV.UK",
         "url": "https://content-api.publishing.service.gov.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -195,7 +195,7 @@
         "label": "TfL",
         "url": "https://api.tfl.gov.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -217,7 +217,7 @@
         "label": "National Highways",
         "url": "https://opendata.nationalhighways.co.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -239,7 +239,7 @@
         "label": "NHS England",
         "url": "https://digital.nhs.uk/data-and-information/data-tools-and-services"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -262,7 +262,7 @@
         "label": "Environment Agency",
         "url": "https://environment.data.gov.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -284,7 +284,7 @@
         "label": "UK Police",
         "url": "https://data.police.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -306,7 +306,7 @@
         "label": "Department for Education",
         "url": "https://explore-education-statistics.service.gov.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -328,7 +328,7 @@
         "label": "Ordnance Survey",
         "url": "https://osdatahub.os.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -350,7 +350,7 @@
         "label": "NESO",
         "url": "https://neso.energy/data-portal"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -373,7 +373,7 @@
         "label": "Bank of England",
         "url": "https://www.bankofengland.co.uk/statistics/research-datasets"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -395,7 +395,7 @@
         "label": "Greater London Authority",
         "url": "https://data.london.gov.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -417,7 +417,7 @@
         "label": "Met Office",
         "url": "https://www.metoffice.gov.uk/services/data/datapoint"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -439,7 +439,7 @@
         "label": "UK Data Service",
         "url": "https://ukdataservice.ac.uk/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -461,7 +461,7 @@
         "label": "Public Health Scotland",
         "url": "https://www.opendata.nhs.scot/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -483,7 +483,7 @@
         "label": "Welsh Government",
         "url": "https://datamap.gov.wales/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -505,7 +505,7 @@
         "label": "SEPA",
         "url": "https://www.sepa.org.uk/environment/environmental-data/"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -527,7 +527,7 @@
         "label": "Food Standards Agency",
         "url": "https://api.ratings.food.gov.uk/help"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -549,7 +549,7 @@
         "label": "Ministry of Housing, Communities and Local Government",
         "url": "https://www.planning.data.gov.uk/docs"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -571,7 +571,7 @@
         "label": "Welsh Government",
         "url": "https://api.stats.gov.wales/v1/docs"
       },
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-25",
       "verified": true,
       "active": true,
       "optOut": false,
