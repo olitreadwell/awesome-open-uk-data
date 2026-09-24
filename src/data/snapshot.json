@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-24T17:42:02.572Z",
+  "exportedAt": "2026-09-24T17:42:24.051Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -570,6 +570,28 @@
       "source": {
         "label": "Welsh Government",
         "url": "https://api.stats.gov.wales/v1/docs"
+      },
+      "lastVerified": "2026-09-25",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "charity-commission-register",
+      "name": "Charity Commission Register of Charities",
+      "slug": "charity-commission-register",
+      "city": "Bootle",
+      "region": "England",
+      "location": "England and Wales",
+      "lat": 53.4517,
+      "lng": -3.0006,
+      "website": "https://register-of-charities.charitycommission.gov.uk/",
+      "categories": ["charity", "government", "catalog"],
+      "description": "The Charity Commission register for England and Wales as a daily extract, published as JSON and tab-delimited files: charity records plus trustee, annual return, classification, area of operation and governing document tables.",
+      "source": {
+        "label": "Charity Commission",
+        "url": "https://register-of-charities.charitycommission.gov.uk/register/full-register-download"
       },
       "lastVerified": "2026-09-25",
       "verified": true,

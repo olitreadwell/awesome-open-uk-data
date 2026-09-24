@@ -481,6 +481,26 @@ const rawItems = [
     lastVerified: '2026-09-25',
     verified: true,
   },
+  {
+    id: 'charity-commission-register',
+    slug: 'charity-commission-register',
+    name: 'Charity Commission Register of Charities',
+    city: 'Bootle',
+    region: 'England',
+    location: 'England and Wales',
+    lat: 53.4517,
+    lng: -3.0006,
+    description:
+      'The Charity Commission register for England and Wales as a daily extract, published as JSON and tab-delimited files: charity records plus trustee, annual return, classification, area of operation and governing document tables.',
+    categories: ['charity', 'government', 'catalog'],
+    website: 'https://register-of-charities.charitycommission.gov.uk/',
+    source: {
+      label: 'Charity Commission',
+      url: 'https://register-of-charities.charitycommission.gov.uk/register/full-register-download',
+    },
+    lastVerified: '2026-09-25',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
