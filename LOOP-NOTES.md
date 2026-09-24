@@ -120,3 +120,45 @@ down, and what is queued for the next run.
   export in `out/` and this app does not produce one. Pre-existing, untouched
   here, and worth a separate decision about whether that workflow belongs in
   the repo at all.
+
+## 2026-09-25
+
+- Step 1: `node scripts/check-item-urls.mjs` covered the 26 listings that were
+  committed at the start of the run (31 URLs). 29 answered 200,
+  `digital.nhs.uk` and `neso.energy` answered 403 (bot protection, server up),
+  0 dead. Every `lastVerified` rolled forward to 2026-09-25 in `d4df6d9`.
+- Added 3 sources: the Charity Commission register of charities (`99925b6`),
+  The National Archives Discovery API (`0b00b37`), and the UKHSA data
+  dashboard (`8e1b687`). The dataset is now 29 listings; the URL check re-run
+  after those adds reads 37 URLs: 35 ok, 2 bot-blocked, 0 dead.
+- Charity Commission: the register root answers 200, but
+  `/en/register/full-register-download` 404s while
+  `/register/full-register-download` answers 200, so the item points at the
+  page that actually lists the extracts (charity, charity_trustee,
+  charity_annual_return_parta/partb, and the rest as JSON or tab-delimited
+  files). City is Bootle, from the commission's own GOV.UK contact address
+  (PO Box 211, L20 7YX), the same route the FSA item's York came from.
+- National Archives: `/API/sitemapindex` answers 500 and `/API/search/records`
+  answers 400 without parameters, and the checker reads both as dead, so the
+  source URL is `/API/`, the Web API help page that lists every endpoint.
+  City is London, from the Kew, Richmond TW9 4DU address on the archives'
+  contact page. A real search call (`?searchTerm=test`) answers 200.
+- UKHSA: the dashboard root and `api.ukhsa-dashboard.data.gov.uk` both answer
+  200, and `/access-our-data` is the API developer guide with Swagger docs and
+  bulk chart downloads. City is London, from the E14 4PU South Colonnade
+  address on the agency's GOV.UK page.
+- Closed out, not retried: `www.opendatani.gov.uk` (root 200, CKAN
+  `/api/3/action/package_search` 404 again, third consecutive failure) and
+  `statistics.gov.scot` (no reply at all, third consecutive failure). Both
+  stay off the candidate list until the publisher changes something, per the
+  grow-loop rule on a blocker failing three times. Neither one blocked this
+  batch, so the run still exits 0.
+- `www.nisra.gov.uk/statistics` answered 200 this time, where the last run got
+  406, so NISRA moves to the front of the queue. Also queued: Natural England
+  Open Data (`naturalengland-defra.opendata.arcgis.com`, root and DCAT feed
+  both 200), Defra UK-AIR (`uk-air.defra.gov.uk/data`, 200), and two sites
+  that answer 403 to this client and would need the same treatment as
+  `digital.nhs.uk`: Historic England's listing data downloads and
+  `get-information-schools.service.gov.uk`.
+- `pnpm run check:fast` green on `8e1b687`; `git status --short` empty after
+  it.

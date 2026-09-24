@@ -47,9 +47,22 @@ All notable changes documented here. Format follows
   100+ datasets and bulk downloads.
 - 2026-09-24: `statswales`: Welsh Government statistics about Wales, with a
   public API that lists datasets and downloads them as JSON, CSV or XLSX.
+- 2026-09-25: `charity-commission-register`: the Charity Commission's daily
+  extract of the England and Wales charity register as JSON and
+  tab-delimited files, including the charity, trustee and annual return
+  tables.
+- 2026-09-25: `national-archives-discovery-api`: The National Archives
+  Discovery catalogue of records held by archives across the UK, queryable
+  over a public REST API.
+- 2026-09-25: `ukhsa-data-dashboard`: the UK Health Security Agency's public
+  health dashboard for England, with a documented API and bulk chart
+  downloads.
 
 ### Fixed
 
+- 2026-09-25: rolled every `lastVerified` forward after
+  `pnpm run check:item-urls` re-checked all 37 listing URLs (35 answered, 2
+  bot-blocked but live, 0 dead).
 - 2026-09-24: rolled every `lastVerified` forward after
   `pnpm run check:item-urls` re-checked all 25 listing URLs (23 answered, 2
   bot-blocked but live, 0 dead).

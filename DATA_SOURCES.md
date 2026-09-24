@@ -28,6 +28,9 @@ Vercel Cron, and record every run in `scrapes` (DB mode) or
 | `Food Standards Agency` (Food Hygiene Rating Scheme API) | initial seed source | ✅ planned |
 | `Ministry of Housing, Communities and Local Government` (Planning Data) | initial seed source | ✅ planned |
 | `Welsh Government` (StatsWales) | initial seed source | ✅ planned |
+| `Charity Commission` (register of charities data extract) | initial seed source | ✅ planned |
+| `The National Archives` (Discovery API) | initial seed source | ✅ planned |
+| `UK Health Security Agency` (UKHSA data dashboard API) | initial seed source | ✅ planned |
 <!-- SEED-SOURCES -->
 
 ## Candidate seeds from public-apis
