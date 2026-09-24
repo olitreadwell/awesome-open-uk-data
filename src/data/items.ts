@@ -521,6 +521,26 @@ const rawItems = [
     lastVerified: '2026-09-25',
     verified: true,
   },
+  {
+    id: 'ukhsa-data-dashboard',
+    slug: 'ukhsa-data-dashboard',
+    name: 'UKHSA data dashboard',
+    city: 'London',
+    region: 'England',
+    location: 'England',
+    lat: 51.5049,
+    lng: -0.0215,
+    description:
+      'UK Health Security Agency dashboard for public health data in England, covering respiratory viruses, healthcare-associated infections and antimicrobial resistance. The same data is available through a documented API and bulk chart downloads.',
+    categories: ['health', 'statistics', 'api'],
+    website: 'https://ukhsa-dashboard.data.gov.uk/',
+    source: {
+      label: 'UK Health Security Agency',
+      url: 'https://api.ukhsa-dashboard.data.gov.uk/',
+    },
+    lastVerified: '2026-09-25',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */

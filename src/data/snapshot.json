@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-24T17:42:43.769Z",
+  "exportedAt": "2026-09-24T17:43:01.030Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -614,6 +614,28 @@
       "source": {
         "label": "The National Archives",
         "url": "https://discovery.nationalarchives.gov.uk/API/"
+      },
+      "lastVerified": "2026-09-25",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "ukhsa-data-dashboard",
+      "name": "UKHSA data dashboard",
+      "slug": "ukhsa-data-dashboard",
+      "city": "London",
+      "region": "England",
+      "location": "England",
+      "lat": 51.5049,
+      "lng": -0.0215,
+      "website": "https://ukhsa-dashboard.data.gov.uk/",
+      "categories": ["health", "statistics", "api"],
+      "description": "UK Health Security Agency dashboard for public health data in England, covering respiratory viruses, healthcare-associated infections and antimicrobial resistance. The same data is available through a documented API and bulk chart downloads.",
+      "source": {
+        "label": "UK Health Security Agency",
+        "url": "https://api.ukhsa-dashboard.data.gov.uk/"
       },
       "lastVerified": "2026-09-25",
       "verified": true,
