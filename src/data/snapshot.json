@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-24T17:42:24.051Z",
+  "exportedAt": "2026-09-24T17:42:43.769Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -592,6 +592,28 @@
       "source": {
         "label": "Charity Commission",
         "url": "https://register-of-charities.charitycommission.gov.uk/register/full-register-download"
+      },
+      "lastVerified": "2026-09-25",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "national-archives-discovery-api",
+      "name": "The National Archives Discovery API",
+      "slug": "national-archives-discovery-api",
+      "city": "London",
+      "region": "England",
+      "location": "Kew, Richmond",
+      "lat": 51.4758,
+      "lng": -0.2805,
+      "website": "https://discovery.nationalarchives.gov.uk/",
+      "categories": ["archives", "heritage", "api"],
+      "description": "REST API over Discovery, the catalogue of records held by The National Archives and archives across the UK: search records, archive collections and file authorities, and fetch record details, hierarchies and reference data.",
+      "source": {
+        "label": "The National Archives",
+        "url": "https://discovery.nationalarchives.gov.uk/API/"
       },
       "lastVerified": "2026-09-25",
       "verified": true,

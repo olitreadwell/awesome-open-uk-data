@@ -501,6 +501,26 @@ const rawItems = [
     lastVerified: '2026-09-25',
     verified: true,
   },
+  {
+    id: 'national-archives-discovery-api',
+    slug: 'national-archives-discovery-api',
+    name: 'The National Archives Discovery API',
+    city: 'London',
+    region: 'England',
+    location: 'Kew, Richmond',
+    lat: 51.4758,
+    lng: -0.2805,
+    description:
+      'REST API over Discovery, the catalogue of records held by The National Archives and archives across the UK: search records, archive collections and file authorities, and fetch record details, hierarchies and reference data.',
+    categories: ['archives', 'heritage', 'api'],
+    website: 'https://discovery.nationalarchives.gov.uk/',
+    source: {
+      label: 'The National Archives',
+      url: 'https://discovery.nationalarchives.gov.uk/API/',
+    },
+    lastVerified: '2026-09-25',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
