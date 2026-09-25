@@ -561,6 +561,26 @@ const rawItems = [
     lastVerified: '2026-09-26',
     verified: true,
   },
+  {
+    id: 'defra-uk-air',
+    slug: 'defra-uk-air',
+    name: 'Defra UK-AIR (Air Information Resource)',
+    city: 'London',
+    region: 'United Kingdom',
+    location: 'UK-wide',
+    lat: 51.5074,
+    lng: -0.1278,
+    description:
+      "Defra's air quality data archive: hourly measurements from more than 1,500 monitoring sites across the UK, split into automatic and non-automatic networks, with a data selector for custom extracts and preformatted raw files from the automatic network. Descriptive statistics and exceedance statistics sit alongside the measurements under the Open Government Licence v3.0.",
+    categories: ['environment', 'statistics'],
+    website: 'https://uk-air.defra.gov.uk/',
+    source: {
+      label: 'Department for Environment, Food & Rural Affairs',
+      url: 'https://uk-air.defra.gov.uk/data/',
+    },
+    lastVerified: '2026-09-26',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
