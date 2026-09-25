@@ -19,8 +19,7 @@ const apply = args.includes('--apply');
 const push = args.includes('--push');
 const repoArg = args.indexOf('--repo');
 const repoDir = resolve(repoArg === -1 ? process.cwd() : args[repoArg + 1]);
-const templateUrl =
-  process.env.TEMPLATE_URL ?? 'https://github.com/olitreadwell/dataset-directory-template.git';
+const templateUrl = process.env.TEMPLATE_URL ?? 'https://github.com/olitreadwell/template.git';
 
 function run(cmd, cwd = repoDir) {
   return execFileSync(cmd[0], cmd.slice(1), {
@@ -140,10 +139,19 @@ async function main() {
       }
       const merged = structuredClone(localPkg);
       merged.scripts = { ...tmplPkg.scripts, ...(localPkg.scripts ?? {}) };
-      merged.devDependencies = { ...tmplPkg.devDependencies, ...(localPkg.devDependencies ?? {}) };
+      // Don't force the husky prepare hook onto repos without a husky
+      // dependency (older apps and monorepos manage hooks differently).
+      const hasHuskyDep = localPkg.dependencies?.husky ?? localPkg.devDependencies?.husky;
+      if (!hasHuskyDep) {
+        delete merged.scripts.prepare;
+      }
       // Runtime deps stay local: template app deps (Radix, nodemailer, …)
       // are opt-in per repo, not forced by a sync.
       merged.dependencies = localPkg.dependencies ?? {};
+      // Tooling stays local too: template devDeps (vitest 4, playwright, …)
+      // can conflict with a repo's pinned majors (ERESOLVE). A sync must
+      // never break `npm install`; repos adopt tooling upgrades by choice.
+      merged.devDependencies = localPkg.devDependencies ?? {};
       merged.packageManager = localPkg.packageManager ?? tmplPkg.packageManager;
       if (JSON.stringify(merged) !== JSON.stringify(localPkg)) {
         changes.push({ rel: 'package.json', action: 'MERGE' });
@@ -169,7 +177,9 @@ async function main() {
     const branch = 'chore/template-sync';
     try {
       run(['git', 'branch', '-D', branch]);
-    } catch {}
+    } catch {
+      // Branch does not exist locally yet; nothing to delete.
+    }
     run(['git', 'checkout', '-q', '-b', branch]);
     run(['git', 'add', '-A']);
     run(['git', 'commit', '-q', '-m', 'chore: sync files from template', '--allow-empty']);

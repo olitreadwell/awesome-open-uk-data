@@ -1,13 +1,32 @@
 #!/usr/bin/env bash
-# Pre-commit fast lane: lint, typecheck, data-focused tests.
-# Sequential on purpose: parallel npm tasks made vitest fork workers time
-# out on this hardware. The full suite (coverage, e2e, smoke) runs in CI.
+# Pre-commit fast lane: lint, typecheck, and the data-focused test subset in
+# parallel. The full suite (coverage, e2e, smoke) runs in CI after push.
 set -e
 
 echo "=== Pre-commit fast lane ==="
 
-npm run lint --if-present
-npm run typecheck --if-present
-npm run test:fast --if-present
+(
+  npm run lint --if-present
+) &
+G1=$!
 
+(
+  npm run typecheck --if-present
+) &
+G2=$!
+
+(
+  npm run test:fast --if-present
+) &
+G3=$!
+
+FAILED=0
+wait $G1 || FAILED=1
+wait $G2 || FAILED=1
+wait $G3 || FAILED=1
+
+if [ $FAILED -eq 1 ]; then
+  echo "FAILED. Fix then commit again. Skip with: git commit --no-verify"
+  exit 1
+fi
 echo "All checks passed."

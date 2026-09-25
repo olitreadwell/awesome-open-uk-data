@@ -22,31 +22,35 @@ drift.
 4. Type-level checks (`IsEqual` from type-fest) keep the zod-inferred types
    in sync with the documented shapes.
 
-## Dataset-directory surface
-
-New in this template, on top of the base routes below:
+## Routes
 
 | Route | Method | Purpose |
 | --- | --- | --- |
-| `/api/v1/items` | GET | List with `q`/`city`/`category`/`limit`/`offset`; records the query |
-| `/api/v1/items/[id]` | GET | One listing, 404 when unknown |
-| `/api/v1/cities` | GET | City names + counts |
-| `/api/v1/categories` | GET | Category labels + counts |
-| `/api/v1/dataset` | GET | Full dataset JSON, `ETag` = content-hash version, 304 round-trip |
-| `/api/v1/dataset.csv` | GET | Dataset CSV sharing the JSON ETag |
-| `/api/v1/dataset/meta` | GET | Version, counts, sources, license |
-| `/api/search` | GET | Fuzzy search (Fuse.js), shared by the site |
-| `/api/items/[id]/view` | POST | View counter for the self-improvement loop |
-| `/api/opt-out` | POST | Permanent removal (DB) or PR-tracked request (snapshot) |
-| `/api/cron/refresh` | GET/POST | Daily scrape + upsert, `CRON_SECRET`-guarded |
-| `/api/subscribe` | POST | Email list (env-gated, off by default) |
-| `/api/unsubscribe` | POST | Unsubscribe |
-| `/feed.xml` | GET | RSS feed |
-| `/calendar.ics` | GET | iCal (all-day events from `calendarDates`) |
-| `/sitemap.xml` | GET | Dynamic sitemap incl. items/cities/categories |
+| `/health` | GET | Liveness for load balancers and orchestrators |
+| `/api/hello` | GET | Greeting demo (zod validation at the boundary) |
+| `/api/challenge` | GET | Proof-of-work challenge |
+| `/api/contact` | POST | Contact submission (gated) |
+| `/api/feedback` | POST | Feedback -> GitHub issue (gated) |
+| `/api/openapi.json` | GET | This spec |
+| `/docs` | GET | Swagger UI |
 
-The live-server contract test lives in `scripts/contract-test.mjs` and runs
-inside `pnpm run smoke` against the standalone build; `pnpm run contract`
-runs it against any `BASE_URL`. Snapshot mode (no `DATABASE_URL`) serves
-the committed `src/data/snapshot.json`; DB mode reads/writes Postgres.
+`/api/auth/*` is managed by Better Auth and is not hand-documented here;
+see the repo's auth documentation when auth is enabled.
 
+## Why not JSON:API?
+
+[JSON:API](https://jsonapi.org) is still maintained (spec v1.1) and is a
+good fit for resource-oriented CRUD APIs with relationships, pagination,
+and compound documents. This template's API surface is form submission
+(contact, feedback) plus a few simple endpoints, where the JSON:API
+envelope (`data`/`errors` wrappers, `application/vnd.api+json`) would add
+ceremony without benefit. The template therefore uses plain JSON with an
+OpenAPI contract. If a scaffolded project grows a resource API, adopt
+JSON:API for that surface and keep this spec as the contract.
+
+## Adding a route
+
+1. Add the route handler under `src/app/api/`.
+2. Add the path to `src/server/openapi.ts`, reusing the same zod schemas
+   the handler validates against.
+3. The contract test then proves the spec and the server agree.
