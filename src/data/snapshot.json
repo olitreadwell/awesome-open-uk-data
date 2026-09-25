@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-25T17:42:53.185Z",
+  "exportedAt": "2026-09-25T17:43:00.687Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -680,6 +680,28 @@
       "source": {
         "label": "Department for Environment, Food & Rural Affairs",
         "url": "https://uk-air.defra.gov.uk/data/"
+      },
+      "lastVerified": "2026-09-26",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "nisra-statistics",
+      "name": "NISRA Statistics and Research",
+      "slug": "nisra-statistics",
+      "city": "Belfast",
+      "region": "Northern Ireland",
+      "location": "Northern Ireland",
+      "lat": 54.5973,
+      "lng": -5.9301,
+      "website": "https://www.nisra.gov.uk/",
+      "categories": ["statistics", "government"],
+      "description": "The Northern Ireland Statistics and Research Agency's statistics hub. NISRA is an executive agency of the Department of Finance (NI) and publishes official statistics on population and the census, health and social care, work, pay and benefits, education and skills, transport, the environment and climate change, crime and justice, and the economy.",
+      "source": {
+        "label": "Northern Ireland Statistics and Research Agency",
+        "url": "https://www.nisra.gov.uk/statistics"
       },
       "lastVerified": "2026-09-26",
       "verified": true,

@@ -581,6 +581,26 @@ const rawItems = [
     lastVerified: '2026-09-26',
     verified: true,
   },
+  {
+    id: 'nisra-statistics',
+    slug: 'nisra-statistics',
+    name: 'NISRA Statistics and Research',
+    city: 'Belfast',
+    region: 'Northern Ireland',
+    location: 'Northern Ireland',
+    lat: 54.5973,
+    lng: -5.9301,
+    description:
+      "The Northern Ireland Statistics and Research Agency's statistics hub. NISRA is an executive agency of the Department of Finance (NI) and publishes official statistics on population and the census, health and social care, work, pay and benefits, education and skills, transport, the environment and climate change, crime and justice, and the economy.",
+    categories: ['statistics', 'government'],
+    website: 'https://www.nisra.gov.uk/',
+    source: {
+      label: 'Northern Ireland Statistics and Research Agency',
+      url: 'https://www.nisra.gov.uk/statistics',
+    },
+    lastVerified: '2026-09-26',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
