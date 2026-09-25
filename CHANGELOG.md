@@ -57,9 +57,28 @@ All notable changes documented here. Format follows
 - 2026-09-25: `ukhsa-data-dashboard`: the UK Health Security Agency's public
   health dashboard for England, with a documented API and bulk chart
   downloads.
+- 2026-09-26: `natural-england-open-data`: Natural England's geoportal on the
+  Defra ArcGIS Hub, with 250+ datasets from SSSIs and National Nature
+  Reserves to ancient woodland and the England Coast Path, downloadable as
+  CSV, Shapefile, GeoJSON, KML, GeoPackage or file geodatabase.
+- 2026-09-26: `defra-uk-air`: Defra's air quality data archive, carrying
+  hourly measurements from 1,500+ monitoring sites across the UK with a data
+  selector, preformatted raw files and descriptive and exceedance statistics.
+- 2026-09-26: `nisra-statistics`: the Northern Ireland Statistics and Research
+  Agency's statistics hub, an executive agency of the Department of Finance
+  (NI), covering population and the census, health, work and benefits,
+  education, transport, the environment, crime and the economy.
 
 ### Fixed
 
+- 2026-09-26: rolled every `lastVerified` forward after
+  `pnpm run check:item-urls` re-checked all 43 listing URLs (41 answered, 2
+  bot-blocked but live, 0 dead).
+- 2026-09-26: `check-item-urls.mjs` retries a connection-level failure up to
+  three times with backoff before calling a URL dead. Public Health
+  Scotland's portal (`www.opendata.nhs.scot`) resets a share of its TLS
+  connections while answering the rest, so a single reset kept reading as a
+  dead source. HTTP status codes are still never retried.
 - 2026-09-25: rolled every `lastVerified` forward after
   `pnpm run check:item-urls` re-checked all 37 listing URLs (35 answered, 2
   bot-blocked but live, 0 dead).

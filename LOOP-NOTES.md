@@ -162,3 +162,63 @@ down, and what is queued for the next run.
   `get-information-schools.service.gov.uk`.
 - `pnpm run check:fast` green on `8e1b687`; `git status --short` empty after
   it.
+
+## 2026-09-26
+
+- Step 1: `node scripts/check-item-urls.mjs` covered the 29 listings committed
+  at the start of the run (37 URLs). The first pass read 35 ok, 2 bot-blocked
+  (`digital.nhs.uk`, `neso.energy`), and 1 dead: Public Health Scotland's
+  portal came back as a connection reset. Two more passes read 0 dead with no
+  item change, so the reset was the publisher's, not the listing's.
+- `www.opendata.nhs.scot` resets about half of its TLS connections while
+  answering the rest (curl: 2 resets then 2 x 200 in four tries; node fetch:
+  4 x 200 in four tries, same user agent). The checker made one attempt per
+  URL, so it called a live source dead on two of three runs. Root cause fix in
+  `41222ac`: connection-level failures (reset, timeout, DNS) are retried three
+  times with 1s/2s backoff, HTTP status codes are still never retried. The
+  full pass after that reads 43 URLs: 41 ok, 2 bot-blocked, 0 dead.
+- Every `lastVerified` rolled forward to 2026-09-26 in `4d061cf`, and the
+  CHANGELOG records the same counts.
+- Added 3 sources. The dataset is now 32 listings, 43 URLs.
+- Natural England Open Data Geoportal (`9954438`): the DCAT feed at
+  `naturalengland-defra.opendata.arcgis.com/api/feed/dcat-us/1.1.json` counted
+  251 datasets on 2026-09-26, and the distribution formats across the feed are
+  CSV, ZIP (Shapefile), GeoJSON, KML, TXT, XLSX, GPKG, GDB and ArcGIS
+  GeoServices REST API, which is what the description says. City "York", from
+  the Natural England page on GOV.UK ("a head office in York").
+- Defra UK-AIR (`a08c5ff`): the `data/` page carries "over 1500 sites across
+  the UK", the automatic and non-automatic network split, the Data Selector
+  Tool, preformatted raw files and the descriptive and exceedance statistics
+  the description lists. The footer states the Open Government Licence v3.0,
+  "except where otherwise stated", so the item says "under the OGL v3.0" for
+  the archive. The Sensor Observation Service endpoint
+  (`/sos-ukair/api/v1/`) timed out on every attempt, so no item URL points at
+  it and the description claims no API. City "London", from Defra's GOV.UK
+  page, which lists London among the department's staff locations.
+- NISRA (`debca09`): the topics in the description are the section list on
+  `nisra.gov.uk/statistics` (people and communities; health and social care;
+  work, pay and benefits; education and skills; transport, environment and
+  climate change; crime and justice; business, economy and trade), and the
+  agency's own about-us page is the source for "executive agency of the
+  Department of Finance (NI)". The PxStat portal at `data.nisra.gov.uk` answers
+  200 but every API path tried (`/api/v1/`, `/api/v1/collection`, `/api/v1/read`)
+  404s, so the item points at the statistics hub and claims no API. City
+  "Belfast": NISRA's site names no office, so it comes from the Belfast
+  addresses (Clare House BT3 9ED, Craigantlet Buildings BT4 3SX) on the
+  Department of Finance data-controller block in NISRA's own privacy notice.
+- NISRA answers the checker's user agent (3 of 3 runs on `/statistics`), but a
+  browser user agent got a 403 from the Varnish cache on `/contact-us`, so it
+  is worth a re-check next run before trusting it long term.
+- Queued for next run: DWP Stat-Xplore (200, benefit statistics), British
+  Geological Survey (`bgs.ac.uk/geological-data/`, 200), JNCC Open Data portal
+  (200), Natural Resources Wales evidence and data (200), BGS National
+  Geoscience Data Centre (200). Historic England's listing downloads and
+  `get-information-schools.service.gov.uk/Downloads` still answer 403 to this
+  client, while `get-information-schools.service.gov.uk` itself answers 200.
+- Still closed out, not retried: `www.opendatani.gov.uk` and
+  `statistics.gov.scot`, both on their third consecutive failure, logged in the
+  2026-09-25 entry.
+- `pnpm run check:fast` exits 0 on this tree (snapshot, format, lint,
+  typecheck, data tests, links, build), and `git status --short` is empty
+  after it apart from the CHANGELOG, DATA_SOURCES and LOOP-NOTES edits of this
+  batch. Full suite (coverage, smoke, e2e) runs in CI after the push.

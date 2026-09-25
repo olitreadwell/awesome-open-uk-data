@@ -31,6 +31,9 @@ Vercel Cron, and record every run in `scrapes` (DB mode) or
 | `Charity Commission` (register of charities data extract) | initial seed source | ✅ planned |
 | `The National Archives` (Discovery API) | initial seed source | ✅ planned |
 | `UK Health Security Agency` (UKHSA data dashboard API) | initial seed source | ✅ planned |
+| `Natural England` (Open Data Geoportal) | initial seed source | ✅ planned |
+| `Department for Environment, Food & Rural Affairs` (UK-AIR air quality data archive) | initial seed source | ✅ planned |
+| `Northern Ireland Statistics and Research Agency` (statistics and research hub) | initial seed source | ✅ planned |
 <!-- SEED-SOURCES -->
 
 ## Candidate seeds from public-apis
@@ -85,3 +88,8 @@ client, not gone.
 
 It sits outside `pnpm run check` on purpose: the gate has to pass on an
 offline clone and in CI, so no check in that chain may need the network.
+
+A connection-level failure (reset, timeout, DNS) is retried three times with
+backoff before the URL is called dead, because some publishers reset a share of
+their TLS connections while answering the rest. An HTTP status code is never
+retried: that is the publisher's answer, not a failed connection.
