@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-25T17:42:33.425Z",
+  "exportedAt": "2026-09-25T17:42:47.025Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -636,6 +636,28 @@
       "source": {
         "label": "UK Health Security Agency",
         "url": "https://api.ukhsa-dashboard.data.gov.uk/"
+      },
+      "lastVerified": "2026-09-26",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "natural-england-open-data",
+      "name": "Natural England Open Data Geoportal",
+      "slug": "natural-england-open-data",
+      "city": "York",
+      "region": "England",
+      "location": "England",
+      "lat": 53.959,
+      "lng": -1.0815,
+      "website": "https://naturalengland-defra.opendata.arcgis.com/",
+      "categories": ["environment", "geospatial", "catalog"],
+      "description": "Natural England's open data geoportal on the Defra ArcGIS Hub: more than 250 datasets covering Sites of Special Scientific Interest, National Nature Reserves, the England Coast Path, ancient woodland, moorland change and local nature recovery strategy areas. Each dataset downloads as CSV, Shapefile, GeoJSON, KML, GeoPackage or file geodatabase, and is also served through ArcGIS REST services.",
+      "source": {
+        "label": "Natural England",
+        "url": "https://naturalengland-defra.opendata.arcgis.com/datasets"
       },
       "lastVerified": "2026-09-26",
       "verified": true,

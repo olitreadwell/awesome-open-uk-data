@@ -541,6 +541,26 @@ const rawItems = [
     lastVerified: '2026-09-26',
     verified: true,
   },
+  {
+    id: 'natural-england-open-data',
+    slug: 'natural-england-open-data',
+    name: 'Natural England Open Data Geoportal',
+    city: 'York',
+    region: 'England',
+    location: 'England',
+    lat: 53.959,
+    lng: -1.0815,
+    description:
+      "Natural England's open data geoportal on the Defra ArcGIS Hub: more than 250 datasets covering Sites of Special Scientific Interest, National Nature Reserves, the England Coast Path, ancient woodland, moorland change and local nature recovery strategy areas. Each dataset downloads as CSV, Shapefile, GeoJSON, KML, GeoPackage or file geodatabase, and is also served through ArcGIS REST services.",
+    categories: ['environment', 'geospatial', 'catalog'],
+    website: 'https://naturalengland-defra.opendata.arcgis.com/',
+    source: {
+      label: 'Natural England',
+      url: 'https://naturalengland-defra.opendata.arcgis.com/datasets',
+    },
+    lastVerified: '2026-09-26',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
