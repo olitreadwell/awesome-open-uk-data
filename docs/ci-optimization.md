@@ -69,3 +69,48 @@ snippets here are the GitHub Actions form used by this repo.
 
 Numbers assume a single-dev repo on hosted runners; savings compound with
 more pushes per day.
+
+## The gate is the local run
+
+GitHub Actions is not the merge gate for these repos. The gate is
+`npm run check:ci`, which runs the same checks on the machine that is about to
+merge or push.
+
+| CI job | local equivalent |
+| --- | --- |
+| Check | `npm run check` (format, lint, typecheck, coverage, build, smoke, e2e, links) |
+| Dependency audit | `pnpm audit --audit-level=high` (advisory, as in CI) |
+| Committed secrets scan | `bash scripts/security-checks.sh` |
+| Workflow lint | `actionlint` |
+| YAML lint | `yamllint -c .yamllint.yml .github/ .yamllint.yml` |
+| Spell check | `codespell` |
+| E2E shards | `npx playwright test` (shards exist to fit runner time limits, not to be complete) |
+| Docker | `docker build -t local-ci-check .` (`--docker`) |
+| Quality Gates | `pnpm dlx @lhci/cli@0.15.0 autorun` (`--lighthouse`) |
+
+Why:
+
+- The private repos in this family cannot run Actions at all while the account
+  has a billing block. Their workflows are disabled on purpose, so a missing
+  check on those repos is expected rather than a failure.
+- The public repos do run Actions, but runs queue behind other pushes. A red or
+  pending check can belong to a commit that is not the one being merged.
+
+How to run it:
+
+```bash
+bash scripts/local-ci.sh                        # full gate
+bash scripts/local-ci.sh --fast                 # the pre-push subset
+bash scripts/local-ci.sh --docker --lighthouse  # optional extras
+npm run check:ci                                # same as the first line
+```
+
+`codespell`, `yamllint`, `actionlint`, and `docker` are optional. The script
+reports them as skipped when they are not installed, and the dependency audit
+is advisory, matching CI. Everything else must pass.
+
+The pre-commit hook runs `check:fast` and the pre-push hook runs `check:fast`
+plus the dependency audit. Those are convenience gates, not the full gate. Run
+the full gate before merging, and merge with `gh pr merge` once it passes. A
+push never needs a green check to go through; nothing in these repos requires
+one.

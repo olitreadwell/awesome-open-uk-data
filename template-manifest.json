@@ -84,6 +84,10 @@
         "if": "package.json"
       },
       {
+        "path": "scripts/local-ci.sh",
+        "if": "package.json"
+      },
+      {
         "path": "scripts/sync-from-template.mjs"
       },
       {

@@ -40,6 +40,7 @@
     "contract": "node scripts/contract-test.mjs",
     "test:fast": "vitest run src/data src/lib/dataset.test.ts src/lib/db.test.ts src/lib/db-mode.test.ts src/lib/item-repository.test.ts src/lib/search.test.ts",
     "check:fast": "npm run build:snapshot && npm run format:check && npm run lint && npm run typecheck && npm run test:fast && npm run check:external-links && npm run check:links && npm run build",
+    "check:ci": "bash scripts/local-ci.sh",
     "check:item-urls": "node scripts/check-item-urls.mjs"
   },
   "dependencies": {
