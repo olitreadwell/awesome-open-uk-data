@@ -22,4 +22,4 @@ jobs:
         run: node scripts/sync-from-template.mjs --apply --push
         env:
           GH_TOKEN: ${{ secrets.TEMPLATE_SYNC_TOKEN || secrets.GITHUB_TOKEN }}
-          TEMPLATE_URL: ${{ secrets.TEMPLATE_URL || 'https://github.com/olitreadwell/template.git' }}
+          TEMPLATE_URL: ${{ secrets.TEMPLATE_URL || 'https://github.com/olitreadwell/dataset-directory-template.git' }}
