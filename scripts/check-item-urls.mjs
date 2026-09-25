@@ -16,6 +16,17 @@ const PER_ORIGIN_DELAY_MS = 500;
 /** Per-request timeout, in milliseconds. */
 const REQUEST_TIMEOUT_MS = 15000;
 
+/**
+ * Attempts per URL before a network-level failure counts as dead. Some
+ * publishers (Public Health Scotland among them) reset a share of TLS
+ * connections while answering others, so one reset is not evidence of a dead
+ * source. HTTP status codes are never retried: only thrown fetch errors are.
+ */
+const NETWORK_ATTEMPTS = 3;
+
+/** Delay before the first retry, in milliseconds; doubles for each later retry. */
+const RETRY_BACKOFF_MS = 1000;
+
 /** User agent for the check: identifies the repo so a publisher can see who asked. */
 const CHECK_USER_AGENT =
   'Mozilla/5.0 (compatible; AwesomeOpenUKDataLinkCheck/1.0; +https://github.com/olitreadwell/awesome-open-uk-data)';
@@ -59,37 +70,59 @@ async function respectOriginDelay(origin) {
 }
 
 /**
- * Probes one URL and classifies the answer.
+ * Classifies one HTTP answer. Never retried, because a status code is the
+ * publisher's answer rather than a failed connection.
+ */
+function classifyResponse(res) {
+  if (LIVE_STATUSES.has(res.status)) {
+    return { outcome: 'ok', status: res.status, detail: res.url };
+  }
+  if (DEAD_STATUSES.has(res.status)) {
+    return { outcome: 'dead', status: res.status, detail: res.url };
+  }
+  if (res.status === 403 || res.status === 405 || res.status === 429) {
+    return { outcome: 'blocked', status: res.status, detail: 'bot-protected, server is up' };
+  }
+  return { outcome: 'dead', status: res.status, detail: `${res.status} from publisher` };
+}
+
+/** One fetch attempt, with the polite per-origin delay observed first. */
+async function fetchOnce(url, origin) {
+  await respectOriginDelay(origin);
+  return fetch(url, {
+    method: 'GET',
+    redirect: 'follow',
+    headers: { 'user-agent': CHECK_USER_AGENT, accept: 'text/html,*/*' },
+    signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+  });
+}
+
+/**
+ * Probes one URL and classifies the answer. Connection-level failures are
+ * retried, because a publisher that resets one TCP connection is usually still
+ * up on the next.
  *
  * @param url - Absolute http(s) URL to probe
  * @returns `{ outcome, status, detail }`, where outcome is ok | blocked | dead
  */
 async function probeUrl(url) {
   const origin = new URL(url).origin;
-  await respectOriginDelay(origin);
-  try {
-    const res = await fetch(url, {
-      method: 'GET',
-      redirect: 'follow',
-      headers: { 'user-agent': CHECK_USER_AGENT, accept: 'text/html,*/*' },
-      signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
-    });
-    if (LIVE_STATUSES.has(res.status)) {
-      return { outcome: 'ok', status: res.status, detail: res.url };
+  let lastError;
+  for (let attempt = 1; attempt <= NETWORK_ATTEMPTS; attempt += 1) {
+    try {
+      return classifyResponse(await fetchOnce(url, origin));
+    } catch (error) {
+      lastError = error;
+      if (attempt < NETWORK_ATTEMPTS) {
+        await new Promise((resolve) => setTimeout(resolve, RETRY_BACKOFF_MS * 2 ** (attempt - 1)));
+      }
     }
-    if (DEAD_STATUSES.has(res.status)) {
-      return { outcome: 'dead', status: res.status, detail: res.url };
-    }
-    if (res.status === 403 || res.status === 405 || res.status === 429) {
-      return { outcome: 'blocked', status: res.status, detail: 'bot-protected, server is up' };
-    }
-    if (res.status >= 500) {
-      return { outcome: 'dead', status: res.status, detail: `${res.status} from publisher` };
-    }
-    return { outcome: 'dead', status: res.status, detail: `${res.status} from publisher` };
-  } catch (error) {
-    return { outcome: 'dead', status: 0, detail: `fetch failed: ${error.message}` };
   }
+  return {
+    outcome: 'dead',
+    status: 0,
+    detail: `fetch failed after ${NETWORK_ATTEMPTS} attempts: ${lastError.message}`,
+  };
 }
 
 const items = loadSeedItems();
