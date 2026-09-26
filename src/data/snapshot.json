@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-26T16:43:45.013Z",
+  "exportedAt": "2026-09-26T16:43:57.205Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -703,6 +703,28 @@
       "source": {
         "label": "Northern Ireland Statistics and Research Agency",
         "url": "https://www.nisra.gov.uk/statistics"
+      },
+      "lastVerified": "2026-09-27",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "dwp-stat-xplore",
+      "name": "DWP Stat-Xplore",
+      "slug": "dwp-stat-xplore",
+      "city": "London",
+      "region": "United Kingdom",
+      "location": "UK-wide",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "website": "https://stat-xplore.dwp.gov.uk/",
+      "categories": ["statistics", "government", "api"],
+      "description": "The Department for Work and Pensions' tool for benefit statistics: choose a dataset, build a custom table, view it as a chart and download the result in common file formats. Guest access is free, and a free account adds saved tables, field customisation and queued large tables. Information in Stat-Xplore sits under the Open Government Licence, and the REST API under /webapi/rest/v1/ needs an account.",
+      "source": {
+        "label": "Department for Work and Pensions",
+        "url": "https://stat-xplore.dwp.gov.uk/webapi/online-help/index.html"
       },
       "lastVerified": "2026-09-27",
       "verified": true,

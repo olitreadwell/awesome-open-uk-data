@@ -603,6 +603,26 @@ const rawItems = [
     lastVerified: '2026-09-27',
     verified: true,
   },
+  {
+    id: 'dwp-stat-xplore',
+    slug: 'dwp-stat-xplore',
+    name: 'DWP Stat-Xplore',
+    city: 'London',
+    region: 'United Kingdom',
+    location: 'UK-wide',
+    lat: 51.5074,
+    lng: -0.1278,
+    description:
+      "The Department for Work and Pensions' tool for benefit statistics: choose a dataset, build a custom table, view it as a chart and download the result in common file formats. Guest access is free, and a free account adds saved tables, field customisation and queued large tables. Information in Stat-Xplore sits under the Open Government Licence, and the REST API under /webapi/rest/v1/ needs an account.",
+    categories: ['statistics', 'government', 'api'],
+    website: 'https://stat-xplore.dwp.gov.uk/',
+    source: {
+      label: 'Department for Work and Pensions',
+      url: 'https://stat-xplore.dwp.gov.uk/webapi/online-help/index.html',
+    },
+    lastVerified: '2026-09-27',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
