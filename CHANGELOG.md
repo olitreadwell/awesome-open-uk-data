@@ -68,9 +68,29 @@ All notable changes documented here. Format follows
   Agency's statistics hub, an executive agency of the Department of Finance
   (NI), covering population and the census, health, work and benefits,
   education, transport, the environment, crime and the economy.
+- 2026-09-27: `dwp-stat-xplore`: the Department for Work and Pensions' tool
+  for benefit statistics, with custom tables, charts and downloads, free
+  guest access, data under the Open Government Licence and a REST API under
+  `/webapi/rest/v1/` that needs an account.
+- 2026-09-27: `british-geological-survey`: BGS geoscience data through
+  OpenGeoscience (maps, borehole log scans, photographs and digital
+  datasets, free of charge) plus WMS/WFS map services, a CSW catalogue and
+  the AGS geotechnical download service.
+- 2026-09-27: `cqc-open-data`: the Care Quality Commission's data on the
+  health and adult social care services it regulates in England, as a
+  key-based public API covering every active and inactive provider and
+  location plus care directory spreadsheet downloads.
 
 ### Fixed
 
+- 2026-09-27: rolled every `lastVerified` forward after
+  `pnpm run check:item-urls` re-checked all 48 listing URLs (45 answered, 2
+  bot-blocked but live, 1 dead).
+- 2026-09-27: Public Health Scotland's portal (`www.opendata.nhs.scot`) reset
+  every request after a completed TLS handshake, where the previous two runs
+  saw intermittent resets. It is now `verified: false` with the failure
+  written into `notes`, and it stays in the dataset: the source is not
+  dropped.
 - 2026-09-26: rolled every `lastVerified` forward after
   `pnpm run check:item-urls` re-checked all 43 listing URLs (41 answered, 2
   bot-blocked but live, 0 dead).

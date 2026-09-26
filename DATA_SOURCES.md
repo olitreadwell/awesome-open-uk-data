@@ -34,6 +34,9 @@ Vercel Cron, and record every run in `scrapes` (DB mode) or
 | `Natural England` (Open Data Geoportal) | initial seed source | ✅ planned |
 | `Department for Environment, Food & Rural Affairs` (UK-AIR air quality data archive) | initial seed source | ✅ planned |
 | `Northern Ireland Statistics and Research Agency` (statistics and research hub) | initial seed source | ✅ planned |
+| `Department for Work and Pensions` (Stat-Xplore benefit statistics) | initial seed source | ✅ planned |
+| `British Geological Survey` (OpenGeoscience downloads and web services) | initial seed source | ✅ planned |
+| `Care Quality Commission` (open data API and care directory downloads) | initial seed source | ✅ planned |
 <!-- SEED-SOURCES -->
 
 ## Candidate seeds from public-apis

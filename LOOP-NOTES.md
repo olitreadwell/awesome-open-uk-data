@@ -222,3 +222,73 @@ down, and what is queued for the next run.
   typecheck, data tests, links, build), and `git status --short` is empty
   after it apart from the CHANGELOG, DATA_SOURCES and LOOP-NOTES edits of this
   batch. Full suite (coverage, smoke, e2e) runs in CI after the push.
+
+## 2026-09-27
+
+- Step 1: `node scripts/check-item-urls.mjs` covered the 32 listings committed
+  at the start of the run (43 URLs). One URL read dead:
+  `www.opendata.nhs.scot`, where the TLS handshake completes against a current
+  certificate and the connection is then reset before any response, on the home
+  page and on the CKAN API paths alike. Eight curl attempts and three node
+  fetch attempts all failed the same way, two independent proxies timed out on
+  the origin (codetabs 522, allorigins 408), and plain HTTP still answers 302
+  from the site's BigIP load balancer, so the host is up and the application
+  layer is not serving. Yesterday's run saw the same origin fail about half the
+  time, which read as transient then and now looks like a degrading service.
+  The listing stays in the dataset as `verified: false` with the evidence in
+  `notes`; `lastVerified` stays at 2026-09-26, the last day it answered. The
+  checker still exits non-zero for it, because it has no concept of an
+  annotated source: expect that one DEAD line on every run until PHS fix the
+  front end, and treat a third consecutive failure as the three-strikes stop
+  from the loop contract.
+- Every other `lastVerified` rolled forward to 2026-09-27.
+- Added 3 sources. The dataset is now 35 listings, 48 URLs.
+- DWP Stat-Xplore (`3f94d7b`): the front page describes the guided table
+  builder, free guest access, the free optional account (saved tables, queued
+  large tables, custom fields) and downloads into common file formats, and the
+  terms page states "Information within Stat-Xplore is made available under the
+  Open Government Licence". `https://stat-xplore.dwp.gov.uk/webapi/rest/v1/`
+  answers 401 unauthenticated, so the description says the API needs an
+  account. City "London", with location "UK-wide" rather than an invented
+  address: the DWP about page carries no postal address, only Caxton House
+  logo assets.
+- British Geological Survey (`3f6a167`): OpenGeoscience publishes maps,
+  borehole log scans, photographs and digital datasets free of charge; the
+  terms block says data is made available under the Open Government Licence
+  "wherever possible" with a "Contains British Geological Survey materials ©
+  UKRI [year]" acknowledgement; the web services page lists WFS, APIs, an OGC
+  CSW catalogue and the AGS geotechnical download service. The BGS ArcGIS Open
+  Data Hub (`maps-bgs.opendata.arcgis.com`, a separate 200) carried 72 datasets
+  in its DCAT feed on 2026-09-27, formats CSV, ZIP, GeoJSON, KML, TXT, XLSX,
+  GPKG, GDB, OGC WMS and ArcGIS GeoServices REST API. City "Nottingham",
+  location "Keyworth, Nottinghamshire": BGS's own Keyworth page says the
+  headquarters are there and the nearest railway station is Nottingham, and
+  the postcode NG12 5GG confirms it. The pin is Nottingham city, not the
+  Keyworth site.
+- Care Quality Commission (`e8094e2`): the using-CQC-data page confirms the API
+  base `https://api.service.cqc.org.uk`, that authentication is now required,
+  that the API covers all active and inactive providers and locations with
+  individual detail and linked-organisation history, that the data updates
+  daily, that TLS 1.2 or higher is needed, and that the Open Government Licence
+  applies. `https://api-portal.service.cqc.org.uk` answers 200, and the API
+  answers 401 with a dummy key, which is what a live key-gated service should
+  do. "Care directory" spreadsheet downloads are on the same page. City
+  "Newcastle upon Tyne"; the coordinate is the Citygate postcode NE1 4PA from
+  the CQC's own map link (54.9732, -1.6208).
+- The final `check-item-urls` pass reads 48 URLs: 45 ok, 2 bot-blocked but
+  live, 1 dead (the annotated PHS listing). All five new URLs answered 200 on
+  the first try.
+- Checked and rejected this run: JNCC's Resource Hub (`hub.jncc.gov.uk`, 200,
+  open-access reports and datasets but no discovered API and the DCAT feed
+  404s), Natural Resources Wales' evidence-and-data page (200 but a
+  JS-rendered language gate with no content for this client), Historic
+  Environment Scotland's archives-and-research page (200, worth another look),
+  `get-information-schools.service.gov.uk/Downloads` (403), and CQC's API
+  without a key.
+- Queued for next run: National Records of Scotland statistics (200), DAERA
+  Northern Ireland (200), Sport England research and data (200), Historic
+  Environment Scotland, and the BGS National Geoscience Data Centre.
+- `pnpm run check:fast` exits 0 on this tree after the last commit (snapshot,
+  format, lint, typecheck, data tests, links, build), and `git status --short`
+  is clean apart from the CHANGELOG, DATA_SOURCES and LOOP-NOTES edits of this
+  batch. Full suite (coverage, smoke, e2e) runs in CI after the push.
