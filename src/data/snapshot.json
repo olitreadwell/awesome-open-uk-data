@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-25T17:43:00.687Z",
+  "exportedAt": "2026-09-26T16:43:45.013Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -19,7 +19,7 @@
         "label": "data.gov.uk",
         "url": "https://www.data.gov.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -41,7 +41,7 @@
         "label": "ONS",
         "url": "https://api.ons.gov.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -63,7 +63,7 @@
         "label": "ONS",
         "url": "https://geoportal.statistics.gov.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -85,7 +85,7 @@
         "label": "Companies House",
         "url": "https://developer.company-information.service.gov.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -107,7 +107,7 @@
         "label": "HM Land Registry",
         "url": "https://landregistry.data.gov.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -129,7 +129,7 @@
         "label": "UK Parliament",
         "url": "https://api.parliament.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -151,7 +151,7 @@
         "label": "The National Archives",
         "url": "https://www.legislation.gov.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -173,7 +173,7 @@
         "label": "GOV.UK",
         "url": "https://content-api.publishing.service.gov.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -195,7 +195,7 @@
         "label": "TfL",
         "url": "https://api.tfl.gov.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -217,7 +217,7 @@
         "label": "National Highways",
         "url": "https://opendata.nationalhighways.co.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -239,7 +239,7 @@
         "label": "NHS England",
         "url": "https://digital.nhs.uk/data-and-information/data-tools-and-services"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -262,7 +262,7 @@
         "label": "Environment Agency",
         "url": "https://environment.data.gov.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -284,7 +284,7 @@
         "label": "UK Police",
         "url": "https://data.police.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -306,7 +306,7 @@
         "label": "Department for Education",
         "url": "https://explore-education-statistics.service.gov.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -328,7 +328,7 @@
         "label": "Ordnance Survey",
         "url": "https://osdatahub.os.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -350,7 +350,7 @@
         "label": "NESO",
         "url": "https://neso.energy/data-portal"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -373,7 +373,7 @@
         "label": "Bank of England",
         "url": "https://www.bankofengland.co.uk/statistics/research-datasets"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -395,7 +395,7 @@
         "label": "Greater London Authority",
         "url": "https://data.london.gov.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -417,7 +417,7 @@
         "label": "Met Office",
         "url": "https://www.metoffice.gov.uk/services/data/datapoint"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -439,7 +439,7 @@
         "label": "UK Data Service",
         "url": "https://ukdataservice.ac.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -462,10 +462,11 @@
         "url": "https://www.opendata.nhs.scot/"
       },
       "lastVerified": "2026-09-26",
-      "verified": true,
+      "verified": false,
       "active": true,
       "optOut": false,
-      "calendarDates": []
+      "calendarDates": [],
+      "notes": "The HTTPS front end reset every request on 2026-09-27: the TLS handshake completes and the certificate is current, then the connection drops before a response, on the home page and the CKAN API paths alike. Two independent proxies (codetabs, allorigins) timed out on the same origin, and plain HTTP still answers 302 from the BigIP load balancer, so the host is up while the application layer is not serving. Left in place and unverified rather than dropped; re-check next run."
     },
     {
       "id": "datamap-wales",
@@ -483,7 +484,7 @@
         "label": "Welsh Government",
         "url": "https://datamap.gov.wales/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -505,7 +506,7 @@
         "label": "SEPA",
         "url": "https://www.sepa.org.uk/environment/environmental-data/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -527,7 +528,7 @@
         "label": "Food Standards Agency",
         "url": "https://api.ratings.food.gov.uk/help"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -549,7 +550,7 @@
         "label": "Ministry of Housing, Communities and Local Government",
         "url": "https://www.planning.data.gov.uk/docs"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -571,7 +572,7 @@
         "label": "Welsh Government",
         "url": "https://api.stats.gov.wales/v1/docs"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -593,7 +594,7 @@
         "label": "Charity Commission",
         "url": "https://register-of-charities.charitycommission.gov.uk/register/full-register-download"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -615,7 +616,7 @@
         "label": "The National Archives",
         "url": "https://discovery.nationalarchives.gov.uk/API/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -637,7 +638,7 @@
         "label": "UK Health Security Agency",
         "url": "https://api.ukhsa-dashboard.data.gov.uk/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -659,7 +660,7 @@
         "label": "Natural England",
         "url": "https://naturalengland-defra.opendata.arcgis.com/datasets"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -681,7 +682,7 @@
         "label": "Department for Environment, Food & Rural Affairs",
         "url": "https://uk-air.defra.gov.uk/data/"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
@@ -703,7 +704,7 @@
         "label": "Northern Ireland Statistics and Research Agency",
         "url": "https://www.nisra.gov.uk/statistics"
       },
-      "lastVerified": "2026-09-26",
+      "lastVerified": "2026-09-27",
       "verified": true,
       "active": true,
       "optOut": false,
