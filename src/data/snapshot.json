@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-26T16:43:57.205Z",
+  "exportedAt": "2026-09-26T16:44:06.686Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -725,6 +725,28 @@
       "source": {
         "label": "Department for Work and Pensions",
         "url": "https://stat-xplore.dwp.gov.uk/webapi/online-help/index.html"
+      },
+      "lastVerified": "2026-09-27",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "british-geological-survey",
+      "name": "British Geological Survey OpenGeoscience",
+      "slug": "british-geological-survey",
+      "city": "Nottingham",
+      "region": "United Kingdom",
+      "location": "Keyworth, Nottinghamshire",
+      "lat": 52.9548,
+      "lng": -1.1581,
+      "website": "https://www.bgs.ac.uk/geological-data/opengeoscience/",
+      "categories": ["geospatial", "environment", "catalog", "api"],
+      "description": "BGS geoscience data for the UK: OpenGeoscience publishes maps, borehole log scans, photographs and digital datasets free of charge, alongside WMS and WFS map services, a CSW catalogue for dataset discovery and a download service for geotechnical AGS data. The BGS ArcGIS Open Data Hub carried 72 datasets in its DCAT feed on 27 September 2026. OpenGeoscience data is under the Open Government Licence wherever possible, with a \"Contains British Geological Survey materials © UKRI\" acknowledgement.",
+      "source": {
+        "label": "British Geological Survey",
+        "url": "https://www.bgs.ac.uk/geological-data/"
       },
       "lastVerified": "2026-09-27",
       "verified": true,
