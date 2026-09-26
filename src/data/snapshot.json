@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-26T16:44:06.686Z",
+  "exportedAt": "2026-09-26T16:44:12.849Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -747,6 +747,28 @@
       "source": {
         "label": "British Geological Survey",
         "url": "https://www.bgs.ac.uk/geological-data/"
+      },
+      "lastVerified": "2026-09-27",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "cqc-open-data",
+      "name": "Care Quality Commission Open Data",
+      "slug": "cqc-open-data",
+      "city": "Newcastle upon Tyne",
+      "region": "United Kingdom",
+      "location": "Citygate, Newcastle upon Tyne",
+      "lat": 54.9732,
+      "lng": -1.6208,
+      "website": "https://www.cqc.org.uk/about-us/transparency/using-cqc-data",
+      "categories": ["health", "government", "api"],
+      "description": "The Care Quality Commission's data on the health and adult social care services it regulates in England. Its public API at api.service.cqc.org.uk lists every active and inactive provider and location, with the detail behind each one and the links between organisations, refreshed daily; an API key from the CQC developer portal is required. The care directory is also published as spreadsheet downloads. Both are under the Open Government Licence.",
+      "source": {
+        "label": "Care Quality Commission",
+        "url": "https://www.cqc.org.uk/about-us/transparency/using-cqc-data"
       },
       "lastVerified": "2026-09-27",
       "verified": true,

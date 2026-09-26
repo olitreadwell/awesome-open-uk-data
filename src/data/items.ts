@@ -640,6 +640,26 @@ const rawItems = [
     lastVerified: '2026-09-27',
     verified: true,
   },
+  {
+    id: 'cqc-open-data',
+    slug: 'cqc-open-data',
+    name: 'Care Quality Commission Open Data',
+    city: 'Newcastle upon Tyne',
+    region: 'United Kingdom',
+    location: 'Citygate, Newcastle upon Tyne',
+    lat: 54.9732,
+    lng: -1.6208,
+    description:
+      "The Care Quality Commission's data on the health and adult social care services it regulates in England. Its public API at api.service.cqc.org.uk lists every active and inactive provider and location, with the detail behind each one and the links between organisations, refreshed daily; an API key from the CQC developer portal is required. The care directory is also published as spreadsheet downloads. Both are under the Open Government Licence.",
+    categories: ['health', 'government', 'api'],
+    website: 'https://www.cqc.org.uk/about-us/transparency/using-cqc-data',
+    source: {
+      label: 'Care Quality Commission',
+      url: 'https://www.cqc.org.uk/about-us/transparency/using-cqc-data',
+    },
+    lastVerified: '2026-09-27',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
