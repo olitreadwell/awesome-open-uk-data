@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-27T16:44:40.453Z",
+  "exportedAt": "2026-09-27T16:44:44.310Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -769,6 +769,28 @@
       "source": {
         "label": "Care Quality Commission",
         "url": "https://www.cqc.org.uk/about-us/transparency/using-cqc-data"
+      },
+      "lastVerified": "2026-09-28",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "fingertips-public-health-profiles",
+      "name": "Fingertips Public Health Profiles",
+      "slug": "fingertips-public-health-profiles",
+      "city": "London",
+      "region": "United Kingdom",
+      "location": "Westminster, London",
+      "lat": 51.497876,
+      "lng": -0.133348,
+      "website": "https://fingertips.phe.org.uk/",
+      "categories": ["health", "statistics", "api"],
+      "description": "The Office for Health Improvement and Disparities public health data collection for England, part of DHSC. Indicators are grouped into themed profiles that put local figures next to national comparators, with data down to small-area geography. The API answers in JSON or CSV, with R and Python clients, and its endpoint list is documented at /swagger/docs/v1. All content is under the Open Government Licence except where stated.",
+      "source": {
+        "label": "Office for Health Improvement and Disparities",
+        "url": "https://fingertips.phe.org.uk/profile/guidance/supporting-information/api"
       },
       "lastVerified": "2026-09-28",
       "verified": true,

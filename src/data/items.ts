@@ -660,6 +660,26 @@ const rawItems = [
     lastVerified: '2026-09-28',
     verified: true,
   },
+  {
+    id: 'fingertips-public-health-profiles',
+    slug: 'fingertips-public-health-profiles',
+    name: 'Fingertips Public Health Profiles',
+    city: 'London',
+    region: 'United Kingdom',
+    location: 'Westminster, London',
+    lat: 51.497876,
+    lng: -0.133348,
+    description:
+      'The Office for Health Improvement and Disparities public health data collection for England, part of DHSC. Indicators are grouped into themed profiles that put local figures next to national comparators, with data down to small-area geography. The API answers in JSON or CSV, with R and Python clients, and its endpoint list is documented at /swagger/docs/v1. All content is under the Open Government Licence except where stated.',
+    categories: ['health', 'statistics', 'api'],
+    website: 'https://fingertips.phe.org.uk/',
+    source: {
+      label: 'Office for Health Improvement and Disparities',
+      url: 'https://fingertips.phe.org.uk/profile/guidance/supporting-information/api',
+    },
+    lastVerified: '2026-09-28',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
