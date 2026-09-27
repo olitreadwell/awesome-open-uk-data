@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-27T16:44:47.276Z",
+  "exportedAt": "2026-09-27T16:44:50.142Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -813,6 +813,28 @@
       "source": {
         "label": "NHS Business Services Authority",
         "url": "https://opendata.nhsbsa.net/dataset/"
+      },
+      "lastVerified": "2026-09-28",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "national-records-of-scotland-statistics",
+      "name": "National Records of Scotland Statistics",
+      "slug": "national-records-of-scotland-statistics",
+      "city": "Edinburgh",
+      "region": "Scotland",
+      "location": "Edinburgh",
+      "lat": 55.953751,
+      "lng": -3.189296,
+      "website": "https://www.nrscotland.gov.uk/statistics-and-data",
+      "categories": ["statistics", "population", "government"],
+      "description": "National Records of Scotland publishes Scotland's official statistics on population, births, deaths, marriages and life expectancy, migration and households, and names, plus the country's census results. Its geography products include the Scottish Postcode Directory, whose index arrives as zipped CSV files with boundary data alongside, and the Scottish Statistics Postcode Lookup. Publications carry downloadable data files, and the site is under the Open Government Licence v3.0.",
+      "source": {
+        "label": "National Records of Scotland",
+        "url": "https://www.nrscotland.gov.uk/statistics-and-data"
       },
       "lastVerified": "2026-09-28",
       "verified": true,

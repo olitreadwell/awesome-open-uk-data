@@ -700,6 +700,26 @@ const rawItems = [
     lastVerified: '2026-09-28',
     verified: true,
   },
+  {
+    id: 'national-records-of-scotland-statistics',
+    slug: 'national-records-of-scotland-statistics',
+    name: 'National Records of Scotland Statistics',
+    city: 'Edinburgh',
+    region: 'Scotland',
+    location: 'Edinburgh',
+    lat: 55.953751,
+    lng: -3.189296,
+    description:
+      "National Records of Scotland publishes Scotland's official statistics on population, births, deaths, marriages and life expectancy, migration and households, and names, plus the country's census results. Its geography products include the Scottish Postcode Directory, whose index arrives as zipped CSV files with boundary data alongside, and the Scottish Statistics Postcode Lookup. Publications carry downloadable data files, and the site is under the Open Government Licence v3.0.",
+    categories: ['statistics', 'population', 'government'],
+    website: 'https://www.nrscotland.gov.uk/statistics-and-data',
+    source: {
+      label: 'National Records of Scotland',
+      url: 'https://www.nrscotland.gov.uk/statistics-and-data',
+    },
+    lastVerified: '2026-09-28',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
