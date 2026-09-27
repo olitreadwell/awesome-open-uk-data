@@ -80,6 +80,17 @@ All notable changes documented here. Format follows
   health and adult social care services it regulates in England, as a
   key-based public API covering every active and inactive provider and
   location plus care directory spreadsheet downloads.
+- 2026-09-28: `fingertips-public-health-profiles`: the Office for Health
+  Improvement and Disparities public health data collection for England,
+  grouped into themed profiles, with a documented JSON and CSV API and R and
+  Python clients.
+- 2026-09-28: `nhsbsa-open-data-portal`: the NHS Business Services Authority
+  open data portal, a CKAN catalogue of 2,158 packages covering prescribing,
+  dental activity, dispensing contractors and more, free to use and reuse
+  under the Open Government Licence.
+- 2026-09-28: `national-records-of-scotland-statistics`: Scotland's official
+  population, vital events and household statistics, plus geography products
+  such as the Scottish Postcode Directory, under the Open Government Licence.
 
 ### Fixed
 
@@ -91,6 +102,16 @@ All notable changes documented here. Format follows
   saw intermittent resets. It is now `verified: false` with the failure
   written into `notes`, and it stays in the dataset: the source is not
   dropped.
+- 2026-09-28: rolled every `lastVerified` forward to 2026-09-28 after
+  `pnpm run check:item-urls` re-checked all 53 listing URLs (50 answered, 2
+  bot-blocked but live, 1 dead: the Public Health Scotland portal; a one-off
+  timeout on `uk-air.defra.gov.uk` answered 200 to curl and in a browser
+  straight after).
+- 2026-09-28: Public Health Scotland's portal (`www.opendata.nhs.scot`) reset
+  every request again, for the second consecutive run. It stays
+  `verified: false` with the failure written into `notes` and `lastVerified`
+  at 2026-09-26, the last day it answered. A third consecutive run will hit
+  the loop's three-strikes stop.
 - 2026-09-26: rolled every `lastVerified` forward after
   `pnpm run check:item-urls` re-checked all 43 listing URLs (41 answered, 2
   bot-blocked but live, 0 dead).

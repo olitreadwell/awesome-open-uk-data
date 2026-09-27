@@ -292,3 +292,74 @@ down, and what is queued for the next run.
   format, lint, typecheck, data tests, links, build), and `git status --short`
   is clean apart from the CHANGELOG, DATA_SOURCES and LOOP-NOTES edits of this
   batch. Full suite (coverage, smoke, e2e) runs in CI after the push.
+
+## 2026-09-28
+
+- Step 1: `node scripts/check-item-urls.mjs` covered the 35 listings committed
+  at the start of the run (48 unique URLs). Two read dead in that pass.
+  `www.opendata.nhs.scot` reset every request again, the second consecutive
+  run: the TLS handshake completes against a current certificate and the
+  connection then drops before a response, on the home page and the CKAN API
+  paths alike, in curl, in Node fetch and in headless Chrome. Plain HTTP still
+  answers 302 from the BigIP load balancer, so the host is up and the
+  application layer is not serving. The listing stays `verified: false` with
+  the evidence in `notes` and `lastVerified` at 2026-09-26, the last day it
+  answered. The second dead line was `uk-air.defra.gov.uk`, which timed out
+  once inside the Node checker and answered 200 to curl and in the browser
+  straight after, so it keeps `verified: true` and rolls forward; a third
+  consecutive PHS failure will hit the loop's three-strikes stop.
+- Every other `lastVerified` rolled forward to 2026-09-28.
+- A second pass over the batch, run after the new items landed, covered all
+  53 unique listing URLs: 50 answered 200, 2 answered 403 from bot-protected
+  hosts that are live in a browser (`digital.nhs.uk`, `neso.energy`), and the
+  Public Health Scotland portal was the only dead line. `uk-air.defra.gov.uk`
+  answered 200 on both of its URLs this time, which confirms the earlier
+  timeout was transient.
+- Added three sources, each verified live before the item was written:
+  `fingertips-public-health-profiles`, `nhsbsa-open-data-portal` and
+  `national-records-of-scotland-statistics`.
+- Fingertips (`fingertips.phe.org.uk`, 200): the guidance page says the API
+  returns JSON or CSV, that R (`fingertipsR`) and Python (`fingertips_py`)
+  clients exist, and that the site is published by the Office for Health
+  Improvement and Disparities under the Open Government Licence and Crown
+  copyright. The Swagger spec at `/swagger/docs/v1` answers 200 with 113
+  documented paths, `/api/profiles` returned 38 profiles and `/api/area_types`
+  returned JSON on the day. City "London", location "Westminster, London"; the
+  coordinate is DHSC's own published address at 39 Victoria Street SW1H 0EU
+  (51.497876, -0.133348 from postcodes.io), where OHID sits.
+- NHSBSA Open Data Portal (`opendata.nhsbsa.net`, 200): the About page says
+  all data is released under the Open Government Licence and free to use and
+  reuse, and that the portal runs on CKAN. `status_show` reported CKAN 2.11.6
+  with the datastore and dcat extensions, `package_list` carried 2,158
+  packages, the resource-format facet showed CSV (998), XLSX (103), PDF (74),
+  ZIP (8) and XLS (2), and `datastore_search` returned rows for a real
+  resource. City "Newcastle upon Tyne"; the coordinate is NHSBSA's own
+  contact-page address, Stella House, Goldcrest Way, Newburn Riverside,
+  NE15 8NY (54.96972, -1.712379 from postcodes.io).
+- National Records of Scotland (`nrscotland.gov.uk`, 200, plus the geography
+  page at 200): the statistics-and-data hub carries population, migration and
+  households, births, deaths, marriages and life expectancy, names, and
+  Scotland's Census; the geography products page documents the Scottish
+  Postcode Directory (CSV index files plus boundary shapefiles) and the
+  Scottish Statistics Postcode Lookup; the Scottish Postcode Directory 2026/2
+  publication page lists eight zipped downloads; and the site footer puts
+  content under the Open Government Licence v3.0. City "Edinburgh"; the
+  coordinate is NRS's General Register House home, 2 Princes Street EH1 3YY
+  (55.953751, -3.189296 from postcodes.io).
+- Checked and rejected this run: `statistics.gov.scot` (still an empty reply on
+  every attempt, over HTTP/1.1 and HTTP/2, as first noted on 2026-09-23),
+  `canmore.org.uk` (403 to this client), NatureScot's data-and-research page
+  (403), Registers of Scotland data-and-statistics (403), Ofcom research and
+  data (403), and Historic England's listed-building data downloads (403).
+  These are all live-but-bot-protected rather than gone, so they stay on the
+  candidate list if a browser check is worth the time.
+- Still queued: Sport England research and data (200), Historic Environment
+  Scotland archives and research (200) plus the Historic Environment Portal
+  (200), DAERA Northern Ireland (200), the Office for Students data and
+  analysis (200), the Environmental Information Data Centre
+  (`eidc.ceh.ac.uk`, 200) with its `catalogue.ceh.ac.uk` JSON catalogue, and
+  the BGS National Geoscience Data Centre (200, likely too close to the
+  existing OpenGeoscience listing).
+- `pnpm run check:fast` exits 0 on this tree after the batch (snapshot,
+  format, lint, typecheck, data tests, links, build). Full suite (coverage,
+  smoke, e2e) runs in CI after the push.
