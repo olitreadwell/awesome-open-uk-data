@@ -680,6 +680,26 @@ const rawItems = [
     lastVerified: '2026-09-28',
     verified: true,
   },
+  {
+    id: 'nhsbsa-open-data-portal',
+    slug: 'nhsbsa-open-data-portal',
+    name: 'NHSBSA Open Data Portal',
+    city: 'Newcastle upon Tyne',
+    region: 'United Kingdom',
+    location: 'Newburn Riverside, Newcastle upon Tyne',
+    lat: 54.96972,
+    lng: -1.712379,
+    description:
+      'The NHS Business Services Authority open data portal, free to use and reuse under the Open Government Licence. Its themes cover community prescribing and dispensing, dental activity, dispensing contractors, hospital and provider medicines, and digital service performance, alongside ad hoc statistical releases and the FOI disclosure log. Files download as CSV, XLSX, PDF and ZIP, and the portal listed 2,158 packages on 28 September 2026.',
+    categories: ['health', 'catalog', 'api'],
+    website: 'https://opendata.nhsbsa.net/',
+    source: {
+      label: 'NHS Business Services Authority',
+      url: 'https://opendata.nhsbsa.net/dataset/',
+    },
+    lastVerified: '2026-09-28',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */

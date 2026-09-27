@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-27T16:44:44.310Z",
+  "exportedAt": "2026-09-27T16:44:47.276Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -791,6 +791,28 @@
       "source": {
         "label": "Office for Health Improvement and Disparities",
         "url": "https://fingertips.phe.org.uk/profile/guidance/supporting-information/api"
+      },
+      "lastVerified": "2026-09-28",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "nhsbsa-open-data-portal",
+      "name": "NHSBSA Open Data Portal",
+      "slug": "nhsbsa-open-data-portal",
+      "city": "Newcastle upon Tyne",
+      "region": "United Kingdom",
+      "location": "Newburn Riverside, Newcastle upon Tyne",
+      "lat": 54.96972,
+      "lng": -1.712379,
+      "website": "https://opendata.nhsbsa.net/",
+      "categories": ["health", "catalog", "api"],
+      "description": "The NHS Business Services Authority open data portal, free to use and reuse under the Open Government Licence. Its themes cover community prescribing and dispensing, dental activity, dispensing contractors, hospital and provider medicines, and digital service performance, alongside ad hoc statistical releases and the FOI disclosure log. Files download as CSV, XLSX, PDF and ZIP, and the portal listed 2,158 packages on 28 September 2026.",
+      "source": {
+        "label": "NHS Business Services Authority",
+        "url": "https://opendata.nhsbsa.net/dataset/"
       },
       "lastVerified": "2026-09-28",
       "verified": true,
