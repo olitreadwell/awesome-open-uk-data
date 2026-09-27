@@ -112,6 +112,9 @@ All notable changes documented here. Format follows
   `verified: false` with the failure written into `notes` and `lastVerified`
   at 2026-09-26, the last day it answered. A third consecutive run will hit
   the loop's three-strikes stop.
+- 2026-09-28: added `ags` to `ignore-words-list` in `.codespellrc`. Codespell
+  read the BGS item's "AGS" (the geotechnical data format) as "tags/ages" and
+  failed the spell-check job on the 2026-09-27 push and again on 2026-09-28.
 - 2026-09-26: rolled every `lastVerified` forward after
   `pnpm run check:item-urls` re-checked all 43 listing URLs (41 answered, 2
   bot-blocked but live, 0 dead).

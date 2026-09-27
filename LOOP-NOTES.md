@@ -363,3 +363,11 @@ down, and what is queued for the next run.
 - `pnpm run check:fast` exits 0 on this tree after the batch (snapshot,
   format, lint, typecheck, data tests, links, build). Full suite (coverage,
   smoke, e2e) runs in CI after the push.
+- CI on `01db1b7` came back with one red job: codespell, which read the BGS
+  item's "AGS" (the geotechnical data format) as "tags/ages". The same job was
+  already red on the 2026-09-27 push for the same four lines, so this predates
+  today's batch. `ags` is now in `ignore-words-list` in `.codespellrc`, which
+  is the same fix the template used for "ONS" and "ot", and `codespell` exits
+  0 locally. The other jobs on `01db1b7` passed: Check (mirrors `pnpm run
+  check`), dependency audit, actionlint, yamllint, Docker, Quality Gates,
+  Security and both e2e shards.
