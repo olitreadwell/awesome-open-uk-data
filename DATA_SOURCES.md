@@ -40,6 +40,7 @@ Vercel Cron, and record every run in `scrapes` (DB mode) or
 | `Fingertips` (Office for Health Improvement and Disparities public health profiles) | initial seed source | ✅ planned |
 | `NHSBSA` (Open Data Portal CKAN catalogue) | initial seed source | ✅ planned |
 | `National Records of Scotland` (statistics and geography products) | initial seed source | ✅ planned |
+| `Environmental Information Data Centre` (NERC terrestrial and freshwater data catalogue) | initial seed source | ✅ planned |
 <!-- SEED-SOURCES -->
 
 ## Candidate seeds from public-apis

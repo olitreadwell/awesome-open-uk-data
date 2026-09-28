@@ -91,6 +91,11 @@ All notable changes documented here. Format follows
 - 2026-09-28: `national-records-of-scotland-statistics`: Scotland's official
   population, vital events and household statistics, plus geography products
   such as the Scottish Postcode Directory, under the Open Government Licence.
+- 2026-09-29: `environmental-information-data-centre`: the UK's national data
+  centre for terrestrial and freshwater sciences, run by NERC's Environmental
+  Data Service at the UK Centre for Ecology & Hydrology, with a 2,432-record
+  catalogue, per-dataset licences and scripted downloads that move to
+  Personal Access Tokens on 5 October 2026.
 
 ### Fixed
 

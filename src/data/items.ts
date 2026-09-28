@@ -720,6 +720,26 @@ const rawItems = [
     lastVerified: '2026-09-29',
     verified: true,
   },
+  {
+    id: 'environmental-information-data-centre',
+    slug: 'environmental-information-data-centre',
+    name: 'Environmental Information Data Centre',
+    city: 'Lancaster',
+    region: 'United Kingdom',
+    location: 'Bailrigg, Lancaster',
+    lat: 54.009176,
+    lng: -2.786881,
+    description:
+      "The Environmental Information Data Centre is the UK's national data centre for terrestrial and freshwater sciences, part of the Natural Environment Research Council's Environmental Data Service and hosted by the UK Centre for Ecology & Hydrology. Its catalogue held 2,432 records on 29 September 2026, with topics running from biodiversity and hydrology to land cover and pollution, and it is certified as a trusted repository by CoreTrustSeal. Downloads arrive as zipped data packages, or over plain HTTP for large holdings such as CHESS-met, and the catalogue answers JSON requests directly. Licences are set per record rather than site-wide, so each dataset page states its own terms. From 5 October 2026 programmatic downloads need a Personal Access Token in place of basic authentication.",
+    categories: ['environment', 'catalog', 'api'],
+    website: 'https://eidc.ac.uk/',
+    source: {
+      label: 'Environmental Information Data Centre',
+      url: 'https://catalogue.ceh.ac.uk/eidc/documents',
+    },
+    lastVerified: '2026-09-29',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
