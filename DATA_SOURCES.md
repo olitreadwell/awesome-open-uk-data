@@ -41,6 +41,7 @@ Vercel Cron, and record every run in `scrapes` (DB mode) or
 | `NHSBSA` (Open Data Portal CKAN catalogue) | initial seed source | ✅ planned |
 | `National Records of Scotland` (statistics and geography products) | initial seed source | ✅ planned |
 | `Environmental Information Data Centre` (NERC terrestrial and freshwater data catalogue) | initial seed source | ✅ planned |
+| `Office for Students` (higher education data and analysis) | initial seed source | ✅ planned |
 <!-- SEED-SOURCES -->
 
 ## Candidate seeds from public-apis

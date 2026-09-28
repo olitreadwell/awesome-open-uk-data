@@ -96,6 +96,10 @@ All notable changes documented here. Format follows
   Data Service at the UK Centre for Ecology & Hydrology, with a 2,432-record
   catalogue, per-dataset licences and scripted downloads that move to
   Personal Access Tokens on 5 October 2026.
+- 2026-09-29: `office-for-students-data`: the higher education regulator for
+  England, publishing access and participation statistics, student numbers
+  and outcomes, National Student Survey and TEF data, with dashboards and
+  spreadsheet downloads under the Open Government Licence.
 
 ### Fixed
 

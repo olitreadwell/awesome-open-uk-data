@@ -740,6 +740,26 @@ const rawItems = [
     lastVerified: '2026-09-29',
     verified: true,
   },
+  {
+    id: 'office-for-students-data',
+    slug: 'office-for-students-data',
+    name: 'Office for Students Data and Analysis',
+    city: 'Bristol',
+    region: 'England',
+    location: 'Stoke Gifford, Bristol',
+    lat: 51.509343,
+    lng: -2.548942,
+    description:
+      'The Office for Students is the regulator for higher education in England, and its data and analysis pages carry the statistics behind that role: access and participation, student numbers and characteristics, student outcomes, the National Student Survey and the Teaching Excellence Framework. Interactive dashboards cover the size and shape of provision, student outcomes and TEF ratings, and the releases come with spreadsheet downloads, among them the 2024-25 student numbers table published on 16 September 2026. Content owned by the OfS is available for re-use under the Open Government Licence.',
+    categories: ['education', 'statistics', 'government'],
+    website: 'https://www.officeforstudents.org.uk/data-and-analysis/',
+    source: {
+      label: 'Office for Students',
+      url: 'https://www.officeforstudents.org.uk/data-and-analysis/official-statistics/',
+    },
+    lastVerified: '2026-09-29',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
