@@ -371,3 +371,65 @@ down, and what is queued for the next run.
   0 locally. The other jobs on `01db1b7` passed: Check (mirrors `pnpm run
   check`), dependency audit, actionlint, yamllint, Docker, Quality Gates,
   Security and both e2e shards.
+
+## 2026-09-29
+
+- `pnpm run check:item-urls` re-checked all 53 URLs in the dataset at the
+  start of the run: 51 answered, 2 are bot-blocked but live (`digital.nhs.uk`,
+  `neso.energy`), 0 dead. Every `lastVerified` moved to 2026-09-29.
+- `www.opendata.nhs.scot` answered every request again, for the first time
+  since 2026-09-26. The home page returned 200 to curl three times in a row
+  and the CKAN `package_search` API returned 105 packages, so the item goes
+  back to `verified: true` with no third strike, and the reset history stays
+  in `notes`.
+- Added three sources, each verified live before the item was written:
+  `environmental-information-data-centre`, `office-for-students-data` and
+  `gov-uk-trade-tariff-api`.
+- Environmental Information Data Centre (`eidc.ac.uk`, 200, canonical home
+  of `eidc.ceh.ac.uk`): the about page calls it the UK's national data centre
+  for terrestrial and freshwater sciences, part of NERC's Environmental Data
+  Service and hosted by UKCEH, and CoreTrustSeal-certified as a trusted
+  repository. `https://catalogue.ceh.ac.uk/eidc/documents` returns JSON with
+  `numFound: 2432` and `rows: 20`, the first 100 records split 81 Open
+  Government Licence to 19 non-OGL, so licences are set per record. The
+  download help page documents zip data packages, large holdings such as
+  CHESS-met served over plain HTTP, and Personal Access Tokens replacing basic
+  auth for scripted downloads from 5 October 2026. City "Lancaster"; the
+  coordinate is the EIDC's own postal address, Lancaster Environment Centre,
+  Library Avenue, Bailrigg, Lancaster LA1 4AP (54.009176, -2.786881 from
+  postcodes.io).
+- Office for Students (`officeforstudents.org.uk`, 200): the about page says
+  OfS is "the regulator for higher education in England" and a
+  non-departmental public body accountable to Parliament. The data and
+  analysis hub carries access and participation statistics, student numbers
+  and characteristics, outcomes, National Student Survey and TEF data, plus
+  dashboards such as size and shape of provision and student outcomes. The
+  student numbers page offers a real download, "Student numbers 2024-25"
+  (XLSX, published 2026-09-16), and the copyright page puts OfS-owned content
+  under the Open Government Licence. City "Bristol"; the coordinate is the
+  OfS offices page address, Westward House, Lime Kiln Close, Stoke Gifford,
+  Bristol BS34 8SR (51.509343, -2.548942 from postcodes.io).
+- GOV.UK Trade Tariff API (`api.gov.uk/hmrc/gov-uk-trade-tariff-api/`, 200):
+  the API catalogue entry describes HMRC's JSON API over the UK Trade Tariff
+  as covering "commodity codes, import/export controls, customs duty and VAT
+  rates", accessed over HTTPS as JSON, with the OGL v3.0 usage licence. The
+  reference docs at docs.trade-tariff.service.gov.uk (200) document the v2
+  endpoints, note that the tariff is updated daily, that the new service on
+  api.trade-tariff.service.gov.uk needs OAuth credentials from HMRC's
+  developer portal, and that rate limiting arrives from September 2026. Live
+  checks on the day: `/api/v2/sections` returned 21 sections and
+  `/api/v2/headings/0406` returned the cheese heading.
+- Checked and deferred this run: Sport England research and data (200 to this
+  client, but its terms-of-use page says all rights reserved; only the
+  360Giving grant-awards data carries an explicit Open Government Licence v3
+  statement, so the licence position needs a decision before it ships),
+  DAERA Northern Ireland statistics (200, publication-based with no bulk
+  download or API found on the statistics topic page), Historic Environment
+  Scotland (200), Natural Resources Wales evidence and data (200), and
+  `statistics.gov.scot` (still an empty reply on every attempt, unchanged
+  since 2026-09-23).
+- `pnpm run check:fast` exits 0 on this tree after the batch (snapshot,
+  format, lint, typecheck, data tests, links, build), and a second
+  `check:item-urls` pass over all 59 URLs (57 answered, 2 bot-blocked but
+  live, 0 dead) confirms the three new listings respond. Full suite (coverage,
+  smoke, e2e) runs in CI after the push.
