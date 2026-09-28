@@ -760,6 +760,26 @@ const rawItems = [
     lastVerified: '2026-09-29',
     verified: true,
   },
+  {
+    id: 'gov-uk-trade-tariff-api',
+    slug: 'gov-uk-trade-tariff-api',
+    name: 'GOV.UK Trade Tariff API',
+    city: 'London',
+    region: 'United Kingdom',
+    location: 'UK-wide',
+    lat: 51.5074,
+    lng: -0.1278,
+    description:
+      "The GOV.UK Trade Tariff API is HMRC's JSON interface to the UK Trade Tariff, covering commodity codes, duties and VAT rates, quota measures and historical tariff data. It is updated daily, with documentation at docs.trade-tariff.service.gov.uk and an entry in the government API catalogue that places the data under the Open Government Licence v3.0. The sections endpoint returned 21 sections on 29 September 2026, and the heading and commodity endpoints return the goods nomenclature records behind a code. The newer service on api.trade-tariff.service.gov.uk issues OAuth credentials through HMRC's developer portal, and rate limiting came in from September 2026.",
+    categories: ['trade', 'government', 'api'],
+    website: 'https://www.gov.uk/trade-tariff',
+    source: {
+      label: 'GOV.UK API Catalogue',
+      url: 'https://www.api.gov.uk/hmrc/gov-uk-trade-tariff-api/',
+    },
+    lastVerified: '2026-09-29',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */

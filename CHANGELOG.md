@@ -100,6 +100,10 @@ All notable changes documented here. Format follows
   England, publishing access and participation statistics, student numbers
   and outcomes, National Student Survey and TEF data, with dashboards and
   spreadsheet downloads under the Open Government Licence.
+- 2026-09-29: `gov-uk-trade-tariff-api`: HMRC's JSON API over the UK Trade
+  Tariff, covering commodity codes, duties and VAT rates, quota measures and
+  historical data, documented at docs.trade-tariff.service.gov.uk under the
+  Open Government Licence v3.0.
 
 ### Fixed
 
