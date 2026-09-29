@@ -111,6 +111,9 @@ All notable changes documented here. Format follows
 - 2026-09-30: `find-a-tender-service`: the Cabinet Office's UK procurement
   notice service, publishing opportunities, awards and payments as Open
   Contracting Data Standard release packages over a JSON API.
+- 2026-09-30: `nomis`: official census and labour market statistics run by
+  the University of Durham for the Office for National Statistics since 1981,
+  with a REST API for dataset discovery and SDMX, CSV and JSON downloads.
 
 ### Fixed
 

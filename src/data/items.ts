@@ -820,6 +820,26 @@ const rawItems = [
     lastVerified: '2026-09-30',
     verified: true,
   },
+  {
+    id: 'nomis',
+    slug: 'nomis',
+    name: 'Nomis',
+    city: 'Durham',
+    region: 'England',
+    location: 'Durham University',
+    lat: 54.768122,
+    lng: -1.571884,
+    description:
+      'Nomis is the official census and labour market statistics service, run by the University of Durham on behalf of the Office for National Statistics and first launched in 1981. It holds employment, unemployment, earnings and population figures by geography, sex, age and industry, drawn from the Labour Force Survey, the Annual Survey of Hours and Earnings, the Claimant Count, the Business Register and Employment Survey and the census. The REST API (v01) covers dataset discovery and data downloads in SDMX XML or JSON, CSV and JSON, with a query builder that will generate the API link for a chosen table.',
+    categories: ['statistics', 'employment', 'population', 'api'],
+    website: 'https://www.nomisweb.co.uk/',
+    source: {
+      label: 'Nomis',
+      url: 'https://www.nomisweb.co.uk/api/v01/help',
+    },
+    lastVerified: '2026-09-30',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
