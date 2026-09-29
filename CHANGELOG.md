@@ -104,6 +104,10 @@ All notable changes documented here. Format follows
   Tariff, covering commodity codes, duties and VAT rates, quota measures and
   historical data, documented at docs.trade-tariff.service.gov.uk under the
   Open Government Licence v3.0.
+- 2026-09-30: `dvsa-mot-history-api`: the Driver and Vehicle Standards
+  Agency's MOT history API, serving vehicle and MOT test records for Great
+  Britain and Northern Ireland over JSON, with a bulk download page and
+  documentation under the Open Government Licence v3.0.
 
 ### Fixed
 

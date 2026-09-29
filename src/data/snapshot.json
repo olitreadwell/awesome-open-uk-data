@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-29T21:13:02.373Z",
+  "exportedAt": "2026-09-29T21:13:14.254Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -901,6 +901,28 @@
       "source": {
         "label": "GOV.UK API Catalogue",
         "url": "https://www.api.gov.uk/hmrc/gov-uk-trade-tariff-api/"
+      },
+      "lastVerified": "2026-09-30",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "dvsa-mot-history-api",
+      "name": "DVSA MOT History API",
+      "slug": "dvsa-mot-history-api",
+      "city": "Nottingham",
+      "region": "England",
+      "location": "Unity Square, Nottingham",
+      "lat": 52.94209,
+      "lng": -1.159632,
+      "website": "https://documentation.history.mot.api.gov.uk/",
+      "categories": ["transport", "government", "api"],
+      "description": "The MOT history API from the Driver and Vehicle Standards Agency serves vehicle and MOT test records over a JSON REST interface: cars, motorcycles and vans tested in Great Britain since 2005 and Northern Ireland since 2017, plus HGVs, trailers, buses and coaches from Great Britain since 2018 and Northern Ireland from 2017. Access needs a registered API key, the documentation carries its own error codes and rate limits, and a separate page covers bulk downloads of vehicle and MOT history data. All content on the documentation site sits under the Open Government Licence v3.0.",
+      "source": {
+        "label": "Driver and Vehicle Standards Agency",
+        "url": "https://www.gov.uk/government/organisations/driver-and-vehicle-standards-agency"
       },
       "lastVerified": "2026-09-30",
       "verified": true,

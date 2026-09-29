@@ -780,6 +780,26 @@ const rawItems = [
     lastVerified: '2026-09-30',
     verified: true,
   },
+  {
+    id: 'dvsa-mot-history-api',
+    slug: 'dvsa-mot-history-api',
+    name: 'DVSA MOT History API',
+    city: 'Nottingham',
+    region: 'England',
+    location: 'Unity Square, Nottingham',
+    lat: 52.94209,
+    lng: -1.159632,
+    description:
+      'The MOT history API from the Driver and Vehicle Standards Agency serves vehicle and MOT test records over a JSON REST interface: cars, motorcycles and vans tested in Great Britain since 2005 and Northern Ireland since 2017, plus HGVs, trailers, buses and coaches from Great Britain since 2018 and Northern Ireland from 2017. Access needs a registered API key, the documentation carries its own error codes and rate limits, and a separate page covers bulk downloads of vehicle and MOT history data. All content on the documentation site sits under the Open Government Licence v3.0.',
+    categories: ['transport', 'government', 'api'],
+    website: 'https://documentation.history.mot.api.gov.uk/',
+    source: {
+      label: 'Driver and Vehicle Standards Agency',
+      url: 'https://www.gov.uk/government/organisations/driver-and-vehicle-standards-agency',
+    },
+    lastVerified: '2026-09-30',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
