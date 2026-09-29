@@ -433,3 +433,46 @@ down, and what is queued for the next run.
   `check:item-urls` pass over all 59 URLs (57 answered, 2 bot-blocked but
   live, 0 dead) confirms the three new listings respond. Full suite (coverage,
   smoke, e2e) runs in CI after the push.
+
+## 2026-09-30
+
+- Ran `node scripts/check-item-urls.mjs` first: all 59 listing URLs from the
+  previous batch answered (57 ok, 2 bot-blocked but live), so no link needed
+  fixing and every `lastVerified` rolled to 2026-09-30.
+- Added three sources (see `CHANGELOG.md` for the commits): the DVSA MOT
+  history API, the Find a Tender Service, and Nomis.
+  - DVSA MOT history API (`documentation.history.mot.api.gov.uk`, 200): a
+    JSON REST API over vehicle and MOT test records, covering cars,
+    motorcycles and vans in Great Britain since 2005 and Northern Ireland
+    since 2017, and HGVs, trailers, buses and coaches since 2018 in Great
+    Britain and 2017 in Northern Ireland. Access needs a registered key, and
+    the documentation carries error codes, rate limits and a bulk download
+    page, with the site footer placing its content under the Open Government
+    Licence v3.0. The Nottingham coordinate is the DVSA correspondence
+    address published on GOV.UK (1 Unity Square, NG2 1AY), geocoded through
+    postcodes.io.
+  - Find a Tender Service (`find-tender.service.gov.uk`, 200): the Cabinet
+    Office service where UK public sector buyers publish procurement notices.
+    Notices from February 2025 follow the Procurement Act 2023 and cover the
+    full contract life cycle outside Scotland, and the service replaced
+    Tenders Electronic Daily in the UK on 31 December 2020. The Open
+    Contracting Data Standard endpoint `/api/1.0/ocdsReleasePackages`
+    answered a plain request without a key (OCDS 1.1, updatedTo 2026-09-29);
+    only the submission endpoints need credentials.
+  - Nomis (`nomisweb.co.uk`, 200): ONS-backed census and labour market
+    statistics, run by the University of Durham since 1981. The REST API v01
+    serves dataset discovery and downloads as SDMX XML or JSON, CSV and JSON,
+    and both the dataset index and a live data query answered before writing.
+- Checked and deferred this run: FCA data (`fca.org.uk/data`, 200, but no
+  site-wide licence statement and the register has its own terms), the ORR
+  Data Portal (`dataportal.orr.gov.uk`, 200, rail statistics and a data table
+  catalogue, but the licence and terms pages tried both 404), the Ofgem data
+  portal (200, page needs JavaScript to read), the Cefas Data Portal
+  (`data.cefas.co.uk`, 200, but a client-rendered app so no dataset or
+  licence text could be read without a browser), and `statistics.gov.scot`
+  (still an empty reply, unchanged since 2026-09-23).
+- `pnpm run check:fast` exits 0 on this tree after the batch (snapshot,
+  format, lint, typecheck, data tests, links, build), and a second
+  `check:item-urls` pass over all 65 URLs (63 answered, 2 bot-blocked but
+  live, 0 dead) confirms the three new listings respond. Full suite (coverage,
+  smoke, e2e) runs in CI after the push.

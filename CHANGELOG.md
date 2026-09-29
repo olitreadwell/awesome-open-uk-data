@@ -117,6 +117,9 @@ All notable changes documented here. Format follows
 
 ### Fixed
 
+- 2026-09-30: rolled every `lastVerified` forward to 2026-09-30 after
+  `pnpm run check:item-urls` re-checked all 65 listing URLs (63 answered, 2
+  bot-blocked but live, 0 dead).
 - 2026-09-27: rolled every `lastVerified` forward after
   `pnpm run check:item-urls` re-checked all 48 listing URLs (45 answered, 2
   bot-blocked but live, 1 dead).
