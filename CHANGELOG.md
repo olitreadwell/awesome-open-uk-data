@@ -108,6 +108,9 @@ All notable changes documented here. Format follows
   Agency's MOT history API, serving vehicle and MOT test records for Great
   Britain and Northern Ireland over JSON, with a bulk download page and
   documentation under the Open Government Licence v3.0.
+- 2026-09-30: `find-a-tender-service`: the Cabinet Office's UK procurement
+  notice service, publishing opportunities, awards and payments as Open
+  Contracting Data Standard release packages over a JSON API.
 
 ### Fixed
 

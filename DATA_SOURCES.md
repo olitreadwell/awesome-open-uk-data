@@ -44,6 +44,7 @@ Vercel Cron, and record every run in `scrapes` (DB mode) or
 | `Office for Students` (higher education data and analysis) | initial seed source | ✅ planned |
 | `HMRC` (GOV.UK Trade Tariff API) | initial seed source | ✅ planned |
 | `DVSA` (MOT history API) | initial seed source | ✅ planned |
+| `Cabinet Office` (Find a Tender Service) | initial seed source | ✅ planned |
 <!-- SEED-SOURCES -->
 
 ## Candidate seeds from public-apis

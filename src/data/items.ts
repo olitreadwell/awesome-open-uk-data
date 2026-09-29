@@ -800,6 +800,26 @@ const rawItems = [
     lastVerified: '2026-09-30',
     verified: true,
   },
+  {
+    id: 'find-a-tender-service',
+    slug: 'find-a-tender-service',
+    name: 'Find a Tender Service',
+    city: 'London',
+    region: 'United Kingdom',
+    location: 'UK-wide',
+    lat: 51.50365,
+    lng: -0.126614,
+    description:
+      'Find a Tender is where UK public sector buyers publish notices about procurement opportunities and contracts, run by the Cabinet Office. Notices from February 2025 follow the Procurement Act 2023 and cover the full contract life cycle outside Scotland, while earlier procurements stay in the notice search. The same notices appear as Open Contracting Data Standard release packages over a JSON API that answered a plain request with records updated on 29 September 2026, and Find a Tender took over from Tenders Electronic Daily in the UK on 31 December 2020.',
+    categories: ['procurement', 'government', 'api'],
+    website: 'https://www.find-tender.service.gov.uk/',
+    source: {
+      label: 'Find a Tender',
+      url: 'https://www.find-tender.service.gov.uk/apidocumentation',
+    },
+    lastVerified: '2026-09-30',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
