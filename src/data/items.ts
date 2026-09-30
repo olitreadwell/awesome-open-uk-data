@@ -874,6 +874,23 @@ const rawItems = [
     lastVerified: '2026-10-01',
     verified: true,
   },
+  {
+    id: 'scottish-government-statistics',
+    slug: 'scottish-government-statistics',
+    name: 'Scottish Government Statistics',
+    city: 'Edinburgh',
+    region: 'Scotland',
+    location: "St Andrew's House, Edinburgh",
+    lat: 55.95365,
+    lng: -3.183896,
+    description:
+      'The Scottish Government publishes its official statistics and research on gov.scot, listed together in a statistics and research hub that held over 6,000 publications on 1 October 2026. Releases cover the economy, population, health, education, justice, transport, housing and the environment, and most carry spreadsheet tables alongside the report, such as the Excel tables for the quarterly housing statistics update and the Scottish Fish Farm Production Survey. Publications are grouped into collections, among them economy statistics and the fish farm production surveys. Content on gov.scot is available under the Open Government Licence v3.0 except for graphic assets and where stated otherwise.',
+    categories: ['statistics', 'government', 'economy', 'population'],
+    website: 'https://www.gov.scot/statistics/',
+    source: { label: 'Scottish Government', url: 'https://www.gov.scot/crown-copyright/' },
+    lastVerified: '2026-10-01',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */

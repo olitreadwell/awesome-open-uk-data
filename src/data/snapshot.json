@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-09-30T16:42:50.501Z",
+  "exportedAt": "2026-09-30T16:42:57.421Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -1011,6 +1011,28 @@
       "source": {
         "label": "Office of Rail and Road",
         "url": "https://www.orr.gov.uk/"
+      },
+      "lastVerified": "2026-10-01",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "scottish-government-statistics",
+      "name": "Scottish Government Statistics",
+      "slug": "scottish-government-statistics",
+      "city": "Edinburgh",
+      "region": "Scotland",
+      "location": "St Andrew's House, Edinburgh",
+      "lat": 55.95365,
+      "lng": -3.183896,
+      "website": "https://www.gov.scot/statistics/",
+      "categories": ["statistics", "government", "economy", "population"],
+      "description": "The Scottish Government publishes its official statistics and research on gov.scot, listed together in a statistics and research hub that held over 6,000 publications on 1 October 2026. Releases cover the economy, population, health, education, justice, transport, housing and the environment, and most carry spreadsheet tables alongside the report, such as the Excel tables for the quarterly housing statistics update and the Scottish Fish Farm Production Survey. Publications are grouped into collections, among them economy statistics and the fish farm production surveys. Content on gov.scot is available under the Open Government Licence v3.0 except for graphic assets and where stated otherwise.",
+      "source": {
+        "label": "Scottish Government",
+        "url": "https://www.gov.scot/crown-copyright/"
       },
       "lastVerified": "2026-10-01",
       "verified": true,
