@@ -891,6 +891,23 @@ const rawItems = [
     lastVerified: '2026-10-01',
     verified: true,
   },
+  {
+    id: 'uk-parliament-members-api',
+    slug: 'uk-parliament-members-api',
+    name: 'UK Parliament Members API',
+    city: 'London',
+    region: 'United Kingdom',
+    location: 'Westminster',
+    lat: 51.4995,
+    lng: -0.1248,
+    description:
+      'The UK Parliament Members API lists MPs and peers with their party, house, and dates of service, and reports the state of the parties in each house. The state-of-the-parties call takes a house, 1 for the Commons and 2 for the Lords, and a date, and returns each party with the seats it holds and the members counted behind them: on 1 October 2026 the Commons held 650 seats across 18 parties, with Labour on 403 and the Conservatives on 118. It answers without a key and sits alongside the main Parliament APIs on api.parliament.uk, and Parliament publishes the data under the Open Parliament Licence v3.0.',
+    categories: ['government', 'api', 'statistics'],
+    website: 'https://members-api.parliament.uk/',
+    source: { label: 'UK Parliament', url: 'https://members-api.parliament.uk/index.html' },
+    lastVerified: '2026-10-01',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */

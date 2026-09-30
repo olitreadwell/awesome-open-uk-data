@@ -127,6 +127,11 @@ All notable changes documented here. Format follows
   statistics and research hub on gov.scot, listing over 6,000 publications on
   1 October 2026 with spreadsheet tables alongside most reports, under the
   Open Government Licence v3.0.
+- 2026-10-01: `uk-parliament-members-api`: the UK Parliament Members API,
+  which lists MPs and peers and reports the state of the parties in each
+  house. The Commons held 650 seats across 18 parties on 1 October 2026, with
+  Labour on 403 and the Conservatives on 118, under the Open Parliament
+  Licence v3.0.
 
 ### Fixed
 

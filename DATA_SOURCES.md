@@ -49,6 +49,7 @@ Vercel Cron, and record every run in `scrapes` (DB mode) or
 | `Met Office` (Climate Data Portal) | initial seed source | ✅ planned |
 | `Office of Rail and Road` (rail statistics data portal) | initial seed source | ✅ planned |
 | `Scottish Government` (gov.scot statistics and research hub) | initial seed source | ✅ planned |
+| `UK Parliament` (Members API state of the parties) | initial seed source | ✅ planned |
 <!-- SEED-SOURCES -->
 
 ## Candidate seeds from public-apis
