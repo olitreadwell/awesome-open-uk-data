@@ -840,6 +840,23 @@ const rawItems = [
     lastVerified: '2026-10-01',
     verified: true,
   },
+  {
+    id: 'met-office-climate-data-portal',
+    slug: 'met-office-climate-data-portal',
+    name: 'Met Office Climate Data Portal',
+    city: 'Exeter',
+    region: 'United Kingdom',
+    location: 'UK-wide',
+    lat: 50.727611,
+    lng: -3.47566,
+    description:
+      "The Met Office Climate Data Portal publishes the UK's climate observations and projections as downloadable layers and GIS services. Its DCAT feed carried 98 datasets on 1 October 2026, with distributions in ZIP, CSV, GeoJSON, KML, TXT, XLSX, GPKG and GDB, plus an ArcGIS GeoServices REST API for each published layer. The holdings cover monthly and annual temperature, precipitation and wind-speed projections on 12km and 5km grids and at local-authority and sub-local-authority boundaries, sea level projections to 2100, the UK shared socioeconomic pathway scenarios, and gridded observations for 1991 to 2020. Licences are set per dataset, and 89 of the 98 state the Open Government Licence v3.0.",
+    categories: ['climate', 'environment', 'geospatial', 'api'],
+    website: 'https://climatedataportal.metoffice.gov.uk/',
+    source: { label: 'Met Office', url: 'https://climatedataportal.metoffice.gov.uk/search' },
+    lastVerified: '2026-10-01',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
