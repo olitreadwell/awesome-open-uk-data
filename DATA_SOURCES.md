@@ -46,6 +46,9 @@ Vercel Cron, and record every run in `scrapes` (DB mode) or
 | `DVSA` (MOT history API) | initial seed source | ✅ planned |
 | `Cabinet Office` (Find a Tender Service) | initial seed source | ✅ planned |
 | `Nomis` (ONS census and labour market statistics) | initial seed source | ✅ planned |
+| `Met Office` (Climate Data Portal) | initial seed source | ✅ planned |
+| `Office of Rail and Road` (rail statistics data portal) | initial seed source | ✅ planned |
+| `Scottish Government` (gov.scot statistics and research hub) | initial seed source | ✅ planned |
 <!-- SEED-SOURCES -->
 
 ## Candidate seeds from public-apis

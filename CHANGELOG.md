@@ -114,9 +114,25 @@ All notable changes documented here. Format follows
 - 2026-09-30: `nomis`: official census and labour market statistics run by
   the University of Durham for the Office for National Statistics since 1981,
   with a REST API for dataset discovery and SDMX, CSV and JSON downloads.
+- 2026-10-01: `met-office-climate-data-portal`: the Met Office's climate data
+  portal, carrying 98 datasets in its DCAT feed on 1 October 2026, from
+  gridded observations and UKCP projections to sea level and local-authority
+  climate data, in ZIP, CSV, GeoJSON, KML, TXT, XLSX, GPKG and GDB with an
+  ArcGIS GeoServices REST API for each layer.
+- 2026-10-01: `orr-data-portal`: the Office of Rail and Road's rail statistics
+  portal, covering passenger and freight usage, performance, fares, finance,
+  safety and infrastructure, with a data table catalogue whose tables download
+  as ODS files and a schedule of publication dates.
+- 2026-10-01: `scottish-government-statistics`: the Scottish Government's
+  statistics and research hub on gov.scot, listing over 6,000 publications on
+  1 October 2026 with spreadsheet tables alongside most reports, under the
+  Open Government Licence v3.0.
 
 ### Fixed
 
+- 2026-10-01: rolled every `lastVerified` forward to 2026-10-01 after
+  `pnpm run check:item-urls` re-checked all 65 listing URLs (63 answered, 2
+  bot-blocked but live, 0 dead).
 - 2026-09-30: rolled every `lastVerified` forward to 2026-09-30 after
   `pnpm run check:item-urls` re-checked all 65 listing URLs (63 answered, 2
   bot-blocked but live, 0 dead).

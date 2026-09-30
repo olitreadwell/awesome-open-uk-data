@@ -476,3 +476,71 @@ down, and what is queued for the next run.
   `check:item-urls` pass over all 65 URLs (63 answered, 2 bot-blocked but
   live, 0 dead) confirms the three new listings respond. Full suite (coverage,
   smoke, e2e) runs in CI after the push.
+
+## 2026-10-01
+
+- Step 1: `node scripts/check-item-urls.mjs` re-checked the 65 listing URLs
+  committed at the start of the run. 63 answered 200, `digital.nhs.uk` and
+  `neso.energy` answered 403 from bot protection that lets a browser in, and
+  0 were dead, so no link needed fixing. Every `lastVerified` rolled forward
+  to 2026-10-01 in `b404d2f`.
+- Added three sources, each fetched live before the item was written.
+  - Met Office Climate Data Portal (`8b26e37`): the DCAT feed at
+    `climatedataportal.metoffice.gov.uk/api/feed/dcat-us/1.1.json` carried 98
+    datasets on 2026-10-01. Distribution formats across the feed are ZIP
+    (180), a Web Page (98), and 90 each of ArcGIS GeoServices REST API, CSV,
+    GeoJSON, KML, TXT, XLSX, GPKG and GDB, so each layer has both a REST
+    service and file downloads. Titles cover monthly and annual temperature,
+    precipitation and wind-speed projections on 12km and 5km grids and at
+    local-authority and sub-local-authority boundaries, sea level projections
+    to 2100, the UK shared socioeconomic pathway scenarios, and 1991 to 2020
+    observations. Licences are set per dataset: 89 of the 98 state the Open
+    Government Licence v3.0 and 9 do not. City "Exeter", the Met Office
+    headquarters at FitzRoy Road EX1 3PB (50.727611, -3.47566 from
+    postcodes.io), matching the existing Met Office DataPoint item's city.
+  - Office of Rail and Road Data Portal (`bd911e2`): the portal indexes rail
+    statistics under usage, passenger experience, performance, finance,
+    health and safety, and infrastructure and environment, and has a data
+    table catalogue whose table pages carry ODS downloads, checked live on
+    `table-1220-passenger-journeys`. The release schedule on the day listed
+    Rail safety April 2025 to March 2026 (24 September 2026), freight rail
+    usage April to June 2026 (22 September 2026) and passenger rail
+    performance for the same quarter (17 September 2026). ORR's terms and
+    conditions page states Crown copyright 2026 and use under the Open
+    Government Licence, with the usual third-party exception. City "London";
+    the coordinate is ORR head office, 25 Cabot Square E14 4QZ (51.504805,
+    -0.023854 from postcodes.io). Checked and turned down in the same area:
+    Network Rail's open data feeds are registration-gated, capped at 1,000
+    users and carry bespoke terms rather than an open licence.
+  - Scottish Government Statistics (`ca37da1`): `gov.scot/statistics/` is the
+    statistics and research hub for the devolved administration and read
+    6,070 results on 2026-10-01, with releases such as the GDP Monthly
+    Estimate for July 2026 and the Scottish Fish Farm Production Survey 2025,
+    and spreadsheet tables on the publication pages, among them the Excel
+    tables for the quarterly housing statistics update. The gov.scot
+    crown-copyright page states all content is under the Open Government
+    Licence v3.0 except graphic assets and where stated otherwise. City
+    "Edinburgh", St Andrew's House EH1 3DG (55.95365, -3.183896 from
+    postcodes.io).
+- Checked and rejected this run: the Marine Data Exchange (200, but its terms
+  of use allow personal copying only, forbid use in a GIS and bar passing data
+  to third parties), the British Oceanographic Data Centre (200, but its
+  copyright page requires a signed licence, prohibits publishing data on the
+  web and can charge royalties), Natural Resources Wales evidence and data
+  (200 but a client-rendered language gate with no readable content),
+  Historic Environment Scotland's archives data page and
+  `portal.historicenvironment.scot/spatialdownloads` (both 403 to this
+  client), `spatialdata.gov.scot` (403), and `gov.wales/statistics-and-research`
+  (202 but landed on an A to Z of public bodies rather than a statistics
+  listing). All are worth another look with a browser except the two licensed
+  ones.
+- A second `check-item-urls` pass over the batch read 71 URLs: 69 ok, the same
+  2 bot-blocked but live, 0 dead.
+- `pnpm run check:fast` exits 0 on this tree after the batch (snapshot,
+  format, lint, typecheck, data tests, links, build). Full suite (coverage,
+  smoke, e2e) runs in CI after the push.
+- Queued for next run: Sport England research and data (200, licence position
+  unresolved: only the 360Giving grant awards carry an explicit OGL
+  statement), the FCA's data pages (200, no site-wide licence statement), the
+  JNCC Resource Hub (200, no API found), DAERA Northern Ireland statistics,
+  Historic Environment Scotland, Natural Resources Wales, and Cefas.
