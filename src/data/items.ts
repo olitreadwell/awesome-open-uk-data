@@ -857,6 +857,23 @@ const rawItems = [
     lastVerified: '2026-10-01',
     verified: true,
   },
+  {
+    id: 'orr-data-portal',
+    slug: 'orr-data-portal',
+    name: 'Office of Rail and Road Data Portal',
+    city: 'London',
+    region: 'England',
+    location: 'Cabot Square, London',
+    lat: 51.504805,
+    lng: -0.023854,
+    description:
+      'The Office of Rail and Road publishes its rail statistics on the data portal: passenger and freight usage, performance and cancellations, fares and industry finance, rail safety including the Common Safety Indicators and RIDDOR incident reports, and infrastructure and environment data. Each statistical release carries a set of data tables that download as ODS files, and the portal lists the publication dates for releases ahead. Recent releases include Rail safety, April 2025 to March 2026, published on 24 September 2026, freight rail usage for April to June 2026 on 22 September 2026, and passenger rail performance for the same quarter on 17 September 2026. Material on ORR websites is Crown copyright and available under the Open Government Licence v3.0.',
+    categories: ['transport', 'statistics', 'government'],
+    website: 'https://dataportal.orr.gov.uk/',
+    source: { label: 'Office of Rail and Road', url: 'https://www.orr.gov.uk/' },
+    lastVerified: '2026-10-01',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
