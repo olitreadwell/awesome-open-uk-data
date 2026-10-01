@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-10-01T16:46:55.942Z",
+  "exportedAt": "2026-10-01T16:47:03.623Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -1055,6 +1055,28 @@
       "source": {
         "label": "UK Parliament",
         "url": "https://members-api.parliament.uk/index.html"
+      },
+      "lastVerified": "2026-10-02",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "the-gazette",
+      "name": "The Gazette",
+      "slug": "the-gazette",
+      "city": "Norwich",
+      "region": "England",
+      "location": "PO Box 3584, Norwich",
+      "lat": 52.647735,
+      "lng": 1.32296,
+      "website": "https://www.thegazette.co.uk/data",
+      "categories": ["government", "legal", "api"],
+      "description": "The Gazette is the official public record of the UK, published since 1665 and produced by TSO under the superintendence of HM Stationery Office, part of The National Archives. Its archive holds company, insolvency, wills and probate, planning, honours and appointment notices, and it publishes them as linked data: a linked data API returns each notice as JSON-LD, Turtle or RDFa-enriched XML from format-specific URLs, and an Atom feed carries the latest notices and accepts search parameters such as text and start-publish-date. The site states the content is Crown copyright and free to use under the Open Government Licence v3.0, with the licence not covering the re-use of personal data.",
+      "source": {
+        "label": "The Gazette",
+        "url": "https://www.thegazette.co.uk/data/formats"
       },
       "lastVerified": "2026-10-02",
       "verified": true,

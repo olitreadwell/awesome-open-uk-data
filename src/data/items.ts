@@ -908,6 +908,23 @@ const rawItems = [
     lastVerified: '2026-10-02',
     verified: true,
   },
+  {
+    id: 'the-gazette',
+    slug: 'the-gazette',
+    name: 'The Gazette',
+    city: 'Norwich',
+    region: 'England',
+    location: 'PO Box 3584, Norwich',
+    lat: 52.647735,
+    lng: 1.32296,
+    description:
+      'The Gazette is the official public record of the UK, published since 1665 and produced by TSO under the superintendence of HM Stationery Office, part of The National Archives. Its archive holds company, insolvency, wills and probate, planning, honours and appointment notices, and it publishes them as linked data: a linked data API returns each notice as JSON-LD, Turtle or RDFa-enriched XML from format-specific URLs, and an Atom feed carries the latest notices and accepts search parameters such as text and start-publish-date. The site states the content is Crown copyright and free to use under the Open Government Licence v3.0, with the licence not covering the re-use of personal data.',
+    categories: ['government', 'legal', 'api'],
+    website: 'https://www.thegazette.co.uk/data',
+    source: { label: 'The Gazette', url: 'https://www.thegazette.co.uk/data/formats' },
+    lastVerified: '2026-10-02',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
