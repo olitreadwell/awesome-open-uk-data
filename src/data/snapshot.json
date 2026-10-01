@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-10-01T16:47:09.622Z",
+  "exportedAt": "2026-10-01T16:47:18.449Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -1099,6 +1099,28 @@
       "source": {
         "label": "UKRI",
         "url": "https://gtr.ukri.org/resources/about.html"
+      },
+      "lastVerified": "2026-10-02",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "elexon-insights-solution",
+      "name": "Elexon Insights Solution (BMRS)",
+      "slug": "elexon-insights-solution",
+      "city": "London",
+      "region": "England",
+      "location": "Euston Road, London",
+      "lat": 51.524391,
+      "lng": -0.142095,
+      "website": "https://www.elexon.co.uk/data/",
+      "categories": ["energy", "api"],
+      "description": "The Insights Solution is the open data service for the Balancing Mechanism Reporting Service, covering the electricity system of Great Britain. It publishes generation, demand, balancing and settlement, transmission, and REMIT and operational notices, with a free REST API that returns the data as JSON and a real-time IRIS streaming service alongside it; on 2 October 2026 a call to the generation endpoint returned half-hourly output by fuel type without a key. Elexon describes the service as the replacement for the older BMRS website, and its BMRS open data licence grants worldwide, royalty-free, perpetual and non-exclusive use on condition of the attribution \"Contains BMRS data © Elexon Limited copyright and database right [year]\".",
+      "source": {
+        "label": "Elexon",
+        "url": "https://www.elexon.co.uk/bsc/operations-settlement/bsc-central-services/balancing-mechanism-reporting-agent/copyright-licence-bmrs-data/"
       },
       "lastVerified": "2026-10-02",
       "verified": true,

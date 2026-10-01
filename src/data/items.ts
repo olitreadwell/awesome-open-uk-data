@@ -942,6 +942,26 @@ const rawItems = [
     lastVerified: '2026-10-02',
     verified: true,
   },
+  {
+    id: 'elexon-insights-solution',
+    slug: 'elexon-insights-solution',
+    name: 'Elexon Insights Solution (BMRS)',
+    city: 'London',
+    region: 'England',
+    location: 'Euston Road, London',
+    lat: 51.524391,
+    lng: -0.142095,
+    description:
+      'The Insights Solution is the open data service for the Balancing Mechanism Reporting Service, covering the electricity system of Great Britain. It publishes generation, demand, balancing and settlement, transmission, and REMIT and operational notices, with a free REST API that returns the data as JSON and a real-time IRIS streaming service alongside it; on 2 October 2026 a call to the generation endpoint returned half-hourly output by fuel type without a key. Elexon describes the service as the replacement for the older BMRS website, and its BMRS open data licence grants worldwide, royalty-free, perpetual and non-exclusive use on condition of the attribution "Contains BMRS data © Elexon Limited copyright and database right [year]".',
+    categories: ['energy', 'api'],
+    website: 'https://www.elexon.co.uk/data/',
+    source: {
+      label: 'Elexon',
+      url: 'https://www.elexon.co.uk/bsc/operations-settlement/bsc-central-services/balancing-mechanism-reporting-agent/copyright-licence-bmrs-data/',
+    },
+    lastVerified: '2026-10-02',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
