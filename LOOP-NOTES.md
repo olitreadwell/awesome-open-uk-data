@@ -544,3 +544,60 @@ down, and what is queued for the next run.
   statement), the FCA's data pages (200, no site-wide licence statement), the
   JNCC Resource Hub (200, no API found), DAERA Northern Ireland statistics,
   Historic Environment Scotland, Natural Resources Wales, and Cefas.
+
+## 2026-10-02
+
+- Step 1: `node scripts/check-item-urls.mjs` re-checked the 73 listing URLs
+  committed at the start of the run. 71 answered 200, `digital.nhs.uk` and
+  `neso.energy` answered 403 from bot protection that lets a browser in, and
+  0 were dead, so no link needed fixing. Every `lastVerified` rolled forward
+  to 2026-10-02 in `559d514`.
+- Added three sources, each fetched live before the item was written.
+  - The Gazette (`9efd4ca`): `thegazette.co.uk/data` states the content is
+    Crown copyright and free to use under the Open Government Licence v3.0,
+    with the licence not covering the re-use of personal data. The linked
+    data API returned notice 5220631 as JSON-LD, RDFa-enriched XML and Turtle
+    on 2026-10-02, and the Atom feed at `/all-notices/notice/data.feed`
+    answered a plain GET and accepted `text` and `start-publish-date`
+    filters. The site is published by TSO under the superintendence of HM
+    Stationery Office, part of The National Archives, and has carried
+    official notices since 1665. City "Norwich"; the contact page gives the
+    notice postal address as PO Box 3584, Norwich NR7 7WD (52.647735,
+    1.32296 from postcodes.io).
+  - UKRI Gateway to Research (`8021d34`): the API at
+    `gtr.ukri.org/gtr/api/projects` reported 158,710 projects across 15,871
+    pages of ten on 2026-10-02, alongside 97,102 organisations and 95,176
+    people, and answers without a key. `gtr.ukri.org/resources/about.html`
+    states the award data updates quarterly in the second week of April,
+    July, October and January, and the site footer publishes the data under
+    the Open Government Licence. City "Swindon"; the footer address is
+    Polaris House, Swindon SN2 1ET (51.566729, -1.784744 from postcodes.io).
+  - Elexon Insights Solution (`f5b5994`): `elexon.co.uk/data/` links the
+    Insights Solution and the BMRS licence page, which grants worldwide,
+    royalty-free, perpetual and non-exclusive use with the attribution
+    "Contains BMRS data (c) Elexon Limited copyright and database right
+    [year]". The API at
+    `data.elexon.co.uk/bmrs/api/v1/generation/actual/per-type` returned
+    half-hourly generation by fuel type for 2026-10-01 without a key. City
+    "London"; the privacy policy gives Elexon's address as 350 Euston Road,
+    London NW1 3AW (51.524391, -0.142095 from postcodes.io).
+- Checked and rejected this run: Ofcom research and data (403 to this
+  client), Historic England's National Heritage List downloads (403),
+  `data.justice.gov.uk` (200 and Open Government Licence in the footer, but
+  no API or bulk download found on the landing pages), Cefas Data Hub (200
+  but a client-rendered app with no reachable CKAN API at the usual paths),
+  and Marine Scotland Data (200, DKAN portal, licence position not checked
+  yet). Forest Research statistics answered 200 with an Open Government
+  Licence v3.0 statement, but no bulk download page was located this pass,
+  so it is queued rather than added.
+- A second `check-item-urls` pass over the batch read 79 URLs: 77 ok, the
+  same 2 bot-blocked but live, 0 dead.
+- `pnpm run check:fast` exits 0 on this tree after the batch (snapshot,
+  format, lint, typecheck, data tests, links, build). Full suite (coverage,
+  smoke, e2e) runs in CI after the push.
+- Queued for next run: Forest Research statistics, `data.justice.gov.uk`,
+  Cefas Data Hub, Marine Scotland Data, Historic England, Ofcom, Sport
+  England, the FCA's data pages, the JNCC Resource Hub, DAERA Northern
+  Ireland statistics, Natural Resources Wales, and the two licensed
+  marine data services turned down on 2026-10-01 only if their terms
+  change.

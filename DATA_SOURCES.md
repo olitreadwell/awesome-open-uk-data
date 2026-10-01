@@ -50,6 +50,9 @@ Vercel Cron, and record every run in `scrapes` (DB mode) or
 | `Office of Rail and Road` (rail statistics data portal) | initial seed source | ✅ planned |
 | `Scottish Government` (gov.scot statistics and research hub) | initial seed source | ✅ planned |
 | `UK Parliament` (Members API state of the parties) | initial seed source | ✅ planned |
+| `The Gazette` (official public record linked data API) | initial seed source | ✅ planned |
+| `UKRI Gateway to Research` (funded research and innovation catalogue API) | initial seed source | ✅ planned |
+| `Elexon` (Insights Solution BMRS open data API) | initial seed source | ✅ planned |
 <!-- SEED-SOURCES -->
 
 ## Candidate seeds from public-apis

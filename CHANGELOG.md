@@ -132,9 +132,28 @@ All notable changes documented here. Format follows
   house. The Commons held 650 seats across 18 parties on 1 October 2026, with
   Labour on 403 and the Conservatives on 118, under the Open Parliament
   Licence v3.0.
+- 2026-10-02: `the-gazette`: the official public record of the UK, published
+  since 1665 and produced by TSO under the superintendence of HM Stationery
+  Office, with a linked data API that returns each notice as JSON-LD, Turtle
+  or RDFa-enriched XML and an Atom feed of the latest notices, under the Open
+  Government Licence v3.0 except for the re-use of personal data.
+- 2026-10-02: `gateway-to-research`: UKRI's catalogue of funded research and
+  innovation, covering projects, organisations, people and outcomes, updated
+  quarterly in the second week of April, July, October and January, with two
+  key-free REST APIs; the project endpoint reported 158,710 projects on
+  2 October 2026, under the Open Government Licence.
+- 2026-10-02: `elexon-insights-solution`: Elexon's open data service for the
+  Balancing Mechanism Reporting Service, publishing generation, demand,
+  balancing and settlement, transmission, and REMIT notices over a free JSON
+  REST API with a real-time IRIS stream, under the BMRS open data licence.
 
 ### Fixed
 
+- 2026-10-02: rolled every `lastVerified` forward to 2026-10-02 after
+  `pnpm run check:item-urls` re-checked all 73 listing URLs committed at the
+  start of the run (71 answered, 2 bot-blocked but live, 0 dead). The three
+  new sources add six URLs, checked before they were written: the batch ends
+  at 79 URLs, 77 answered, 2 bot-blocked but live, 0 dead.
 - 2026-10-01: rolled every `lastVerified` forward to 2026-10-01 after
   `pnpm run check:item-urls` re-checked all 65 listing URLs (63 answered, 2
   bot-blocked but live, 0 dead).
