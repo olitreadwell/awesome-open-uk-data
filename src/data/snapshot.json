@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-10-01T16:47:03.623Z",
+  "exportedAt": "2026-10-01T16:47:09.622Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -1077,6 +1077,28 @@
       "source": {
         "label": "The Gazette",
         "url": "https://www.thegazette.co.uk/data/formats"
+      },
+      "lastVerified": "2026-10-02",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "gateway-to-research",
+      "name": "UKRI Gateway to Research",
+      "slug": "gateway-to-research",
+      "city": "Swindon",
+      "region": "England",
+      "location": "Polaris House, Swindon",
+      "lat": 51.566729,
+      "lng": -1.784744,
+      "website": "https://gtr.ukri.org/",
+      "categories": ["research", "government", "api"],
+      "description": "Gateway to Research (GtR) is the public catalogue of research and innovation funded by UK Research and Innovation. It indexes projects, organisations, people and outcomes, publishes the award data quarterly in the second week of April, July, October and January, and offers two REST APIs that return the catalogue as JSON without a key; on 2 October 2026 the project endpoint reported 158,710 projects across 15,871 pages of ten, the organisation endpoint 97,102 organisations, and the people endpoint 95,176 people. The site states the data is available under the Open Government Licence.",
+      "source": {
+        "label": "UKRI",
+        "url": "https://gtr.ukri.org/resources/about.html"
       },
       "lastVerified": "2026-10-02",
       "verified": true,
