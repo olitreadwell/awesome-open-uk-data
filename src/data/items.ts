@@ -1002,6 +1002,26 @@ const rawItems = [
     lastVerified: '2026-10-03',
     verified: true,
   },
+  {
+    id: 'national-river-flow-archive',
+    slug: 'national-river-flow-archive',
+    name: 'National River Flow Archive',
+    city: 'Wallingford',
+    region: 'England',
+    location: 'Maclean Building, Wallingford',
+    lat: 51.602377,
+    lng: -1.110698,
+    description:
+      'The National River Flow Archive is the UK\'s official record of river flow data, based at the UK Centre for Ecology & Hydrology and operated on behalf of Defra, the Scottish Government and the Welsh Government. It curates records from more than 1,600 gauging stations, many reaching back to the 1960s, and provides bulk downloads including the Peak Flow Dataset (version 15, released on 27 August 2026) alongside a documented REST API; the station-ids endpoint returned 1,604 stations on 3 October 2026. Access is granted under the NRFA click-through licence, which asks users to acknowledge "Data from the UK National River Flow Archive".',
+    categories: ['environment', 'statistics', 'api', 'government'],
+    website: 'https://nrfa.ceh.ac.uk/',
+    source: {
+      label: 'National River Flow Archive (UKCEH)',
+      url: 'https://nrfa.ceh.ac.uk/data/use-nrfa-data/nrfa-api',
+    },
+    lastVerified: '2026-10-03',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
