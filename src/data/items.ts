@@ -962,6 +962,26 @@ const rawItems = [
     lastVerified: '2026-10-03',
     verified: true,
   },
+  {
+    id: 'forest-research-statistics',
+    slug: 'forest-research-statistics',
+    name: 'Forest Research statistics',
+    city: 'Farnham',
+    region: 'England',
+    location: 'Alice Holt Lodge, Farnham',
+    lat: 51.178645,
+    lng: -0.85215,
+    description:
+      "Forest Research is the research agency of the Forestry Commission and Great Britain's principal organisation for forestry and tree-related research. Its statistics programme publishes official statistics on forestry, from the annual Forestry Statistics to Accredited Official Statistics such as Provisional Woodland Statistics 2026, and it follows the UK Statistics Authority's Code of Practice for Official Statistics. The time series behind those releases, covering woodland area, planting and restocking, wood production and timber prices, is available to download as ODS spreadsheets under the Open Government Licence v3.0.",
+    categories: ['statistics', 'environment', 'government'],
+    website: 'https://www.forestresearch.gov.uk/tools-and-resources/statistics/',
+    source: {
+      label: 'Forest Research',
+      url: 'https://www.forestresearch.gov.uk/tools-and-resources/statistics/time-series/',
+    },
+    lastVerified: '2026-10-03',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
