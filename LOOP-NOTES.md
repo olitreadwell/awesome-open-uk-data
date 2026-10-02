@@ -601,3 +601,35 @@ down, and what is queued for the next run.
   Ireland statistics, Natural Resources Wales, and the two licensed
   marine data services turned down on 2026-10-01 only if their terms
   change.
+
+## 2026-10-03
+
+- Ship batch: added Forest Research statistics, Marine Directorate Data, and
+  the National River Flow Archive.
+- Verify: `node scripts/check-item-urls.mjs` over the 79 committed URLs
+  returned 77 ok, the same 2 bot-blocked but live (NHS England,
+  `neso.energy`), and 0 dead, so every `lastVerified` rolled forward to
+  2026-10-03. A repeat pass over the 85-URL batch (the committed 79 plus the
+  6 new) read 83 ok, 2 bot-blocked but live, 0 dead; the first pass over the
+  batch showed one transient failure that did not reproduce.
+- Discovered and checked: `data.marine.gov.scot` is a DKAN portal whose
+  `/data.json` DCAT feed listed 302 datasets on 2026-10-03 and whose
+  `/api/dataset` service endpoint answers; the Marine Directorate page on
+  gov.scot gives the contact address as St Andrew's House, Edinburgh.
+  Forest Research (the Forestry Commission's research agency) publishes
+  official forestry statistics, and its time-series page serves the ODS
+  downloads under the Open Government Licence v3.0. The NRFA is UKCEH's
+  official river flow record, with a working REST API (the station-ids
+  endpoint returned 1,604 stations on 2026-10-03) and the Peak Flow Dataset
+  v15 released on 27 August 2026, under a click-through NRFA licence.
+- Checked and rejected this run: Historic England downloads, Ofcom research
+  and data, and Get Information about Schools all answer 403 to this client
+  (live but unverifiable here); `data.justice.gov.uk` and Cefas Data Hub
+  answered 200 with no reachable bulk download or API found on this pass.
+- `pnpm run check:fast` exits 0 on this tree (snapshot, format, lint,
+  typecheck, data tests, internal and external link checks, build). Full
+  suite (coverage, smoke, e2e) runs in CI after the push.
+- Queued for next run: Sport England research and data, the JNCC Resource
+  Hub, Natural Resources Wales evidence and data, the Electoral Commission
+  register, BODC, `data.justice.gov.uk`, Cefas Data Hub, DAERA Northern
+  Ireland statistics, and the FCA's data pages.

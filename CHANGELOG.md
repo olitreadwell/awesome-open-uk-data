@@ -146,9 +146,26 @@ All notable changes documented here. Format follows
   Balancing Mechanism Reporting Service, publishing generation, demand,
   balancing and settlement, transmission, and REMIT notices over a free JSON
   REST API with a real-time IRIS stream, under the BMRS open data licence.
+- 2026-10-03: `forest-research-statistics`: Forest Research, the research
+  agency of the Forestry Commission, publishes official forestry statistics
+  and serves the time series behind them as ODS downloads under the Open
+  Government Licence v3.0.
+- 2026-10-03: `marine-directorate-data`: the Scottish Government's Marine
+  Directorate data portal, a DKAN catalogue of fisheries, aquaculture, marine
+  planning and monitoring datasets, also exposed as a DCAT `data.json` feed
+  (302 datasets on 3 October 2026).
+- 2026-10-03: `national-river-flow-archive`: the UK's official record of river
+  flow data, held by the UK Centre for Ecology & Hydrology, with bulk
+  downloads, a documented REST API (1,604 stations on 3 October 2026) and an
+  NRFA click-through licence.
 
 ### Fixed
 
+- 2026-10-03: rolled every `lastVerified` forward to 2026-10-03 after
+  `pnpm run check:item-urls` re-checked all 79 listing URLs committed at the
+  start of the run (77 answered, 2 bot-blocked but live, 0 dead). The three
+  new sources add six URLs, checked before they were written; the batch ends
+  at 85 URLs (83 answered, 2 bot-blocked but live, 0 dead).
 - 2026-10-02: rolled every `lastVerified` forward to 2026-10-02 after
   `pnpm run check:item-urls` re-checked all 73 listing URLs committed at the
   start of the run (71 answered, 2 bot-blocked but live, 0 dead). The three

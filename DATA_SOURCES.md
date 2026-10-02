@@ -53,6 +53,9 @@ Vercel Cron, and record every run in `scrapes` (DB mode) or
 | `The Gazette` (official public record linked data API) | initial seed source | ✅ planned |
 | `UKRI Gateway to Research` (funded research and innovation catalogue API) | initial seed source | ✅ planned |
 | `Elexon` (Insights Solution BMRS open data API) | initial seed source | ✅ planned |
+| `Forest Research` (official forestry statistics and time-series downloads) | initial seed source | ✅ planned |
+| `Marine Directorate` (Scottish Government marine data portal) | initial seed source | ✅ planned |
+| `National River Flow Archive` (UK river flow data, metadata and API) | initial seed source | ✅ planned |
 <!-- SEED-SOURCES -->
 
 ## Candidate seeds from public-apis
