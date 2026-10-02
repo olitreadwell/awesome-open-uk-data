@@ -1,6 +1,6 @@
 {
   "version": "seed",
-  "exportedAt": "2026-10-02T16:46:44.792Z",
+  "exportedAt": "2026-10-02T16:46:47.838Z",
   "license": "Public data only. Opt-out respected: see /opt-out.",
   "items": [
     {
@@ -1143,6 +1143,28 @@
       "source": {
         "label": "Forest Research",
         "url": "https://www.forestresearch.gov.uk/tools-and-resources/statistics/time-series/"
+      },
+      "lastVerified": "2026-10-03",
+      "verified": true,
+      "active": true,
+      "optOut": false,
+      "calendarDates": []
+    },
+    {
+      "id": "marine-directorate-data",
+      "name": "Marine Directorate Data",
+      "slug": "marine-directorate-data",
+      "city": "Edinburgh",
+      "region": "Scotland",
+      "location": "St Andrew's House, Edinburgh",
+      "lat": 55.95365,
+      "lng": -3.183896,
+      "website": "https://data.marine.gov.scot/",
+      "categories": ["catalog", "environment", "government", "api"],
+      "description": "The Marine Directorate of the Scottish Government publishes its marine data through this portal, covering fisheries and aquaculture, marine planning, marine renewables, and freshwater and marine monitoring. The catalogue runs on DKAN, so it is also available as a DCAT data.json feed and a service endpoint, and on 3 October 2026 the feed listed 302 datasets, each with its own licence and a Digital Object Identifier. The portal states that the data is free to download and gives a pre-formatted citation for each record.",
+      "source": {
+        "label": "Marine Directorate, Scottish Government",
+        "url": "https://data.marine.gov.scot/about"
       },
       "lastVerified": "2026-10-03",
       "verified": true,

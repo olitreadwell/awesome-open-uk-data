@@ -982,6 +982,26 @@ const rawItems = [
     lastVerified: '2026-10-03',
     verified: true,
   },
+  {
+    id: 'marine-directorate-data',
+    slug: 'marine-directorate-data',
+    name: 'Marine Directorate Data',
+    city: 'Edinburgh',
+    region: 'Scotland',
+    location: "St Andrew's House, Edinburgh",
+    lat: 55.95365,
+    lng: -3.183896,
+    description:
+      'The Marine Directorate of the Scottish Government publishes its marine data through this portal, covering fisheries and aquaculture, marine planning, marine renewables, and freshwater and marine monitoring. The catalogue runs on DKAN, so it is also available as a DCAT data.json feed and a service endpoint, and on 3 October 2026 the feed listed 302 datasets, each with its own licence and a Digital Object Identifier. The portal states that the data is free to download and gives a pre-formatted citation for each record.',
+    categories: ['catalog', 'environment', 'government', 'api'],
+    website: 'https://data.marine.gov.scot/',
+    source: {
+      label: 'Marine Directorate, Scottish Government',
+      url: 'https://data.marine.gov.scot/about',
+    },
+    lastVerified: '2026-10-03',
+    verified: true,
+  },
 ] as const;
 
 /** Validated seed listings, exported for tests and the snapshot builder. */
